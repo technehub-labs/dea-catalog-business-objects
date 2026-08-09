@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://technehub-labs.github.io/dea-catalog-business-objects/schemas/entity.schema.json",
+  "title": "BusinessObject Catalog Entry",
+  "description": "Schema for entries in technehub-labs/dea-catalog-business-objects. Mirrors technehub-labs/dea-metamodel/schemas/entities/business-object.json (v1.0.0-alpha).",
+  "type": "object",
+  "required": ["id", "name", "type", "version", "object_class", "ecf_domain", "ecf_stage"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*:[a-z0-9-]+$" },
+    "type": { "type": "string", "const": "BusinessObject" },
+    "name": { "type": "string", "minLength": 1, "maxLength": 200 },
+    "description": { "type": "string", "maxLength": 2000 },
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "object_class": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "object_subclass": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "ecf_domain": {
+      "type": "string",
+      "enum": [
+        "governance-existence", "supply-resources", "people-organization",
+        "customer-demand", "product-offering", "operations-delivery", "finance-value"
+      ]
+    },
+    "ecf_stage": {
+      "type": "string",
+      "enum": ["conceive", "design", "build", "activate", "operate", "improve", "retire"]
+    },
+    "current_state": { "type": "string", "maxLength": 100 },
+    "state_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["state", "entered"],
+        "properties": {
+          "state": { "type": "string" },
+          "ecf_stage": { "type": "string" },
+          "entered": { "type": "string", "format": "date" },
+          "exited": { "type": "string", "format": "date" },
+          "note": { "type": "string" }
+        }
+      }
+    },
+    "identity": {
+      "type": "object",
+      "properties": {
+        "primary_id": { "type": "string" },
+        "external_ids": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        }
+      }
+    },
+    "owner": { "type": "string" },
+    "stakeholders": { "type": "array", "items": { "type": "string" } },
+    "capabilities_consumed": { "type": "array", "items": { "type": "string" } },
+    "processes_involved": { "type": "array", "items": { "type": "string" } },
+    "events": { "type": "array", "items": { "type": "string" } },
+    "data_entities": { "type": "array", "items": { "type": "string" } },
+    "components_realizing": { "type": "array", "items": { "type": "string" } },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "metadata": { "type": "object" }
+  }
+}
