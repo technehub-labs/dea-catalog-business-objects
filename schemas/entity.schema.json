@@ -16,8 +16,8 @@
     "ecf_domain": {
       "type": "string",
       "enum": [
-        "governance-existence", "supply-resources", "people-organization",
-        "customer-demand", "product-offering", "operations-delivery", "finance-value"
+        "governance-existence", "strategy-direction", "agency-organization",
+        "party-relationship", "product-value", "operations-enablement", "finance-accounting"
       ]
     },
     "ecf_stage": {
