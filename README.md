@@ -27,7 +27,7 @@ Business Objects are classified by **two universal coordinates plus two free-for
 
 | Axis | Values |
 |---|---|
-| `ecf_domain` | `governance-existence` · `supply-resources` · `people-organization` · `customer-demand` · `product-offering` · `operations-delivery` · `finance-value` |
+| `ecf_domain` | `governance-existence` · `strategy-direction` · `agency-organization` · `party-relationship` · `product-value` · `operations-enablement` · `finance-accounting` |
 | `ecf_stage` | `conceive` · `design` · `build` · `activate` · `operate` · `improve` · `retire` |
 
 Every BO lives in exactly one `(ecf_domain, ecf_stage)` cell at a time.

@@ -10,7 +10,7 @@ type: BusinessObject
 name: Customer Account
 object_class: customer
 object_subclass: retail
-ecf_domain: customer-demand
+ecf_domain: party-relationship
 ecf_stage: operate
 current_state: active
 version: 1.0.0
