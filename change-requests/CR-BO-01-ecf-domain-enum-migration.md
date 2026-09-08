@@ -30,7 +30,7 @@ both waves in a single step:
 | `people-organization` | `agency-organization` (renamed) |
 | `customer-demand` | `party-relationship` (renamed) |
 | `product-offering` | `product-value` (renamed) |
-| `operations-delivery` | `operations-enablement` (renamed) |
+| `operations-delivery` | `enablement-operations` (renamed) |
 | `finance-value` | `finance-accounting` (renamed) |
 
 ## 3. Files changed
