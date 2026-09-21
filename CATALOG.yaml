@@ -1,0 +1,27 @@
+catalog:
+  abbreviation: DEA-
+  counts:
+    candidates: 0
+    canonical: 0
+    entities: 0
+    open_change_requests: 2
+    research_files: 0
+    retired: 0
+  cross_cutting:
+    change_requests: change-requests/
+    classifications: classifications/
+    contributions_queue: contributions/
+    schemas: schemas/
+    validators: scripts/
+  description: 'A real-world entity of interest to the business (e.g. Customer, Order). The atom of the ECF matrix.
+
+    '
+  entities: []
+  id: dea:catalog-business-objects
+  metamodel_version: unknown
+  name: dea-catalog-business-objects
+  owner: TechNeHub Labs
+  repository: https://github.com/technehub-labs/dea-catalog-business-objects.git
+  research_registers: []
+  status: active
+  version: 0.0.0

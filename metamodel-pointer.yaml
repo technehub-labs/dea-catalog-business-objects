@@ -2,6 +2,8 @@
 # Auto-generated from OpenDEAM v0.2.1 (dea-architecture-framework, ADR-0002).
 # Do not edit manually — allocation changes go through the root model
 # (structural: ADR + minor bump; additive: PR + patch bump).
+id: dea:catalog-business-objects
+
 metamodel:
   version: v0.2.1
   entity_id: dea:entity-business-object
