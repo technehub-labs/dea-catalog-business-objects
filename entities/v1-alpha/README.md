@@ -5,7 +5,7 @@ This directory will hold Business Object catalog entries once Phase 2 content po
 Each entry should be a YAML or JSON file following the schema in `../../schemas/entity.schema.json`. Example shape:
 
 ```yaml
-id: dea:object-customer-12345
+id: objects:object-customer-12345-xxxxxx
 type: BusinessObject
 name: Customer Account
 object_class: customer
@@ -20,15 +20,15 @@ identity:
   external_ids:
     crm_id: SF-0034Q00012
     erp_id: SAP-DEBI-9001
-owner: dea:actor-customer-success-manager
+owner: actors:actor-customer-success-manager-xxxxxx
 stakeholders:
-  - dea:stakeholder-end-customer
+  - stakeholders:stakeholder-end-customer-xxxxxx
 capabilities_consumed:
-  - dea:capability-manage-account
-  - dea:capability-issue-refund
+  - capabilities:capability-manage-account-xxxxxx
+  - capabilities:capability-issue-refund-xxxxxx
 processes_involved:
-  - dea:process-customer-onboarding
-  - dea:process-refund-handling
+  - processes:process-customer-onboarding-xxxxxx
+  - processes:process-refund-handling-xxxxxx
 ```
 
 See [DEA Metamodel BusinessObject schema](https://github.com/technehub-labs/dea-metamodel/blob/main/schemas/entities/business-object.json) for the canonical definition.
