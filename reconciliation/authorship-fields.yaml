@@ -1,0 +1,30 @@
+# Cardinal authorship-field registry (CR-BP-118b; this repo's slice).
+# Adding a new field here is a CR-level change; do not edit casually.
+# The dea-catalog-business-objects repo has the same authorship shape as
+# dea-catalog-business-processes: CR-doc metadata only. The BC-repo
+# catalog-research YAML fields are not used here.
+
+fields:
+  - path: "**Owner**"                # CR doc metadata; first-30-lines
+    file_glob: "change-requests/CR-*.md"
+    kind: "metadata"
+  - path: "**Author**"               # CR doc metadata; first-30-lines
+    file_glob: "change-requests/CR-*.md"
+    kind: "metadata"
+
+allowlist:
+  - "Emmanuel A. Otchere"
+  - "TechNeHub Labs"
+
+# Agent / tool names that may never appear in an authorship-bearing field.
+# `eaojnr` is allowed as a historical record (user handle alone, no agent prefix).
+denylist:
+  - "Coder"
+  - "Agent"
+  - "Hermes"
+  - "Claude"
+  - "GPT"
+  - "Cline"
+  - "OpenAI"
+  - "MiniMax"
+  - "MiniMax-M3"
