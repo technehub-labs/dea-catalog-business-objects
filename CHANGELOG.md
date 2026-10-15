@@ -5,6 +5,10 @@ All notable changes to this catalog are recorded here. Format follows
 
 ## [Unreleased]
 
+### CR-BO-04: Entity System Stage 5-6 (BO slice of the General Entity System institutionalisation. The BO catalog has 0 entity records at the time of CR landing; the gate is vacuously CONFORMANT. Slice)
+
+Business Objects
+
 ### CR-BO-03: Authorship Cardinal Rule (R1, R2) - Org-Wide Propagation Slice
 
 User directive 2026-10-13: "no `Coder` / `Agent` / agent or tool names in any
