@@ -1,0 +1,61 @@
+# Entity System Registry (CR-BO-04; per the Conformance Standard CS-011)
+# Per-repo lightweight slice of the General Entity System. Data-driven
+# configuration for the entity-system gate. This repo has 0 entity
+# records at the time of CR landing; the registry is declared generically
+# (no profiles) so the gate is vacuously CONFORMANT (per the Stage 5
+# staging).
+
+# ES-002: Entity Contract (the common envelope + type-specific profiles)
+envelope:
+  file_globs:
+    - "entities/**/*.yaml"
+  type_field: type
+  # No profiles: the repo has 0 entity records. Profiles will be added
+  # per the entity-type population that follows CR-CR-BO-04. The
+  # gate is vacuously CONFORMANT under empty profiles.
+  profiles: {}
+
+# ES-001: Identity
+# Pre-migration namespace (canonical = legacy). The repo's id family
+# is the `dea:` prefix with a type-specific segment.
+identity:
+  id_field: id
+  canonical_prefix: "dea:"
+  canonical_pattern: "^dea:object-[a-z0-9-]+$"
+  legacy_prefix: "dea:"
+  legacy_pattern: "^dea:object-[a-z0-9-]+$"
+  legacy_migration_map: "reconciliation/migration-id-map.yaml"
+
+# ES-003: Relationship (empty; no entity records declare relationships)
+relationships:
+  field: relationships
+  canonical_types: []
+  forbidden_types:
+    - part-of
+  cross_catalog_field: identity_scope
+
+# ES-004: Lifecycle (empty; no entity records have a lifecycle state)
+lifecycle:
+  field: lifecycle
+  status_field: status
+  valid_states: []
+  terminal_states: []
+  transition_table: {}
+  provenance_field: provenance.change_history
+  provenance_required_keys:
+    - cr
+    - date
+    - change
+
+# ES-005: Per-type gate delegation (empty; no entity types registered)
+per_type_gates: []
+
+# CS-008 / CS-009: Exception mechanism (the EGV-011 escape hatch)
+exceptions:
+  registry_path: reconciliation/normalization.yaml
+  verdict_key: verdict
+  verdict_value: review-retained
+  cr_key: cr
+  expiry_key: expiry
+  reviewer_key: reviewed_by
+  excepted_rules_key: excepted_rules
