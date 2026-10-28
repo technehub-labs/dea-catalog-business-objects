@@ -11,6 +11,12 @@ fields:
   - path: "**Author**"               # CR doc metadata; first-30-lines
     file_glob: "change-requests/CR-*.md"
     kind: "metadata"
+  - path: "audit.author"              # object record YAML (CR-BO-05)
+    file_glob: "entities/v1-alpha/**/objects-*.yaml"
+    kind: "yaml"
+  - path: "audit.reviewed_by"         # object record YAML (CR-BO-05)
+    file_glob: "entities/v1-alpha/**/objects-*.yaml"
+    kind: "yaml"
 
 allowlist:
   - "Emmanuel A. Otchere"

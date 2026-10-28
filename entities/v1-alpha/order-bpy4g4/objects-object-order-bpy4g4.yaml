@@ -1,0 +1,32 @@
+id: objects:object-order-bpy4g4
+name: Order
+type: BusinessObject
+version: 1.0.0
+object_class: transaction
+object_subclass: sales-order
+ecf_domain: enablement-operations
+ecf_stage: operate
+current_state: active
+description: >
+  A request from a customer for products or services, created at commitment time
+  and fulfilled through the enterprise's execution and fulfilment processes. The
+  Order coordinates delivery, production, and revenue recognition and is the
+  operational commitment of the enterprise to its customer.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-operations-management-pm3w8k
+processes_involved:
+  - processes:process-eo-operate-2jnz85
+  - processes:process-eo-operate-xud3hs
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-28
+    note: First admission (CR-BO-05); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-05
+      date: 2026-10-28
+      change: First admission of the record into the catalog (Phase 2 population).
+metadata:
+  seed_record: "true"

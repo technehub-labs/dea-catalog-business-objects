@@ -1,0 +1,33 @@
+id: objects:object-customer-2qvphc
+name: Customer
+type: BusinessObject
+version: 1.0.0
+object_class: party
+object_subclass: customer
+ecf_domain: party-relationship
+ecf_stage: operate
+current_state: active
+description: >
+  An external party that buys or consumes the enterprise's products and
+  services. The Customer business object is the atom of the Party-and-
+  Relationship domain: acquisition, retention, and relationship management
+  processes create and update it, and customer-management capabilities act on
+  it.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-customer-management-f3n8wb
+processes_involved:
+  - processes:process-pr-operate-bbe384
+  - processes:process-pr-conceive-emfgju
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-28
+    note: First admission (CR-BO-05); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-05
+      date: 2026-10-28
+      change: First admission of the record into the catalog (Phase 2 population).
+metadata:
+  seed_record: "true"

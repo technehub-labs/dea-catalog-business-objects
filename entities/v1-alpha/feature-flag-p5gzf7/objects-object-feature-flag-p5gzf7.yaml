@@ -1,0 +1,30 @@
+id: objects:object-feature-flag-p5gzf7
+name: Feature Flag
+type: BusinessObject
+version: 1.0.0
+object_class: technology-control
+object_subclass: release-feature-flag
+ecf_domain: enablement-operations
+ecf_stage: operate
+current_state: active
+description: >
+  A configuration switch controlling the runtime visibility or behavior of a
+  product feature. The Feature Flag decouples deployment from release:
+  technology-enablement capabilities act on it, and its state governs what
+  customers experience without a redeployment.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-technology-enablement-y6nkws
+  - capabilities:capability-technology-management-maus5n
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-28
+    note: First admission (CR-BO-05); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-05
+      date: 2026-10-28
+      change: First admission of the record into the catalog (Phase 2 population).
+metadata:
+  seed_record: "true"

@@ -1,0 +1,29 @@
+id: objects:object-contract-w24y9z
+name: Contract
+type: BusinessObject
+version: 1.0.0
+object_class: legal-instrument
+object_subclass: commercial-contract
+ecf_domain: governance-existence
+ecf_stage: operate
+current_state: active
+description: >
+  A legally binding agreement between the enterprise and another party
+  establishing mutual obligations. The Contract is the governance instrument
+  that authorizes the commercial relationship: it constrains orders, pricing,
+  service levels, and the legal standing of the enterprise's operations.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-legal-matter-management-zzbd2u
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-28
+    note: First admission (CR-BO-05); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-05
+      date: 2026-10-28
+      change: First admission of the record into the catalog (Phase 2 population).
+metadata:
+  seed_record: "true"

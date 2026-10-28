@@ -6,7 +6,7 @@ Business Objects are stored in a **flat layout** under this directory (one subtr
 
 This README mirrors the structural template set in `technehub-labs/dea-catalog-processes` PR #153. The flat-layout sections below replace the containment-tree and ECF-matrix sections that are specific to ECF-coordinated catalogs.
 
-> **Phase 2 deferred-population scaffold.** This catalog was brought up during Wave 3 of the org-wide id-system rollout; the contract is in place (schemas, id-form, conformance gates, CI) but no Phase 2 content admissions have landed yet. The CI early-exit pattern in `ci.yml` skips schema validation when the entities tree is empty; drop it when the first admission lands.
+> **Phase 2 population has begun (CR-BO-05).** This catalog was brought up during Wave 3 of the org-wide id-system rollout; the contract (schemas, id-form, conformance gates, CI) landed first, and the first content admission (eight seed Business Object records) has now landed. The CI early-exit pattern that skipped schema validation while the entities tree was empty has been dropped.
 
 ---
 
@@ -14,12 +14,13 @@ This README mirrors the structural template set in `technehub-labs/dea-catalog-p
 
 ```
 v1-alpha/
-├── <level>-<slug>-<hash6>/                       # L1 record subtree
-│   └── objects-<level>-<slug>-<hash6>.yaml
+├── object-<slug>-<hash6>/                        # record subtree
+│   ├── objects-object-<slug>-<hash6>.yaml
+│   └── README.md
 └── README.md
 ```
 
-Subdirectory names follow `<level>-<slug>-<hash6>`. The 6-character hash is content-derived (first 4 bytes of the record file's SHA-256, base-31 over the alphabet `a-z` minus `i`, `l`, `o` plus digits `2-9`). See `dea-metaframework/docs/id-system.md` §2.5.
+Subdirectory names follow `object-<slug>-<hash6>`. The 6-character hash is content-derived (first 4 bytes of the record file's SHA-256, base-31 over the alphabet `a-z` minus `i`, `l`, `o` plus digits `2-9`). See `dea-metaframework/docs/id-system.md` §2.5.
 
 ---
 
@@ -31,20 +32,30 @@ Per the DEA Metamodel, `objects:Business` is the abstract kernel; concrete insta
 
 | Level | id form |
 | :--- | :--- |
-| L1: Business Object | `objects-<level>-<slug>-<hash6>` |
+| L1: Business Object | `objects:object-<slug>-<hash6>` |
 
-Each record file's id is content-addressed: changing the file's contents (without renaming the file) changes its hash. This is what makes the catalog content-addressed rather than directory-addressed.
+Each record file's id is content-addressed: the hash suffix was assigned once, at admission (CR-BO-05 §2.6), from the record content and is immutable thereafter; the filesystem path is the id with `:` normalized to `-` (IDM-005). This is what makes the catalog content-addressed rather than directory-addressed.
 
-### Canonical YAML Shape (illustrative; first admission will finalize)
+### Canonical YAML Shape (illustrative)
 
 ```yaml
-# id pattern: objects-<level>-<slug>-<hash6>
-id: objects-<level>-example-slug-xxxxxx
+# id pattern: objects:object-<slug>-<hash6>
+id: objects:object-example-slug-xxxxxx
 name: Example Business Object
-definition: >
+type: BusinessObject
+version: 1.0.0
+object_class: example-class
+ecf_domain: product-value
+ecf_stage: operate
+lifecycle_status: active
+description: >
   The illustrative definition for a Business Object record.
-related_records:
-  - <other-namespace>:<other-level>-...-xxxxxx
+capabilities_consumed:
+  - capabilities:capability-example-7a4kqz
+processes_involved:
+  - processes:process-pv-operate-7a4kqz
+audit.author: Emmanuel A. Otchere
+audit.reviewed_by: Emmanuel A. Otchere
 ```
 
 Cross-catalog references use the org-wide id form `<namespace>:<level>-...-<hash6>`.
@@ -55,10 +66,10 @@ Cross-catalog references use the org-wide id form `<namespace>:<level>-...-<hash
 
 | Level | Count |
 | :--- | ---: |
-| L1 (Business Object) | 0 |
-| **Total** | **0** |
+| L1 (Business Object) | 8 |
+| **Total** | **8** |
 
-The catalog is empty pending Phase 2 admissions. The CI early-exit pattern in `.github/workflows/ci.yml` skips schema validation while the tree is empty.
+The first admission (CR-BO-05) landed eight seed Business Object records. The CI early-exit pattern in `.github/workflows/ci.yml` has been dropped; schema validation runs on every entry.
 
 ---
 
@@ -68,7 +79,7 @@ This catalog is protected by an automated CI pipeline with the following gates. 
 
 1. **`validate-entries`** (CI job)
    Validates every record file against `schemas/entity.schema.json` and the cell-charter contract.
-   *Why it matters:* Catches malformed records and structural drift before they reach the catalog. Currently in early-exit mode (empty tree).
+   *Why it matters:* Catches malformed records and structural drift before they reach the catalog. Live since the CR-BO-05 admission (early-exit dropped).
 
 2. **ECF Conformance Consumer** (where applicable)
    Validates that `domain` and ECF coordinate references match the canonical ECF Domain Enum (current: v2.4.x).
@@ -100,10 +111,10 @@ This catalog is protected by an automated CI pipeline with the following gates. 
 
 This directory is the source of truth for the repository's reconciliation artifacts under `reconciliation/`:
 
-* **`CATALOG.yaml`** (repo root): Automatically refreshed to reflect the current state of all entities in this tree. The CI gate runs `scripts/regenerate_catalog.py --check` and fails on any drift. Currently emits an empty (zero-entity) catalog.
+* **`CATALOG.yaml`** (repo root): Automatically refreshed to reflect the current state of all entities in this tree. The CI gate runs `scripts/regenerate_catalog.py --check` and fails on any drift. Currently emits the eight-record catalog (all canonical).
 * **`reconciliation/inventory.yaml`**: Flat inventory of every entity, indexed by id.
 * **`reconciliation/baseline/v1.yaml`**: Byte-identical, round-trip verifiable snapshot of the catalog at the last accepted baseline.
-* **`reconciliation/conformance_report.yaml`**: Last CST run output (16 CSTs, 0 warnings at HEAD).
+* **`reconciliation/conformance_report.yaml`**: Last CST run output.
 
 When modifying this directory, contributors must run the reconciliation build scripts to ensure the baseline remains consistent with the committed tree. CI enforces this.
 
@@ -134,7 +145,7 @@ To add the first record to this catalog:
 1. **Identify the record type and metadata.** Choose the canonical name, slug, and (where applicable) the ECF domain and stage the record belongs to.
 2. **File a Change Request (CR).** Create or reference an existing CR in `change-requests/` (e.g., `CR-<NS>-NN-<title>.md`).
 3. **Create the YAML.** Place the file at the correct flat-layout subtree. Compute the content-derived hash for the id. Use the org-wide id form for cross-catalog references.
-4. **Drop the early-exit.** Remove the empty-tree skip block from `.github/workflows/ci.yml` so schema validation runs on your new record.
+4. **Drop the early-exit.** ~~Remove the empty-tree skip block from `.github/workflows/ci.yml`~~ (done in CR-BO-05; keep it dropped for every subsequent admission).
 5. **Run Local Conformance.** Execute `scripts/check_id_system.py --strict` and the CST suite locally. The CI pipeline runs the same gates on every PR.
 6. **Regenerate Reconciliation Artifacts.** Run `scripts/regenerate_catalog.py --check --schema catalog-index-schema/catalog-index-schema.json`.
 7. **Submit PR.** Link the PR to the CR. The CI pipeline enforces the gates described above.

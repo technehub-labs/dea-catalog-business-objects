@@ -1,0 +1,29 @@
+id: objects:object-payment-kgsvrg
+name: Payment
+type: BusinessObject
+version: 1.0.0
+object_class: financial-instrument
+object_subclass: customer-payment
+ecf_domain: finance-accounting
+ecf_stage: operate
+current_state: active
+description: >
+  A transfer of value from a customer to the enterprise settling one or more
+  Invoices. The Payment closes the order-to-cash loop: it reduces receivables,
+  updates cash positions, and is the cash realization of the enterprise's value
+  exchange.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-financial-resource-management-cd3c7c
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-28
+    note: First admission (CR-BO-05); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-05
+      date: 2026-10-28
+      change: First admission of the record into the catalog (Phase 2 population).
+metadata:
+  seed_record: "true"

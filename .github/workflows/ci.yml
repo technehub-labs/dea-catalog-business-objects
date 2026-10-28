@@ -12,25 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Phase 2 deferred-population scaffold: skip validation when the
-      # entities/ tree is empty. See the processes-catalog PR for the
-      # full rationale and the early-exit pattern.
-      - name: Check for catalog entries
-        id: check
-        run: |
-          shopt -s nullglob globstar
-          count=0
-          for f in entities/**/*.yaml entities/**/*.json; do
-            [ -f "$f" ] && count=$((count + 1))
-          done
-          echo "count=$count" >> "$GITHUB_OUTPUT"
-          if [ "$count" -eq 0 ]; then
-            echo "No catalog entries to validate (Phase 2 not started). Skipping."
-            echo "skip=true" >> "$GITHUB_OUTPUT"
-          fi
-
+      # Phase 2 population has begun (CR-BO-05): the empty-tree early-exit
+      # is dropped and schema validation runs on every entry.
       - name: Validate catalog entries against BusinessObject schema
-        if: steps.check.outputs.skip != 'true'
         uses: dsanders11/json-schema-validate-action@v2.1.0
         with:
           schema: schemas/entity.schema.json

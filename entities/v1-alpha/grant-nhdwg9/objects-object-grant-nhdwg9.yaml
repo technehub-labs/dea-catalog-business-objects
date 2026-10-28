@@ -1,0 +1,29 @@
+id: objects:object-grant-nhdwg9
+name: Grant
+type: BusinessObject
+version: 1.0.0
+object_class: financial-instrument
+object_subclass: disbursement-grant
+ecf_domain: finance-accounting
+ecf_stage: operate
+current_state: active
+description: >
+  A non-repayable disbursement of funds by the enterprise to a recipient under
+  agreed conditions. The Grant is the outbound counterpart of the Invoice: it is
+  budgeted, awarded, disbursed, and accounted as stewardship of financial
+  resources entrusted to the enterprise.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-financial-stewardship-c7xtfk
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-28
+    note: First admission (CR-BO-05); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-05
+      date: 2026-10-28
+      change: First admission of the record into the catalog (Phase 2 population).
+metadata:
+  seed_record: "true"
