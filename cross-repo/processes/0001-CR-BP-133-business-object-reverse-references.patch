@@ -1,0 +1,187 @@
+From b23042c24a9f18d6d25e14b2afb7b9f6e1c16e06 Mon Sep 17 00:00:00 2001
+From: Vibe Nuage Agent <vibe@mistral.ai>
+Date: Wed, 28 Oct 2026 12:04:25 +0000
+Subject: [PATCH] =?UTF-8?q?feat:=20CR-BP-133=20=E2=80=94=20business-object?=
+ =?UTF-8?q?=20cross-catalog=20reverse=20references=20(CR-BO-05=20companion?=
+ =?UTF-8?q?):=20business=5Fobjects=5Finvolved[]=20on=206=20process=20recor?=
+ =?UTF-8?q?ds,=20resolution-registry=20id-form=20truth=20fix?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ ...-133-business-object-reverse-references.md | 56 +++++++++++++++++++
+ .../processes-process-eo-operate-2jnz85.yaml  |  3 +
+ .../processes-process-eo-operate-xud3hs.yaml  |  3 +
+ .../processes-process-pr-conceive-emfgju.yaml |  3 +
+ .../processes-process-pr-operate-bbe384.yaml  |  3 +
+ .../processes-process-pv-design-8v4k89.yaml   |  3 +
+ .../processes-process-pv-operate-zyguzp.yaml  |  3 +
+ reconciliation/cross-catalog-resolution.yaml  |  4 +-
+ 8 files changed, 76 insertions(+), 2 deletions(-)
+ create mode 100644 change-requests/CR-BP-133-business-object-reverse-references.md
+
+diff --git a/change-requests/CR-BP-133-business-object-reverse-references.md b/change-requests/CR-BP-133-business-object-reverse-references.md
+new file mode 100644
+index 0000000..47d3d9d
+--- /dev/null
++++ b/change-requests/CR-BP-133-business-object-reverse-references.md
+@@ -0,0 +1,56 @@
++# CR-BP-133: Business Object Cross-Catalog Reverse References (CR-BO-05 companion)
++
++> **Co-location note:** this is a cross-repo CR (companion to CR-BO-05 in
++> technehub-labs/dea-catalog-business-objects, PR #11), co-located in this
++> repo's change-requests/ by the same convention as CR-ECF-CG-004.
++
++**Status**: Proposed
++**Layer**: Cross-cutting (catalog conformance)
++**Owner**: Emmanuel A. Otchere
++**Date**: 2026-10-28
++**Depends on**: CR-BP-124 (cross-catalog resolution registry), CR-BO-05 (dea-catalog-business-objects first admission)
++**Companion to**: CR-BO-05 in technehub-labs/dea-catalog-business-objects (PR #11)
++
++---
++
++## 1. Change Request
++
++Land the processes-direction of the business-object cross-catalog relationship: the six Process records that CR-BO-05's eight Business Object records reference via `processes_involved[]` gain the inverse `business_objects_involved[]` array. The mapping provenance is exact inversion — no new semantic claims:
++
++| Process record | business_objects_involved |
++|---|---|
++| `processes:process-pr-operate-bbe384` (Manage Customer Relationship) | `objects:object-customer-2qvphc` |
++| `processes:process-pr-conceive-emfgju` (Develop Customer Strategy) | `objects:object-customer-2qvphc` |
++| `processes:process-pv-operate-zyguzp` (Operate Product Catalogue) | `objects:object-product-dkf9gb` |
++| `processes:process-pv-design-8v4k89` (Design Product and Service Propositions) | `objects:object-product-dkf9gb` |
++| `processes:process-eo-operate-xud3hs` (Run Production Line) | `objects:object-order-bpy4g4` |
++| `processes:process-eo-operate-2jnz85` (Operate Service Delivery) | `objects:object-order-bpy4g4` |
++
++Every entry resolves against dea-catalog-business-objects HEAD (its PR #11) per EGV-006 / the CR-BP-124 cross-catalog resolution registry.
++
++## 2. Cross-catalog resolution registry truth fix
++
++`reconciliation/cross-catalog-resolution.yaml` declares the `dea-catalog-business-objects` scope with `id_format: "dea:object-*"` (legacy; not yet migrated). That catalog has now landed its first admission in the org-wide id form (`objects:object-<slug>-<hash6>`, per dea-metaframework docs/id-system.md §2). The registry entry is updated:
++
++```yaml
++- scope: dea-catalog-business-objects
++  repository: technehub-labs/dea-catalog-business-objects
++  id_format: "objects:object-*"        # org-wide id form (CR-BO-05 first admission)
++  legacy_id_format: "dea:object-*"     # pre-migration family (none exist in records)
++```
++
++## 3. Field placement and schema
++
++`business_objects_involved` is inserted immediately after `process_specialization` on the six records. The Process schema (schemas/entity.schema.json) does not set top-level `additionalProperties: false`, so no schema change is required; a formal schema adoption of the field can ride a later CR-BP-CE (content enrichment) slice if the maintainers prefer it explicit.
++
++## 4. Acceptance criteria (verified locally)
++
++- AC-01 All six patched records parse and validate against `schemas/entity.schema.json` (0 errors each).
++- AC-02 Every `objects:object-*` reference resolves against dea-catalog-business-objects HEAD (PR #11).
++- AC-03 The six (process, object) pairs are the exact inverse of CR-BO-05's `processes_involved[]` edges (verified by extraction from both catalog HEADs).
++- AC-04 This catalog's own gates (`check_id_system`, `check_cr_metadata`, `check_catalog_index`) remain CONFORMANT — `objects:` references are cross-catalog and outside this repo's in-namespace IDM-003 resolution scope, by design.
++
++## 5. Out of scope
++
++- References from the remaining 3,592 process records (await business-object coverage upstream).
++- Schema-level formal adoption of `business_objects_involved` (see §3).
+diff --git a/entities/v1-alpha/eo-operate/Execution-and-Fulfilment/Operate-Service-Delivery/processes-process-eo-operate-2jnz85.yaml b/entities/v1-alpha/eo-operate/Execution-and-Fulfilment/Operate-Service-Delivery/processes-process-eo-operate-2jnz85.yaml
+index 9a9bd3c..e84ed7e 100644
+--- a/entities/v1-alpha/eo-operate/Execution-and-Fulfilment/Operate-Service-Delivery/processes-process-eo-operate-2jnz85.yaml
++++ b/entities/v1-alpha/eo-operate/Execution-and-Fulfilment/Operate-Service-Delivery/processes-process-eo-operate-2jnz85.yaml
+@@ -25,6 +25,9 @@ owner:
+   review_due: '2026-12-31'
+   decision_right: Business Process Owner (GOV-002) confirms
+ process_specialization: []
++business_objects_involved:
++  # CR-BP-133: cross-catalog business-object references (companion to dea-catalog-business-objects CR-BO-05); every entry resolves against that catalog's canonical records (EGV-006).
++  - objects:object-order-bpy4g4
+ description: 'Operate the Operate Service Delivery L2 process within the dea:pc-oe-operate Cell Charter. See trigger and outcome for the bounded work this process owns; see identity.outcome_statement for the testable outcome the process produces. '
+ trigger: 'Service delivery operation is needed because the built execution engine is now in active operation and requires steady-state production, delivery, logistics, technology platform, facility, and procurement operation. '
+ outcome: 'Service delivery is operated with production lines run to plan, logistics and inventory operated, and technology platforms and facilities maintained. '
+diff --git a/entities/v1-alpha/eo-operate/Execution-and-Fulfilment/Run-Production-Line/processes-process-eo-operate-xud3hs.yaml b/entities/v1-alpha/eo-operate/Execution-and-Fulfilment/Run-Production-Line/processes-process-eo-operate-xud3hs.yaml
+index 681305d..e98593f 100644
+--- a/entities/v1-alpha/eo-operate/Execution-and-Fulfilment/Run-Production-Line/processes-process-eo-operate-xud3hs.yaml
++++ b/entities/v1-alpha/eo-operate/Execution-and-Fulfilment/Run-Production-Line/processes-process-eo-operate-xud3hs.yaml
+@@ -25,6 +25,9 @@ owner:
+   review_due: '2026-12-31'
+   decision_right: Business Process Owner (GOV-002) confirms
+ process_specialization: []
++business_objects_involved:
++  # CR-BP-133: cross-catalog business-object references (companion to dea-catalog-business-objects CR-BO-05); every entry resolves against that catalog's canonical records (EGV-006).
++  - objects:object-order-bpy4g4
+ description: 'Operate the Run Production Line L2 process within the dea:pc-oe-operate Cell Charter. See trigger and outcome for the bounded work this process owns; see identity.outcome_statement for the testable outcome the process produces. '
+ trigger: 'Production line operation is needed because the stood-up line must produce output to plan on each cycle. '
+ outcome: 'The production line is run to plan with output and quality recorded. '
+diff --git a/entities/v1-alpha/pr-conceive/Customer-Strategy-Conception/Develop-Customer-Strategy/processes-process-pr-conceive-emfgju.yaml b/entities/v1-alpha/pr-conceive/Customer-Strategy-Conception/Develop-Customer-Strategy/processes-process-pr-conceive-emfgju.yaml
+index f401ed2..0303a97 100644
+--- a/entities/v1-alpha/pr-conceive/Customer-Strategy-Conception/Develop-Customer-Strategy/processes-process-pr-conceive-emfgju.yaml
++++ b/entities/v1-alpha/pr-conceive/Customer-Strategy-Conception/Develop-Customer-Strategy/processes-process-pr-conceive-emfgju.yaml
+@@ -25,6 +25,9 @@ owner:
+   review_due: '2026-12-31'
+   decision_right: Business Process Owner (GOV-002) confirms
+ process_specialization: []
++business_objects_involved:
++  # CR-BP-133: cross-catalog business-object references (companion to dea-catalog-business-objects CR-BO-05); every entry resolves against that catalog's canonical records (EGV-006).
++  - objects:object-customer-2qvphc
+ description: 'Operate the Develop Customer Strategy L2 process within the
+ 
+   dea:pc-pr-c Cell Charter. See trigger and outcome for
+diff --git a/entities/v1-alpha/pr-operate/Customer-Lifecycle-Management/Manage-Customer-Relationship/processes-process-pr-operate-bbe384.yaml b/entities/v1-alpha/pr-operate/Customer-Lifecycle-Management/Manage-Customer-Relationship/processes-process-pr-operate-bbe384.yaml
+index 6a14f20..e21b9d8 100644
+--- a/entities/v1-alpha/pr-operate/Customer-Lifecycle-Management/Manage-Customer-Relationship/processes-process-pr-operate-bbe384.yaml
++++ b/entities/v1-alpha/pr-operate/Customer-Lifecycle-Management/Manage-Customer-Relationship/processes-process-pr-operate-bbe384.yaml
+@@ -25,6 +25,9 @@ owner:
+   review_due: '2026-12-31'
+   decision_right: Business Process Owner (GOV-002) confirms
+ process_specialization: []
++business_objects_involved:
++  # CR-BP-133: cross-catalog business-object references (companion to dea-catalog-business-objects CR-BO-05); every entry resolves against that catalog's canonical records (EGV-006).
++  - objects:object-customer-2qvphc
+ description: 'Manage the day-to-day operation of an active customer
+ 
+   relationship across its lifecycle (acquisition → onboarding
+diff --git a/entities/v1-alpha/pv-design/Proposition-Design/Design-Product-and-Service-Propositions/processes-process-pv-design-8v4k89.yaml b/entities/v1-alpha/pv-design/Proposition-Design/Design-Product-and-Service-Propositions/processes-process-pv-design-8v4k89.yaml
+index 5e74d0c..99a76a2 100644
+--- a/entities/v1-alpha/pv-design/Proposition-Design/Design-Product-and-Service-Propositions/processes-process-pv-design-8v4k89.yaml
++++ b/entities/v1-alpha/pv-design/Proposition-Design/Design-Product-and-Service-Propositions/processes-process-pv-design-8v4k89.yaml
+@@ -25,6 +25,9 @@ owner:
+   review_due: '2026-12-31'
+   decision_right: Business Process Owner (GOV-002) confirms
+ process_specialization: []
++business_objects_involved:
++  # CR-BP-133: cross-catalog business-object references (companion to dea-catalog-business-objects CR-BO-05); every entry resolves against that catalog's canonical records (EGV-006).
++  - objects:object-product-dkf9gb
+ description: 'Operate the Design Product and Service Propositions L2 process within the dea:pc-pv-design Cell Charter. See trigger and outcome for the bounded work this process owns; see identity.outcome_statement for the testable outcome the process produces. '
+ trigger: 'A product or service proposition design is needed because the framed value proposition thesis requires bounded proposition architecture, packaging and configuration, and innovation experiment designs. '
+ outcome: 'Product and service propositions are designed with bounded architecture, packaging, and configuration. '
+diff --git a/entities/v1-alpha/pv-operate/Portfolio-Management-Operation/Operate-Product-Catalogue/processes-process-pv-operate-zyguzp.yaml b/entities/v1-alpha/pv-operate/Portfolio-Management-Operation/Operate-Product-Catalogue/processes-process-pv-operate-zyguzp.yaml
+index cae4452..1fb57ff 100644
+--- a/entities/v1-alpha/pv-operate/Portfolio-Management-Operation/Operate-Product-Catalogue/processes-process-pv-operate-zyguzp.yaml
++++ b/entities/v1-alpha/pv-operate/Portfolio-Management-Operation/Operate-Product-Catalogue/processes-process-pv-operate-zyguzp.yaml
+@@ -25,6 +25,9 @@ owner:
+   review_due: '2026-12-31'
+   decision_right: Business Process Owner (GOV-002) confirms
+ process_specialization: []
++business_objects_involved:
++  # CR-BP-133: cross-catalog business-object references (companion to dea-catalog-business-objects CR-BO-05); every entry resolves against that catalog's canonical records (EGV-006).
++  - objects:object-product-dkf9gb
+ description: 'Operate the Operate Product Catalogue L2 process within the dea:pc-pv-operate Cell Charter. See trigger and outcome for the bounded work this process owns; see identity.outcome_statement for the testable outcome the process produces. '
+ trigger: 'Product catalogue operation is needed because the developed products are now in active operation and require steady-state catalogue, portfolio performance, and proposition lifecycle management. '
+ outcome: 'Product catalogue is operated with bounded portfolio performance and proposition lifecycle management. '
+diff --git a/reconciliation/cross-catalog-resolution.yaml b/reconciliation/cross-catalog-resolution.yaml
+index aea60ac..3ed1426 100644
+--- a/reconciliation/cross-catalog-resolution.yaml
++++ b/reconciliation/cross-catalog-resolution.yaml
+@@ -29,8 +29,8 @@ catalogs:
+ 
+   - scope: dea-catalog-business-objects
+     repository: technehub-labs/dea-catalog-business-objects
+-    id_format: "dea:object-*"  # legacy; not yet migrated
+-    legacy_id_format: "dea:object-*"
++    id_format: "objects:object-*"  # org-wide id form (CR-BO-05 first admission; CR-BP-133 registry truth fix)
++    legacy_id_format: "dea:object-*"  # pre-migration family; no legacy ids exist in records
+     relationship_types:
+       composes: []
+       realizes: []
+-- 
+2.47.3
+

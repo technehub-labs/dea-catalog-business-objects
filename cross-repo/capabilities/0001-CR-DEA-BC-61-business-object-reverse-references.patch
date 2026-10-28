@@ -1,0 +1,320 @@
+From 94a0570e397c00b98bae48e122a4b6da3b9ba999 Mon Sep 17 00:00:00 2001
+From: Vibe Nuage Agent <vibe@mistral.ai>
+Date: Wed, 28 Oct 2026 11:56:33 +0000
+Subject: [PATCH] =?UTF-8?q?feat:=20CR-DEA-BC-61=20=E2=80=94=20business-obj?=
+ =?UTF-8?q?ect=20cross-catalog=20reverse=20references=20(CR-BO-05=20compan?=
+ =?UTF-8?q?ion):=20id-typed=20business=5Fobject=5Frefs[]=20on=209=20capabi?=
+ =?UTF-8?q?lities,=20register=20refresh?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ CATALOG.yaml                                  | 10 ++--
+ CHANGELOG.md                                  |  4 ++
+ ...C-61-business-object-reverse-references.md | 56 +++++++++++++++++++
+ change-requests/README.md                     |  1 +
+ ...capability-customer-management-f3n8wb.yaml |  2 +
+ ...-financial-resource-management-cd3c7c.yaml |  3 +
+ ...pability-financial-stewardship-c7xtfk.yaml |  3 +
+ ...bility-legal-matter-management-zzbd2u.yaml |  2 +
+ ...abilities-capability-marketing-xmc539.yaml |  2 +
+ ...capability-offering-management-6egkc8.yaml |  2 +
+ ...pability-operations-management-pm3w8k.yaml |  2 +
+ ...pability-technology-enablement-y6nkws.yaml |  2 +
+ ...pability-technology-management-maus5n.yaml |  2 +
+ ...siness-object-reconciliation-register.yaml |  4 +-
+ schemas/entity.schema.json                    |  5 ++
+ 15 files changed, 93 insertions(+), 7 deletions(-)
+ create mode 100644 change-requests/CR-DEA-BC-61-business-object-reverse-references.md
+
+diff --git a/CATALOG.yaml b/CATALOG.yaml
+index 0dea6f7..e7314a9 100644
+--- a/CATALOG.yaml
++++ b/CATALOG.yaml
+@@ -4,7 +4,7 @@ catalog:
+     candidates: 32
+     canonical: 0
+     entities: 32
+-    open_change_requests: 0
++    open_change_requests: 1
+     research_files: 2
+     retired: 0
+   cross_cutting:
+@@ -20,7 +20,7 @@ catalog:
+   - candidate_count: 1
+     canonical_count: 0
+     id: capabilities:candidate-epm-5fxren
+-    last_modified: '2026-10-14'
++    last_modified: '2026-10-28'
+     lifecycle_status: candidate
+     path: entities/v1-alpha/epm-5fxren/candidates/epm.yaml
+     research_count: 0
+@@ -31,7 +31,7 @@ catalog:
+   - candidate_count: 1
+     canonical_count: 0
+     id: capabilities:candidate-orgdesign-a7s8bf
+-    last_modified: '2026-10-14'
++    last_modified: '2026-10-28'
+     lifecycle_status: candidate
+     path: entities/v1-alpha/orgdesign-a7s8bf/candidates/orgdesign.yaml
+     research_count: 0
+@@ -42,7 +42,7 @@ catalog:
+   - candidate_count: 1
+     canonical_count: 0
+     id: capabilities:candidate-relmgmt-nu73v9
+-    last_modified: '2026-10-14'
++    last_modified: '2026-10-28'
+     lifecycle_status: candidate
+     path: entities/v1-alpha/relmgmt-nu73v9/candidates/relmgmt.yaml
+     research_count: 0
+@@ -373,7 +373,7 @@ catalog:
+   metamodel_version: 1.0.0
+   name: Business Capability
+   owner: TechNeHub Labs
+-  repository: https://github.com/technehub-labs/dea-catalog-business-capabilities.git
++  repository: https://github.com/technehub-labs/dea-catalog-business-capabilities
+   research_registers:
+   - entity_id: capabilities:candidate-epm-5fxren
+     files: []
+diff --git a/CHANGELOG.md b/CHANGELOG.md
+index e7ef2f1..5ccfa05 100644
+--- a/CHANGELOG.md
++++ b/CHANGELOG.md
+@@ -19,6 +19,10 @@ release-cut procedure (gated by the pre-release CI verification contract;
+ GPG-signed; documented in the prior-cut history table).
+ ## [Unreleased]
+ 
++### CR-DEA-BC-61: Business Object Cross-Catalog Reverse References (CR-BO-05 companion)
++
++The upstream business-objects catalog's first admission (CR-BO-05, dea-catalog-business-objects PR #11 — 8 canonical records in the org-wide `objects:object-*` id form) unblocks CR-DEA-BC-58's U-1 disposition. This CR lands the reverse direction: the schema gains an optional id-typed `business_object_refs[]` (org-wide pattern, EGV-006 resolution contract), populated on the 9 capabilities that CR-BO-05 references via `capabilities_consumed[]` — exact inverse edges, no new semantic claims. The CR-DEA-BC-58 register's upstream status is refreshed; the legacy free-text `business_object` labels stay verbatim (register surface). All gates re-verified: schema 29/29, IDM, relationship integrity, entity system, authorship, CR-index, catalog index.
++
+ ### CR-DEA-BC-60: Business Capability Enrichment Tranche Closure
+ 
+ Completion tranche Batch C — the closure assessment. `docs/BUSINESS-CAPABILITY-ENRICHMENT-CLOSURE-REPORT.md` reconciles all nineteen workstreams (BC-41..59, PRs #94–#112) with per-CR evidence, maintains the residual-work register RES-1..RES-9 (each with impact, classification, owner, next action, and closure condition — typed-relationship population open by evidence policy; realization deferred on the upstream processes gap; U-1/U-2 blocked on empty/absent upstream catalogs; two compound business_object values pending review; naming advisories; CI-hygiene deferral; reciprocity observation), and states ten separate programme conclusions without any composite score. The integrity report was regenerated at the assessed revision (15/15 automated dimensions pass). Release-readiness decision record `docs/reports/RELEASE-READINESS-RRR-2026-01.md`: **Ready** under the CR-52 criteria at the evaluated revision — explicitly an assessment artifact: no release, tag, or publication is declared or performed (the release-cut procedure owns that decision). Programme verdict: the documentation-and-governance programme complete; the enrichment programme **conditionally complete with explicit residuals**.
+diff --git a/change-requests/CR-DEA-BC-61-business-object-reverse-references.md b/change-requests/CR-DEA-BC-61-business-object-reverse-references.md
+new file mode 100644
+index 0000000..3b942d8
+--- /dev/null
++++ b/change-requests/CR-DEA-BC-61-business-object-reverse-references.md
+@@ -0,0 +1,56 @@
++# CR-DEA-BC-61: Business Object Cross-Catalog Reverse References (CR-BO-05 companion)
++
++| Field | Value |
++|-------|-------|
++| **CR** | CR-DEA-BC-61 |
++| **Title** | Business Object Cross-Catalog Reverse References (CR-BO-05 companion) |
++| **Status** | Proposed (this PR) |
++| **Layer** | Cross-cutting (catalog conformance) |
++| **Owner** | Emmanuel A. Otchere |
++| **Date** | 2026-10-28 |
++| **Depends on** | CR-DEA-BC-58 (business-object reconciliation register; blocked upstream), CR-BO-05 (dea-catalog-business-objects first admission) |
++| **Companion to** | CR-BO-05 in technehub-labs/dea-catalog-business-objects (PR #11) |
++
++## 1. Purpose
++
++CR-DEA-BC-58 established the business-object reconciliation register with disposition `U-1 blocked upstream`: the business-objects catalog was a Wave-3 scaffold with 0 entities, so the register's free-text `business_object` labels had no canonical targets to resolve against. CR-BO-05 (companion PR, technehub-labs/dea-catalog-business-objects #11) has now landed the first eight canonical Business Object records in the org-wide id form (`objects:object-<slug>-<hash6>`), each carrying `capabilities_consumed[]` references into this catalog. This CR lands the reverse direction: resolved, id-typed references from this catalog's capability records into the business-objects catalog, completing the cross-catalog relationship both ways per EGV-006 (references SHALL resolve to valid entities within the declared identity scope).
++
++## 2. Changes
++
++### 2.1 Schema: `business_object_refs[]`
++
++`schemas/entity.schema.json` gains an optional `business_object_refs` array (items constrained to `^objects:object-[a-z0-9-]+-[a-z2-9]{6}$`). It is a companion to — not a replacement for — the legacy free-text `business_object` label, which stays verbatim (its prose values are part of the METHODOLOGY.md §4 Object Focus evidence and are tracked separately by the CR-DEA-BC-58 register). Populating it on a record asserts that every entry resolves against a canonical record in technehub-labs/dea-catalog-business-objects.
++
++### 2.2 Record population (9 capabilities)
++
++The nine capabilities whose records CR-BO-05 references via `capabilities_consumed[]` gain the inverse `business_object_refs[]`:
++
++| Capability | business_object_refs |
++|---|---|
++| Customer Management | `objects:object-customer-2qvphc` |
++| Financial Resource Management | `objects:object-invoice-z3fwgb`, `objects:object-payment-kgsvrg` |
++| Financial Stewardship | `objects:object-grant-nhdwg9`, `objects:object-invoice-z3fwgb` |
++| Legal Matter Management | `objects:object-contract-w24y9z` |
++| Marketing | `objects:object-product-dkf9gb` |
++| Offering Management | `objects:object-product-dkf9gb` |
++| Operations Management | `objects:object-order-bpy4g4` |
++| Technology Enablement | `objects:object-feature-flag-p5gzf7` |
++| Technology Management | `objects:object-feature-flag-p5gzf7` |
++
++Mapping provenance: the nine (capability, object) pairs are exactly the inverse of the `capabilities_consumed[]` edges asserted by the eight CR-BO-05 records at that catalog's HEAD; no new semantic claims are introduced.
++
++### 2.3 Reconciliation register refresh
++
++`reconciliation/business-object-reconciliation-register.yaml`: `upstream_status` updated to the post-CR-BO-05 state (8 canonical records, org-wide id form); the disposition moves from `U-1 blocked upstream` to a partially-resolvable state — the register's free-text values with canonical targets (Customer, Product) gain resolvable mappings via the new field; the remainder stay as descriptive values pending further upstream admissions (Invoice, Payment, Contract, Grant, Order, Feature Flag do not match any register value verbatim and are not force-mapped).
++
++## 3. Acceptance criteria (verified locally)
++
++- AC-01 All 29 capability records validate against the patched `schemas/entity.schema.json` (0 failures).
++- AC-02 `business_object_refs` present on exactly the 9 records listed in §2.2; every entry matches the org-wide id pattern and resolves against dea-catalog-business-objects HEAD (PR #11).
++- AC-03 The nine (capability, object) pairs are the exact inverse of CR-BO-05's `capabilities_consumed[]` edges (verified by extraction from both catalog HEADs).
++- AC-04 This catalog's existing gates (`check_id_system`, `check_relationship_integrity`, `check_entity_system`, `check_authorship`) remain CONFORMANT — `objects:` references are cross-catalog and outside this repo's IDM-003 in-namespace resolution scope, by design.
++
++## 4. Out of scope
++
++- Rewriting the legacy free-text `business_object` labels (CR-DEA-BC-58's register governs those; semantic review at further upstream admissions).
++- References from the remaining 19 capabilities whose `business_object` labels have no canonical upstream target yet.
+diff --git a/change-requests/README.md b/change-requests/README.md
+index 129d4e1..008ef91 100644
+--- a/change-requests/README.md
++++ b/change-requests/README.md
+@@ -10,6 +10,7 @@ Change requests for the Business Capability catalog. CRs land verbatim on accept
+ 
+ | CR | Title | Status | Landed | Notes |
+ |---|---|---|---|---|
++| [CR-DEA-BC-61](CR-DEA-BC-61-business-object-reverse-references.md) | Business Object Cross-Catalog Reverse References (CR-BO-05 companion) | Proposed | PR (this PR) (2026-10-28) | Companion to CR-BO-05 in dea-catalog-business-objects (PR #11): its first admission (8 canonical records, org-wide `objects:object-*` ids) unblocks the U-1 register disposition. Schema gains optional id-typed `business_object_refs[]` (org-wide id pattern); populated on the 9 capabilities CR-BO-05 references via `capabilities_consumed[]` — exact inverse edges, no new semantic claims. CR-DEA-BC-58 register refresh: upstream 0-entity status replaced with post-admission state; free-text labels stay verbatim (register surface, semantic review continues). Legacy free-text `business_object` untouched. |
+ | [CR-DEA-BC-58](CR-DEA-BC-58-business-object-identity-reconciliation.md) | Cross-Catalog Business Object Identity Reconciliation | Landed | PR (this PR) (2026-10-28) | Completion tranche, Batch B step 2. Upstream inspection (GitHub API): `dea-catalog-business-objects` is an empty Wave 3 scaffold (0 entities) — its identity contract is unexercised, and this CR may not define it on the catalog's behalf. **U-1 disposition: blocked upstream.** All 28 distinct `business_object` values reconciled (register: `reconciliation/business-object-reconciliation-register.yaml`): 26 single descriptive values retained; 2 compound expressions (`Asset/Information`, `Market/Customer`) flagged for semantic review at the upstream catalog's first admissions. Reference strategy recommended-but-deferred (typed ref + retained label; compounds by review). No migration. |
+ | [CR-DEA-BC-60](CR-DEA-BC-60-enrichment-tranche-closure.md) | Business Capability Enrichment Tranche Closure | Landed | PR (this PR) (2026-10-28) | Completion tranche, Batch C — closure assessment against the landed state (BC-41..59, PRs #94-#112). Workstream table with evidence per CR; residual-work register RES-1..RES-9 (typed-relationship population open; realization deferred upstream; U-1/U-2 blocked with named blockers; compound business_objects; naming advisories; CI-hygiene deferral; reciprocity observation) each with impact/class/owner/next-action/closure-condition; ten separate programme conclusions — no composite score. Integrity report regenerated at the assessed revision (15/15). Release-readiness decision record RRR-2026-01: **Ready** on the CR-52 criteria — assessment evidence only, no release/tag/publication performed. **Programme verdict: conditionally complete with explicit residuals.** |
+ | [CR-DEA-BC-57](CR-DEA-BC-57-realization-population.md) | Evidence-Led Realization Reference Population | Landed | PR (this PR) (2026-10-28) | Completion tranche, Batch B step 3. **Documented zero-population disposition**: the upstream evidence base (the processes catalog's `realizes` + `identity_scope` contract, 3,598 records @ `5b95ae56`) contains exactly **one** exemplar assertion, whose target is a legacy id predating both id migrations and not resolving against this catalog; mapping it by name similarity would be the inference the CR forbids. Zero records populated; deferral recorded with the named upstream gap (realizes coverage at scale + target-id alignment — a processes-repo coordination item). Report: `docs/REALIZATION-POPULATION-REPORT.md` (outcome classes per §3.4; all deferrals honest). |
+diff --git a/entities/v1-alpha/customer-management-f3n8wb/capabilities-capability-customer-management-f3n8wb.yaml b/entities/v1-alpha/customer-management-f3n8wb/capabilities-capability-customer-management-f3n8wb.yaml
+index e6285ec..bc23033 100644
+--- a/entities/v1-alpha/customer-management-f3n8wb/capabilities-capability-customer-management-f3n8wb.yaml
++++ b/entities/v1-alpha/customer-management-f3n8wb/capabilities-capability-customer-management-f3n8wb.yaml
+@@ -11,6 +11,8 @@ purpose: "The enterprise requires Customer Management so its relationships with
+ outcome: A known, managed customer base whose lifecycle is deliberate rather than
+   accidental.
+ business_object: Customer
++business_object_refs:
++  - objects:object-customer-2qvphc
+ ecf:
+   primary:
+     domain: party-relationship
+diff --git a/entities/v1-alpha/financial-resource-management-cd3c7c/capabilities-capability-financial-resource-management-cd3c7c.yaml b/entities/v1-alpha/financial-resource-management-cd3c7c/capabilities-capability-financial-resource-management-cd3c7c.yaml
+index b5f0ec4..73bdff7 100644
+--- a/entities/v1-alpha/financial-resource-management-cd3c7c/capabilities-capability-financial-resource-management-cd3c7c.yaml
++++ b/entities/v1-alpha/financial-resource-management-cd3c7c/capabilities-capability-financial-resource-management-cd3c7c.yaml
+@@ -13,6 +13,9 @@ purpose: "The enterprise requires Financial Resource Management so money in the
+ outcome: Money is accounted for, budgets hold, and financial reporting is accurate
+   and timely.
+ business_object: Financial Resource
++business_object_refs:
++  - objects:object-invoice-z3fwgb
++  - objects:object-payment-kgsvrg
+ ecf:
+   primary:
+     domain: finance-accounting
+diff --git a/entities/v1-alpha/financial-stewardship-c7xtfk/capabilities-capability-financial-stewardship-c7xtfk.yaml b/entities/v1-alpha/financial-stewardship-c7xtfk/capabilities-capability-financial-stewardship-c7xtfk.yaml
+index 86e3848..34d4f18 100644
+--- a/entities/v1-alpha/financial-stewardship-c7xtfk/capabilities-capability-financial-stewardship-c7xtfk.yaml
++++ b/entities/v1-alpha/financial-stewardship-c7xtfk/capabilities-capability-financial-stewardship-c7xtfk.yaml
+@@ -11,6 +11,9 @@ purpose: "The enterprise requires Financial Stewardship so its financial positio
+ outcome: The enterprise's financial position is deliberate, funded, and answerable
+   over horizons beyond the operating cycle.
+ business_object: Financial Resource
++business_object_refs:
++  - objects:object-grant-nhdwg9
++  - objects:object-invoice-z3fwgb
+ ecf:
+   primary:
+     domain: finance-accounting
+diff --git a/entities/v1-alpha/legal-matter-management-zzbd2u/capabilities-capability-legal-matter-management-zzbd2u.yaml b/entities/v1-alpha/legal-matter-management-zzbd2u/capabilities-capability-legal-matter-management-zzbd2u.yaml
+index 4fc0eb3..2d34ec4 100644
+--- a/entities/v1-alpha/legal-matter-management-zzbd2u/capabilities-capability-legal-matter-management-zzbd2u.yaml
++++ b/entities/v1-alpha/legal-matter-management-zzbd2u/capabilities-capability-legal-matter-management-zzbd2u.yaml
+@@ -13,6 +13,8 @@ purpose: "The enterprise requires Legal Matter Management so its legal work \u20
+ outcome: The enterprise's legal matters are conducted deliberately and its legal position
+   is known.
+ business_object: Legal Matter
++business_object_refs:
++  - objects:object-contract-w24y9z
+ ecf:
+   primary:
+     domain: governance-existence
+diff --git a/entities/v1-alpha/marketing-xmc539/capabilities-capability-marketing-xmc539.yaml b/entities/v1-alpha/marketing-xmc539/capabilities-capability-marketing-xmc539.yaml
+index b768b3a..8bb398a 100644
+--- a/entities/v1-alpha/marketing-xmc539/capabilities-capability-marketing-xmc539.yaml
++++ b/entities/v1-alpha/marketing-xmc539/capabilities-capability-marketing-xmc539.yaml
+@@ -11,6 +11,8 @@ purpose: "The enterprise requires Marketing so demand for its offerings exists a
+ outcome: Demand exists and is measurable; the enterprise is known to those it intends
+   to serve.
+ business_object: Market/Customer
++business_object_refs:
++  - objects:object-product-dkf9gb
+ ecf:
+   primary:
+     domain: party-relationship
+diff --git a/entities/v1-alpha/offering-management-6egkc8/capabilities-capability-offering-management-6egkc8.yaml b/entities/v1-alpha/offering-management-6egkc8/capabilities-capability-offering-management-6egkc8.yaml
+index 837bac0..83a9181 100644
+--- a/entities/v1-alpha/offering-management-6egkc8/capabilities-capability-offering-management-6egkc8.yaml
++++ b/entities/v1-alpha/offering-management-6egkc8/capabilities-capability-offering-management-6egkc8.yaml
+@@ -10,6 +10,8 @@ capability_layer: operational
+ purpose: "The enterprise requires Offering Management so what it offers is conceived, designed, built, evolved, and retired as a deliberate, end-to-end managed portfolio."
+ outcome: A deliberate offering portfolio whose lifecycle is managed end to end.
+ business_object: Offering
++business_object_refs:
++  - objects:object-product-dkf9gb
+ ecf:
+   primary:
+     domain: product-value
+diff --git a/entities/v1-alpha/operations-management-pm3w8k/capabilities-capability-operations-management-pm3w8k.yaml b/entities/v1-alpha/operations-management-pm3w8k/capabilities-capability-operations-management-pm3w8k.yaml
+index 0303014..3812b83 100644
+--- a/entities/v1-alpha/operations-management-pm3w8k/capabilities-capability-operations-management-pm3w8k.yaml
++++ b/entities/v1-alpha/operations-management-pm3w8k/capabilities-capability-operations-management-pm3w8k.yaml
+@@ -11,6 +11,8 @@ purpose: "The enterprise requires Operations Management so day-to-day production
+ outcome: Offerings are delivered, continuously, at the quality the enterprise commits
+   to.
+ business_object: Operations
++business_object_refs:
++  - objects:object-order-bpy4g4
+ aliases:
+ - Operations
+ - Production Management
+diff --git a/entities/v1-alpha/technology-enablement-y6nkws/capabilities-capability-technology-enablement-y6nkws.yaml b/entities/v1-alpha/technology-enablement-y6nkws/capabilities-capability-technology-enablement-y6nkws.yaml
+index 40d2821..e6b8e8f 100644
+--- a/entities/v1-alpha/technology-enablement-y6nkws/capabilities-capability-technology-enablement-y6nkws.yaml
++++ b/entities/v1-alpha/technology-enablement-y6nkws/capabilities-capability-technology-enablement-y6nkws.yaml
+@@ -11,6 +11,8 @@ purpose: "The enterprise requires Technology Enablement so the technology servic
+ outcome: Technology services and platforms are reliable, available, performant, and adapted to changing
+   demand from the capabilities that depend on them.
+ business_object: Technology Service
++business_object_refs:
++  - objects:object-feature-flag-p5gzf7
+ ecf:
+   primary:
+     domain: enablement-operations
+diff --git a/entities/v1-alpha/technology-management-maus5n/capabilities-capability-technology-management-maus5n.yaml b/entities/v1-alpha/technology-management-maus5n/capabilities-capability-technology-management-maus5n.yaml
+index a94ad1c..1ac4c7a 100644
+--- a/entities/v1-alpha/technology-management-maus5n/capabilities-capability-technology-management-maus5n.yaml
++++ b/entities/v1-alpha/technology-management-maus5n/capabilities-capability-technology-management-maus5n.yaml
+@@ -9,6 +9,8 @@ capability_layer: support
+ purpose: "The enterprise requires Technology Management so its technology estate is directed, invested in, and stewarded deliberately: choices funded, lifecycle-managed, answerable to strategy."
+ outcome: Technology choices are deliberate, funded, lifecycle-managed, and answerable to strategy.
+ business_object: Technology
++business_object_refs:
++  - objects:object-feature-flag-p5gzf7
+ ecf:
+   primary:
+     domain: strategy-direction
+diff --git a/reconciliation/business-object-reconciliation-register.yaml b/reconciliation/business-object-reconciliation-register.yaml
+index a497766..7497e14 100644
+--- a/reconciliation/business-object-reconciliation-register.yaml
++++ b/reconciliation/business-object-reconciliation-register.yaml
+@@ -1,7 +1,7 @@
+ cr: CR-DEA-BC-58
+ generated: '2026-10-28'
+-upstream_status: 'dea-catalog-business-objects: Wave 3 scaffold, 0 entities (GitHub API inspection)'
+-disposition: U-1 blocked upstream
++upstream_status: 'dea-catalog-business-objects: CR-BO-05 first admission landed (8 canonical records, org-wide objects:object-* id form; PR #11)'
++disposition: U-1 partially unblocked (CR-DEA-BC-61: id-typed business_object_refs[] landed on the 9 referenced capabilities; free-text labels below remain the CR-DEA-BC-58 register surface, semantic review continues at further upstream admissions)
+ values:
+ - value: Acquisition Cycle
+   used_by:
+diff --git a/schemas/entity.schema.json b/schemas/entity.schema.json
+index d3e830e..6fa6d79 100644
+--- a/schemas/entity.schema.json
++++ b/schemas/entity.schema.json
+@@ -53,6 +53,11 @@
+       "maxLength": 200,
+       "description": "The business object or domain the ability is concerned with (Object Focus test, METHODOLOGY.md section 4)."
+     },
++    "business_object_refs": {
++      "type": "array",
++      "items": { "type": "string", "pattern": "^objects:object-[a-z0-9-]+-[a-z2-9]{6}$" },
++      "description": "CR-DEA-BC-61: resolved cross-catalog references into dea-catalog-business-objects (org-wide id form). Companion to the legacy free-text business_object label; every entry resolves against that catalog's canonical records (EGV-006)."
++    },
+     "capability_layer": {
+       "type": "string",
+       "enum": ["strategic", "operational", "support"],
+-- 
+2.47.3
+
