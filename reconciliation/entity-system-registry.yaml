@@ -10,18 +10,33 @@ envelope:
   file_globs:
     - "entities/**/*.yaml"
   type_field: type
-  # No profiles: the repo has 0 entity records. Profiles will be added
-  # per the entity-type population that follows CR-CR-BO-04. The
-  # gate is vacuously CONFORMANT under empty profiles.
-  profiles: {}
+  # CR-BO-05 registers the BusinessObject envelope profile ahead of the
+  # first admission (per the CR-ACT-07 precedent; ES-002 fires on any
+  # non-empty `type:` while `profiles: {}`).
+  profiles:
+    BusinessObject:
+      required_fields:
+        - id
+        - type
+        - name
+        - version
+        - object_class
+        - ecf_domain
+        - ecf_stage
+        - description
+        - lifecycle_status
+        - provenance
 
 # ES-001: Identity
 # Pre-migration namespace (canonical = legacy). The repo's id family
 # is the `dea:` prefix with a type-specific segment.
 identity:
   id_field: id
-  canonical_prefix: "dea:"
-  canonical_pattern: "^dea:object-[a-z0-9-]+$"
+  # Canonical = the org-wide form this repo's own IDM gate enforces
+  # (check_id_system.py IDM-001); the pre-migration `dea:` family is
+  # legacy (CR-BO-05 aligned the two gates; they previously disagreed).
+  canonical_prefix: "objects:"
+  canonical_pattern: "^objects:object-[a-z0-9-]+-[a-z2-9]{6}$"
   legacy_prefix: "dea:"
   legacy_pattern: "^dea:object-[a-z0-9-]+$"
   legacy_migration_map: "reconciliation/migration-id-map.yaml"

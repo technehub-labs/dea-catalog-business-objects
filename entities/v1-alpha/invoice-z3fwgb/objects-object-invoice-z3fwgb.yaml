@@ -1,0 +1,30 @@
+id: objects:object-invoice-z3fwgb
+name: Invoice
+type: BusinessObject
+version: 1.0.0
+object_class: financial-instrument
+object_subclass: billing-invoice
+ecf_domain: finance-accounting
+ecf_stage: operate
+current_state: active
+description: >
+  A commercial document issued by the enterprise to a customer, itemizing
+  products or services delivered and demanding payment. The Invoice is the
+  financial counterpart of the Order: it converts fulfilled commitments into
+  receivables and drives revenue recognition and collections.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-financial-resource-management-cd3c7c
+  - capabilities:capability-financial-stewardship-c7xtfk
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-28
+    note: First admission (CR-BO-05); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-05
+      date: 2026-10-28
+      change: First admission of the record into the catalog (Phase 2 population).
+metadata:
+  seed_record: "true"
