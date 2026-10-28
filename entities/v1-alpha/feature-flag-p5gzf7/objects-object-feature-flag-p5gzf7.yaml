@@ -7,6 +7,7 @@ object_subclass: release-feature-flag
 ecf_domain: enablement-operations
 ecf_stage: operate
 current_state: active
+owner: actors:actor-architect-example-rwpe9z
 description: >
   A configuration switch controlling the runtime visibility or behavior of a
   product feature. The Feature Flag decouples deployment from release:
@@ -16,6 +17,10 @@ lifecycle_status: active
 capabilities_consumed:
   - capabilities:capability-technology-enablement-y6nkws
   - capabilities:capability-technology-management-maus5n
+relationships:
+  - relationship_type: toggles
+    target_id: objects:object-product-dkf9gb
+    identity_scope: dea-catalog-business-objects
 state_history:
   - state: active
     ecf_stage: activate
@@ -26,5 +31,8 @@ provenance:
     - cr: CR-BO-05
       date: 2026-10-28
       change: First admission of the record into the catalog (Phase 2 population).
+    - cr: CR-BO-05
+      date: 2026-10-28
+      change: Enrichment pass - owner reference (actors catalog) and intra-catalog relationships[].
 metadata:
   seed_record: "true"

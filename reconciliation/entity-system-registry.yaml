@@ -41,12 +41,38 @@ identity:
   legacy_pattern: "^dea:object-[a-z0-9-]+$"
   legacy_migration_map: "reconciliation/migration-id-map.yaml"
 
-# ES-003: Relationship (empty; no entity records declare relationships)
+# ES-003: Relationship (CR-BO-05 enrichment: intra-catalog BO-to-BO
+# semantics + the owner reference into the actors catalog)
 relationships:
   field: relationships
-  canonical_types: []
+  canonical_types:
+    - places          # Customer places Order
+    - includes        # Order includes Product
+    - generates       # Order generates Invoice
+    - settled-by      # Invoice settled-by Payment
+    - governs         # Contract governs Order
+    - toggles         # Feature Flag toggles Product
   forbidden_types:
     - part-of
+  type_constraints:
+    places:
+      source_types: [BusinessObject]
+      target_identity_scopes: [dea-catalog-business-objects]
+    includes:
+      source_types: [BusinessObject]
+      target_identity_scopes: [dea-catalog-business-objects]
+    generates:
+      source_types: [BusinessObject]
+      target_identity_scopes: [dea-catalog-business-objects]
+    settled-by:
+      source_types: [BusinessObject]
+      target_identity_scopes: [dea-catalog-business-objects]
+    governs:
+      source_types: [BusinessObject]
+      target_identity_scopes: [dea-catalog-business-objects]
+    toggles:
+      source_types: [BusinessObject]
+      target_identity_scopes: [dea-catalog-business-objects]
   cross_catalog_field: identity_scope
 
 # ES-004: Lifecycle (empty; no entity records have a lifecycle state)

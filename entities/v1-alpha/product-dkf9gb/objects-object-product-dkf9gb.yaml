@@ -7,6 +7,7 @@ object_subclass: catalogue-product
 ecf_domain: product-value
 ecf_stage: operate
 current_state: active
+owner: actors:actor-architect-example-rwpe9z
 description: >
   A product or service the enterprise offers to the market. The Product carries
   the value proposition: it is designed as a proposition, built as market
@@ -29,5 +30,8 @@ provenance:
     - cr: CR-BO-05
       date: 2026-10-28
       change: First admission of the record into the catalog (Phase 2 population).
+    - cr: CR-BO-05
+      date: 2026-10-28
+      change: Enrichment pass - owner reference (actors catalog) and intra-catalog relationships[].
 metadata:
   seed_record: "true"

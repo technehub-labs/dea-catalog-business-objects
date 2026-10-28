@@ -7,6 +7,7 @@ object_subclass: sales-order
 ecf_domain: enablement-operations
 ecf_stage: operate
 current_state: active
+owner: actors:actor-architect-example-rwpe9z
 description: >
   A request from a customer for products or services, created at commitment time
   and fulfilled through the enterprise's execution and fulfilment processes. The
@@ -18,6 +19,13 @@ capabilities_consumed:
 processes_involved:
   - processes:process-eo-operate-2jnz85
   - processes:process-eo-operate-xud3hs
+relationships:
+  - relationship_type: includes
+    target_id: objects:object-product-dkf9gb
+    identity_scope: dea-catalog-business-objects
+  - relationship_type: generates
+    target_id: objects:object-invoice-z3fwgb
+    identity_scope: dea-catalog-business-objects
 state_history:
   - state: active
     ecf_stage: activate
@@ -28,5 +36,8 @@ provenance:
     - cr: CR-BO-05
       date: 2026-10-28
       change: First admission of the record into the catalog (Phase 2 population).
+    - cr: CR-BO-05
+      date: 2026-10-28
+      change: Enrichment pass - owner reference (actors catalog) and intra-catalog relationships[].
 metadata:
   seed_record: "true"

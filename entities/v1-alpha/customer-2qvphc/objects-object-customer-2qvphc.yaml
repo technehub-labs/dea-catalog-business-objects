@@ -7,6 +7,7 @@ object_subclass: customer
 ecf_domain: party-relationship
 ecf_stage: operate
 current_state: active
+owner: actors:actor-architect-example-rwpe9z
 description: >
   An external party that buys or consumes the enterprise's products and
   services. The Customer business object is the atom of the Party-and-
@@ -19,6 +20,10 @@ capabilities_consumed:
 processes_involved:
   - processes:process-pr-operate-bbe384
   - processes:process-pr-conceive-emfgju
+relationships:
+  - relationship_type: places
+    target_id: objects:object-order-bpy4g4
+    identity_scope: dea-catalog-business-objects
 state_history:
   - state: active
     ecf_stage: activate
@@ -29,5 +34,8 @@ provenance:
     - cr: CR-BO-05
       date: 2026-10-28
       change: First admission of the record into the catalog (Phase 2 population).
+    - cr: CR-BO-05
+      date: 2026-10-28
+      change: Enrichment pass - owner reference (actors catalog) and intra-catalog relationships[].
 metadata:
   seed_record: "true"

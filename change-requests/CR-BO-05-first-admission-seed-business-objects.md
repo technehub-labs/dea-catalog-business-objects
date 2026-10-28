@@ -42,7 +42,17 @@ Every structured cross-reference in `capabilities_consumed[]` and `processes_inv
 - `capabilities:*` — resolved against `dea-catalog-business-capabilities` (28 canonical records at HEAD).
 - `processes:*` — resolved against `dea-catalog-business-processes` (3,598 records at HEAD); only `processes:process-*` level ids are used.
 
-`owner` and `stakeholders[]` are deliberately left unset: `dea-catalog-actors` holds only seed/system records (no business-owner actor), and `dea-catalog-stakeholders` is an empty scaffold. Populating them would create unresolved references, which IDM-003 forbids. `events[]` and `data_entities[]` remain unset for the same reason (their catalogs are not yet bound).
+`events[]` and `data_entities[]` remain unset: their catalogs (`dea-catalog-event-streams`, `dea-catalog-data-entities`) are empty scaffolds, and populating them would create unresolved references, which IDM-003 forbids. `components_realizing[]` remains unset: `dea-catalog-business-services` is private and unreachable from this delivery context (404), so its record ids cannot be verified for resolution.
+
+### 2.2b Enrichment pass: owner + intra-catalog relationships
+
+The same CR carries a follow-on enrichment pass (per the repository owner's directive):
+
+- **`owner`** on all 8 records → `actors:actor-architect-example-rwpe9z` (the actors catalog's seed human Actor; resolvable at that catalog's HEAD).
+- **`relationships[]`** (ES-003 mechanism, all intra-catalog with `identity_scope: dea-catalog-business-objects`): Customer `places` Order; Order `includes` Product; Order `generates` Invoice; Invoice `settled-by` Payment; Contract `governs` Order; Feature Flag `toggles` Product. The six canonical types are registered in `reconciliation/entity-system-registry.yaml` under ES-003 `canonical_types` with `type_constraints` (source `BusinessObject`, targets scoped to this catalog) — `part-of` stays forbidden.
+- Each record's `provenance.change_history` gains a second CR-BO-05 entry recording the enrichment pass.
+
+Hash suffixes are unchanged (the §2.5 once-assigned-never-recomputed contract holds; only the id-embedded suffix would force reassignment).
 
 ### 2.3 Entity-system registry: BusinessObject profile + identity alignment
 
@@ -81,9 +91,11 @@ The scaffold README's illustrative id form (`objects-<level>-<slug>-<hash6>`, mi
 - AC-05 `scripts/regenerate_catalog.py --check` → clean (committed CATALOG.yaml matches regenerator output; `state: canonical` × 8).
 - AC-06 `scripts/check_catalog_index.py --strict` → CONFORMANT.
 - AC-07 Every `capabilities:*` / `processes:*` reference resolves against the sibling catalog HEADs named in §2.2.
+- AC-08 `owner` references resolve against the actors catalog HEAD (`actors:actor-architect-example-rwpe9z`).
+- AC-09 Every `relationships[].target_id` resolves in-catalog; every `relationship_type` is in the ES-003 canonical list; the ES gate stays CONFORMANT.
 
 ## 4. Out of scope
 
-- `owner` / `stakeholders[]` population (blocked on sibling catalogs; see §2.2).
-- `events[]` / `data_entities[]` population (catalogs not yet bound).
-- Reverse references from capabilities/processes records into this catalog (each sibling catalog's own CR chain).
+- `owner` populated via the actors catalog (§2.2b); `stakeholders[]` still blocked on the empty stakeholders catalog.
+- `events[]` / `data_entities[]` population (catalogs are empty scaffolds).
+- `components_realizing[]` population (services catalog is private/unreachable from this context).
