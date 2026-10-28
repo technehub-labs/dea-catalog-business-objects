@@ -1,4 +1,4 @@
-# Business Objects
+# OpenDEA Business Objects (dea-catalog-business-objects)
 
 > Real-world entities of interest to the business — the atoms that populate the ECF matrix cells.
 
