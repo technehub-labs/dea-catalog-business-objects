@@ -16,7 +16,8 @@ This README mirrors the structural template set in `technehub-labs/dea-catalog-p
 v1-alpha/
 ├── object-<slug>-<hash6>/                        # record subtree
 │   ├── objects-object-<slug>-<hash6>.yaml
-│   └── README.md
+│   ├── README.md                                 # record documentation (IDM-007)
+│   └── aspects.md                                # aspects deep-dive (documentation only)
 └── README.md
 ```
 
@@ -59,6 +60,25 @@ audit.reviewed_by: Emmanuel A. Otchere
 ```
 
 Cross-catalog references use the org-wide id form `<namespace>:<level>-...-<hash6>`.
+
+---
+
+## 📚 Documentation Index
+
+Every record subtree carries its record YAML, a `README.md` with record-level documentation (identity, definition, classification, relationships, lifecycle), and an `aspects.md` deep-dive covering the semantic, relational, lifecycle, operational, governance, and measurement aspects around the object.
+
+| Business Object | id | Class | Record docs | Aspects deep-dive |
+| --- | --- | --- | --- | --- |
+| Customer | `objects:object-customer-2qvphc` | party / customer | [README](customer-2qvphc/README.md) | [aspects](customer-2qvphc/aspects.md) |
+| Order | `objects:object-order-bpy4g4` | transaction / sales-order | [README](order-bpy4g4/README.md) | [aspects](order-bpy4g4/aspects.md) |
+| Product | `objects:object-product-dkf9gb` | offering / catalogue-product | [README](product-dkf9gb/README.md) | [aspects](product-dkf9gb/aspects.md) |
+| Invoice | `objects:object-invoice-z3fwgb` | financial-instrument / billing-invoice | [README](invoice-z3fwgb/README.md) | [aspects](invoice-z3fwgb/aspects.md) |
+| Payment | `objects:object-payment-kgsvrg` | financial-instrument / customer-payment | [README](payment-kgsvrg/README.md) | [aspects](payment-kgsvrg/aspects.md) |
+| Grant | `objects:object-grant-nhdwg9` | financial-instrument / disbursement-grant | [README](grant-nhdwg9/README.md) | [aspects](grant-nhdwg9/aspects.md) |
+| Contract | `objects:object-contract-w24y9z` | legal-instrument / commercial-contract | [README](contract-w24y9z/README.md) | [aspects](contract-w24y9z/aspects.md) |
+| Feature Flag | `objects:object-feature-flag-p5gzf7` | technology-control / release-feature-flag | [README](feature-flag-p5gzf7/README.md) | [aspects](feature-flag-p5gzf7/aspects.md) |
+
+The seed set forms a coherent mini-mesh: the **order-to-cash chain** (Customer → Order → Invoice → Payment), the **outbound money direction** (Grant), the **governance layer** above the chain (Contract), and the **runtime product control** (Product, Feature Flag).
 
 ---
 
