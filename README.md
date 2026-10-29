@@ -12,9 +12,10 @@
 
 ## What this catalog is
 
-This repository is the canonical catalog of **Business Objects (BO)** for the TechNeHub Labs Digital Enterprise Architecture (DEA) ecosystem. A Business Object is a real-world entity the business cares about — a Customer, an Order, an Invoice — and it is the atom that populates the cells of the [ECF matrix](https://github.com/technehub-labs/dea-metamodel).
+This repository is the canonical catalog of **Business Objects (BO)** for the TechNeHub Labs Digital Enterprise Architecture (DEA) ecosystem. 
+A Business Object is a real-world entity the business cares about, e.g. a Customer, an Order, an Invoice etc. In OpenDEA, it is the atom that populates the cells of the [ECF matrix](https://github.com/technehub-labs/dea-metamodel).
 
-This is one of **seven interoperable catalogs** in the DEA ecosystem. Business Objects are acted on by capabilities, created and updated by processes, persisted by data entities, and realized by solution components — all expressed as typed, content-addressed, cross-catalog references.
+This is one of **interoperable catalogs** in the OpenDEA ecosystem. Business Objects are acted on by capabilities, created and updated by processes, persisted by data entities, and realized by solution components — all expressed as typed, content-addressed, cross-catalog references.
 
 ## Status — Phase 2 population
 
