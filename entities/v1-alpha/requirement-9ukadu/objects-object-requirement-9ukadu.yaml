@@ -1,0 +1,30 @@
+id: objects:object-requirement-9ukadu
+name: Requirement
+type: BusinessObject
+version: 1.0.0
+object_class: transaction
+object_subclass: requirement
+ecf_domain: product-value
+ecf_stage: design
+current_state: active
+description: >
+  A specification of what an offering or feature must satisfy: a statement of need with acceptance criteria, traceable to its origin and to the thing that will satisfy it. The Requirement is stage-native to design — it is superseded by the built thing it specifies.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-offering-management-6egkc8
+  - capabilities:capability-technology-management-maus5n
+processes_involved:
+  - processes:process-pv-design-8v4k89
+  - processes:process-pv-design-a4c76s
+state_history:
+  - state: active
+    ecf_stage: design
+    entered: 2026-10-30
+    note: Stage-native admission (CR-BO-11, CR-BO-10 scope); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-11
+      date: 2026-10-30
+      change: Stage-native admission (first non-operate ECF cells, CR-BO-10 scope).
+metadata:
+  seed_record: "false"

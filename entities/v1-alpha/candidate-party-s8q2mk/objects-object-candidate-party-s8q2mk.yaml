@@ -1,0 +1,29 @@
+id: objects:object-candidate-party-s8q2mk
+name: Candidate
+type: BusinessObject
+version: 1.0.0
+object_class: party
+object_subclass: candidate-party
+ecf_domain: party-relationship
+ecf_stage: conceive
+current_state: active
+description: >
+  A prospective party under evaluation before it becomes a Customer, Supplier, Member, or Partner. The Candidate is stage-native to conceive — acquisition and qualification processes work it, and its outcome is conversion into a role party or rejection.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-customer-management-f3n8wb
+processes_involved:
+  - processes:process-pr-conceive-emfgju
+  - processes:process-pr-conceive-tvst8u
+state_history:
+  - state: active
+    ecf_stage: conceive
+    entered: 2026-10-30
+    note: Stage-native admission (CR-BO-11, CR-BO-10 scope); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-11
+      date: 2026-10-30
+      change: Stage-native admission (first non-operate ECF cells, CR-BO-10 scope).
+metadata:
+  seed_record: "false"

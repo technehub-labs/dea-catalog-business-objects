@@ -1,0 +1,28 @@
+id: objects:object-offboarding-plan-djz4md
+name: Offboarding Plan
+type: BusinessObject
+version: 1.0.0
+object_class: work-item
+object_subclass: offboarding-plan
+ecf_domain: party-relationship
+ecf_stage: retire
+current_state: active
+description: >
+  The managed exit of a party relationship: obligations settled, access withdrawn, data retained or erased on terms, and the relationship closed deliberately. The Offboarding Plan is stage-native to retire — it exists to make the exit orderly rather than accidental.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-customer-management-f3n8wb
+processes_involved:
+  - processes:process-pr-retire-bd3asa
+state_history:
+  - state: active
+    ecf_stage: retire
+    entered: 2026-10-30
+    note: Stage-native admission (CR-BO-11, CR-BO-10 scope); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-11
+      date: 2026-10-30
+      change: Stage-native admission (first non-operate ECF cells, CR-BO-10 scope).
+metadata:
+  seed_record: "false"

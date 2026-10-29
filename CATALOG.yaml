@@ -2,9 +2,9 @@ catalog:
   abbreviation: DEA-
   counts:
     candidates: 0
-    canonical: 49
-    entities: 49
-    open_change_requests: 4
+    canonical: 54
+    entities: 54
+    open_change_requests: 5
     research_files: 0
     retired: 0
   cross_cutting:
@@ -67,6 +67,28 @@ catalog:
     last_modified: '2026-10-29'
     lifecycle_status: active
     path: entities/v1-alpha/budget-h77u8h/objects-object-budget-h77u8h.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-business-case-et8p4e
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/business-case-et8p4e/objects-object-business-case-et8p4e.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-candidate-party-s8q2mk
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/candidate-party-s8q2mk/objects-object-candidate-party-s8q2mk.yaml
     research_count: 0
     retired_count: 0
     state: canonical
@@ -327,6 +349,17 @@ catalog:
     version: 1.0.0
   - candidate_count: 0
     canonical_count: 1
+    id: objects:object-offboarding-plan-djz4md
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/offboarding-plan-djz4md/objects-object-offboarding-plan-djz4md.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
     id: objects:object-order-bpy4g4
     last_modified: '2026-10-29'
     lifecycle_status: active
@@ -459,6 +492,17 @@ catalog:
     version: 1.0.0
   - candidate_count: 0
     canonical_count: 1
+    id: objects:object-requirement-9ukadu
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/requirement-9ukadu/objects-object-requirement-9ukadu.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
     id: objects:object-retail-store-6kzkfj
     last_modified: '2026-10-29'
     lifecycle_status: active
@@ -525,6 +569,17 @@ catalog:
     version: 1.0.0
   - candidate_count: 0
     canonical_count: 1
+    id: objects:object-sunset-plan-34225t
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/sunset-plan-34225t/objects-object-sunset-plan-34225t.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
     id: objects:object-supplier-g7m7fu
     last_modified: '2026-10-29'
     lifecycle_status: active
@@ -577,6 +632,12 @@ catalog:
   - entity_id: objects:object-budget-h77u8h
     files: []
     path: entities/v1-alpha/budget-h77u8h/research/
+  - entity_id: objects:object-business-case-et8p4e
+    files: []
+    path: entities/v1-alpha/business-case-et8p4e/research/
+  - entity_id: objects:object-candidate-party-s8q2mk
+    files: []
+    path: entities/v1-alpha/candidate-party-s8q2mk/research/
   - entity_id: objects:object-care-encounter-8enzdc
     files: []
     path: entities/v1-alpha/care-encounter-8enzdc/research/
@@ -646,6 +707,9 @@ catalog:
   - entity_id: objects:object-member-vbxqke
     files: []
     path: entities/v1-alpha/member-vbxqke/research/
+  - entity_id: objects:object-offboarding-plan-djz4md
+    files: []
+    path: entities/v1-alpha/offboarding-plan-djz4md/research/
   - entity_id: objects:object-order-bpy4g4
     files: []
     path: entities/v1-alpha/order-bpy4g4/research/
@@ -682,6 +746,9 @@ catalog:
   - entity_id: objects:object-quote-gnngfe
     files: []
     path: entities/v1-alpha/quote-gnngfe/research/
+  - entity_id: objects:object-requirement-9ukadu
+    files: []
+    path: entities/v1-alpha/requirement-9ukadu/research/
   - entity_id: objects:object-retail-store-6kzkfj
     files: []
     path: entities/v1-alpha/retail-store-6kzkfj/research/
@@ -700,6 +767,9 @@ catalog:
   - entity_id: objects:object-subscription-3v98yb
     files: []
     path: entities/v1-alpha/subscription-3v98yb/research/
+  - entity_id: objects:object-sunset-plan-34225t
+    files: []
+    path: entities/v1-alpha/sunset-plan-34225t/research/
   - entity_id: objects:object-supplier-g7m7fu
     files: []
     path: entities/v1-alpha/supplier-g7m7fu/research/
