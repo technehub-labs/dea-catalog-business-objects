@@ -1,0 +1,29 @@
+id: objects:object-configuration-item-tsn3ex
+name: Configuration Item
+type: BusinessObject
+version: 1.0.0
+object_class: technology-control
+object_subclass: configuration-item
+ecf_domain: enablement-operations
+ecf_stage: operate
+current_state: active
+description: >
+  Any component under formal change control that supports a technology service: middleware, network segments, runbooks, integrations, and the deployed artifacts not already modeled as Application or Environment. The Configuration Item is the unit of change-control traceability: a change to it is governed, recorded, and reversible, and its relationships to other items underpin impact analysis.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-technology-management-maus5n
+  - capabilities:capability-security-management-wmzc7c
+processes_involved:
+  - processes:process-eo-operate-4njp7b
+state_history:
+  - state: active
+    ecf_stage: operate
+    entered: 2026-10-30
+    note: Admission (CR-BO-14); lifecycle anchored at activation in the operate stage.
+provenance:
+  change_history:
+    - cr: CR-BO-14
+      date: 2026-10-30
+      change: Admission (improve-stage records and taxonomy-completion records, CR-BO-13/CR-BO-10 scope continuation).
+metadata:
+  seed_record: "false"

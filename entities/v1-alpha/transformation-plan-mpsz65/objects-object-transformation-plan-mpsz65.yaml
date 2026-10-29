@@ -1,0 +1,30 @@
+id: objects:object-transformation-plan-mpsz65
+name: Transformation Plan
+type: BusinessObject
+version: 1.0.0
+object_class: work-item
+object_subclass: transformation-plan
+ecf_domain: strategy-direction
+ecf_stage: operate
+current_state: active
+description: >
+  A multi-year, portfolio-level vehicle that sequences initiatives toward a strategic target state. The Transformation Plan sits between the Goal (the committed outcome) and the Projects (the executions): it converts intent into a staged roadmap with dependencies, funding phases, and checkpoints, and is steered throughout its life.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-strategic-planning-k3rz7a
+  - capabilities:capability-enterprise-performance-management-5fxren
+processes_involved:
+  - processes:process-sd-operate-u6xgu5
+  - processes:process-sd-build-7n4prh
+state_history:
+  - state: active
+    ecf_stage: operate
+    entered: 2026-10-30
+    note: Admission (CR-BO-14); lifecycle anchored at activation in the operate stage.
+provenance:
+  change_history:
+    - cr: CR-BO-14
+      date: 2026-10-30
+      change: Admission (improve-stage records and taxonomy-completion records, CR-BO-13/CR-BO-10 scope continuation).
+metadata:
+  seed_record: "false"

@@ -1,0 +1,31 @@
+id: objects:object-improvement-proposal-cwcz6m
+name: Improvement Proposal
+type: BusinessObject
+version: 1.0.0
+object_class: work-item
+object_subclass: improvement-proposal
+ecf_domain: enablement-operations
+ecf_stage: improve
+current_state: active
+description: >
+  A structured proposal to change a process, asset, or platform for the better: problem statement, options, expected benefit, and effort. The Improvement Proposal is stage-native to improve — it is the decision artifact of improvement programs, converting insight and ideas into a fundable change, and it closes into a Project or is rejected.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-idea-management-86dckf
+  - capabilities:capability-insight-management-ms4n9d
+  - capabilities:capability-operations-management-pm3w8k
+processes_involved:
+  - processes:process-eo-improve-us272s
+  - processes:process-fa-improve-emqpgr
+state_history:
+  - state: active
+    ecf_stage: improve
+    entered: 2026-10-30
+    note: Admission (CR-BO-14); lifecycle anchored at activation in the improve stage.
+provenance:
+  change_history:
+    - cr: CR-BO-14
+      date: 2026-10-30
+      change: Admission (improve-stage records and taxonomy-completion records, CR-BO-13/CR-BO-10 scope continuation).
+metadata:
+  seed_record: "false"

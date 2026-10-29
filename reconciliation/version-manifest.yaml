@@ -9,6 +9,10 @@ records:
     content_hash: bcc818bb726f2a63
     file: entities/v1-alpha/asset-w887xr/objects-object-asset-w887xr.yaml
     version: 1.0.0
+  objects:object-audit-finding-jd44zy:
+    content_hash: 2eb1a1ee5f83c816
+    file: entities/v1-alpha/audit-finding-jd44zy/objects-object-audit-finding-jd44zy.yaml
+    version: 1.0.0
   objects:object-benefit-entitlement-yx4ckm:
     content_hash: 34424d1a45938d3a
     file: entities/v1-alpha/benefit-entitlement-yx4ckm/objects-object-benefit-entitlement-yx4ckm.yaml
@@ -36,6 +40,10 @@ records:
   objects:object-citizen-2xqsse:
     content_hash: cb51fb69afa5a9d3
     file: entities/v1-alpha/citizen-2xqsse/objects-object-citizen-2xqsse.yaml
+    version: 1.0.0
+  objects:object-configuration-item-tsn3ex:
+    content_hash: 6fd03919d8e5b463
+    file: entities/v1-alpha/configuration-item-tsn3ex/objects-object-configuration-item-tsn3ex.yaml
     version: 1.0.0
   objects:object-consent-record-gacq7d:
     content_hash: f04dc22721546b30
@@ -89,6 +97,10 @@ records:
     content_hash: 8690da2722a45e34
     file: entities/v1-alpha/grant-nhdwg9/objects-object-grant-nhdwg9.yaml
     version: 1.0.0
+  objects:object-improvement-proposal-cwcz6m:
+    content_hash: 86887b40b3fd9052
+    file: entities/v1-alpha/improvement-proposal-cwcz6m/objects-object-improvement-proposal-cwcz6m.yaml
+    version: 1.0.0
   objects:object-incident-wudf9s:
     content_hash: d0f42042a9c86bbd
     file: entities/v1-alpha/incident-wudf9s/objects-object-incident-wudf9s.yaml
@@ -104,6 +116,10 @@ records:
   objects:object-journal-entry-khck7r:
     content_hash: 4f8342b85d8d5aa8
     file: entities/v1-alpha/journal-entry-khck7r/objects-object-journal-entry-khck7r.yaml
+    version: 1.0.0
+  objects:object-lessons-learned-pvcj26:
+    content_hash: 11bb1a0f024b53cd
+    file: entities/v1-alpha/lessons-learned-pvcj26/objects-object-lessons-learned-pvcj26.yaml
     version: 1.0.0
   objects:object-license-na3j53:
     content_hash: 04788722ff07e212
@@ -148,6 +164,10 @@ records:
   objects:object-payment-kgsvrg:
     content_hash: 963a4ecde1a5a9cf
     file: entities/v1-alpha/payment-kgsvrg/objects-object-payment-kgsvrg.yaml
+    version: 1.0.0
+  objects:object-performance-review-k3k7n6:
+    content_hash: 68e35552781205a8
+    file: entities/v1-alpha/performance-review-k3k7n6/objects-object-performance-review-k3k7n6.yaml
     version: 1.0.0
   objects:object-policy-nd2t4y:
     content_hash: 4c1dba20fdceeaea
@@ -232,5 +252,9 @@ records:
   objects:object-training-program-r8fpt3:
     content_hash: f84681711c15bd6f
     file: entities/v1-alpha/training-program-r8fpt3/objects-object-training-program-r8fpt3.yaml
+    version: 1.0.0
+  objects:object-transformation-plan-mpsz65:
+    content_hash: 75a9e73aa18f534c
+    file: entities/v1-alpha/transformation-plan-mpsz65/objects-object-transformation-plan-mpsz65.yaml
     version: 1.0.0
 schema: 1
