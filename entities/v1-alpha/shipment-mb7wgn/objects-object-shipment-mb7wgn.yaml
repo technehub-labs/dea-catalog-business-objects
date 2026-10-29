@@ -1,0 +1,29 @@
+id: objects:object-shipment-mb7wgn
+name: Shipment
+type: BusinessObject
+version: 1.0.0
+object_class: transaction
+object_subclass: shipment
+ecf_domain: enablement-operations
+ecf_stage: operate
+current_state: active
+description: >
+  The movement of goods from the enterprise to a customer or between enterprise locations under a fulfilment commitment. The Shipment carries the physical leg of the order-to-cash chain and is tracked by logistics and warehouse processes.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-operations-management-pm3w8k
+processes_involved:
+  - processes:process-eo-operate-zh9m57
+  - processes:process-eo-operate-zwzmbd
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-07); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-07
+      date: 2026-10-30
+      change: Wave-2 admission (T1 commercial-core extension, CR-BO-06 scope).
+metadata:
+  seed_record: "false"

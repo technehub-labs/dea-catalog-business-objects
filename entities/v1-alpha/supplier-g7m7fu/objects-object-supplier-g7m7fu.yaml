@@ -1,0 +1,30 @@
+id: objects:object-supplier-g7m7fu
+name: Supplier
+type: BusinessObject
+version: 1.0.0
+object_class: party
+object_subclass: supplier
+ecf_domain: party-relationship
+ecf_stage: operate
+current_state: active
+description: >
+  An external party that supplies goods or services to the enterprise. The Supplier is the supply-side counterpart of the Customer: sourcing, procurement, and payment processes create and update it, and supplier management capabilities act on it.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-supplier-management-d6fuj4
+  - capabilities:capability-sourcing-and-procurement-esucp4
+processes_involved:
+  - processes:process-eo-operate-vzcxx7
+  - processes:process-fa-operate-wkqaqp
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-07); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-07
+      date: 2026-10-30
+      change: Wave-2 admission (T1 commercial-core extension, CR-BO-06 scope).
+metadata:
+  seed_record: "false"

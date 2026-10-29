@@ -1,0 +1,29 @@
+id: objects:object-asset-w887xr
+name: Asset
+type: BusinessObject
+version: 1.0.0
+object_class: financial-instrument
+object_subclass: fixed-asset
+ecf_domain: finance-accounting
+ecf_stage: operate
+current_state: active
+description: >
+  A resource controlled by the enterprise from which economic benefit is expected over more than one period, carried at cost and depreciated. The Asset is the balance-sheet counterpart of operational equipment and is tracked jointly by accounting and asset-maintenance processes.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-asset-management-judtwr
+  - capabilities:capability-financial-resource-management-cd3c7c
+processes_involved:
+  - processes:process-eo-operate-j9cjzz
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-07); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-07
+      date: 2026-10-30
+      change: Wave-2 admission (T1 commercial-core extension, CR-BO-06 scope).
+metadata:
+  seed_record: "false"

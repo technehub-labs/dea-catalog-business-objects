@@ -77,8 +77,32 @@ Every record subtree carries its record YAML, a `README.md` with record-level do
 | Grant | `objects:object-grant-nhdwg9` | financial-instrument / disbursement-grant | [README](grant-nhdwg9/README.md) | [aspects](grant-nhdwg9/aspects.md) |
 | Contract | `objects:object-contract-w24y9z` | legal-instrument / commercial-contract | [README](contract-w24y9z/README.md) | [aspects](contract-w24y9z/aspects.md) |
 | Feature Flag | `objects:object-feature-flag-p5gzf7` | technology-control / release-feature-flag | [README](feature-flag-p5gzf7/README.md) | [aspects](feature-flag-p5gzf7/aspects.md) |
+| Supplier | `objects:object-supplier-g7m7fu` | party / supplier | [README](supplier-g7m7fu/README.md) | — |
+| Employee | `objects:object-employee-phbzym` | party / employee | [README](employee-phbzym/README.md) | — |
+| Partner | `objects:object-partner-cfhqx9` | party / partner | [README](partner-cfhqx9/README.md) | — |
+| Service | `objects:object-service-q8w4ce` | offering / service | [README](service-q8w4ce/README.md) | — |
+| Subscription | `objects:object-subscription-3v98yb` | offering / subscription-plan | [README](subscription-3v98yb/README.md) | — |
+| Price List | `objects:object-price-list-4bk48j` | offering / price-list | [README](price-list-4bk48j/README.md) | — |
+| Quote | `objects:object-quote-gnngfe` | transaction / sales-quote | [README](quote-gnngfe/README.md) | — |
+| Shipment | `objects:object-shipment-mb7wgn` | transaction / shipment | [README](shipment-mb7wgn/README.md) | — |
+| Return | `objects:object-return-uwz79t` | transaction / return-rma | [README](return-uwz79t/README.md) | — |
+| Purchase Order | `objects:object-purchase-order-qf4tfa` | transaction / purchase-order | [README](purchase-order-qf4tfa/README.md) | — |
+| Ticket | `objects:object-ticket-2cudww` | transaction / service-ticket | [README](ticket-2cudww/README.md) | — |
+| Journal Entry | `objects:object-journal-entry-khck7r` | financial-instrument / journal-entry | [README](journal-entry-khck7r/README.md) | — |
+| Budget | `objects:object-budget-h77u8h` | financial-instrument / budget | [README](budget-h77u8h/README.md) | — |
+| Credit Note | `objects:object-credit-note-k6nktp` | financial-instrument / credit-note | [README](credit-note-k6nktp/README.md) | — |
+| Asset | `objects:object-asset-w887xr` | financial-instrument / fixed-asset | [README](asset-w887xr/README.md) | — |
+| License | `objects:object-license-na3j53` | legal-instrument / license | [README](license-na3j53/README.md) | — |
+| Policy | `objects:object-policy-nd2t4y` | legal-instrument / policy | [README](policy-nd2t4y/README.md) | — |
+| Consent Record | `objects:object-consent-record-gacq7d` | legal-instrument / consent-record | [README](consent-record-gacq7d/README.md) | — |
+| Project | `objects:object-project-5hgzd3` | work-item / project | [README](project-5hgzd3/README.md) | — |
+| Application | `objects:object-application-eewde8` | technology-control / application | [README](application-eewde8/README.md) | — |
+| Environment | `objects:object-environment-npd5vt` | technology-control / environment | [README](environment-npd5vt/README.md) | — |
+| Incident | `objects:object-incident-wudf9s` | technology-control / service-incident | [README](incident-wudf9s/README.md) | — |
 
 The seed set forms a coherent mini-mesh: the **order-to-cash chain** (Customer → Order → Invoice → Payment), the **outbound money direction** (Grant), the **governance layer** above the chain (Contract), and the **runtime product control** (Product, Feature Flag).
+
+The wave-2 T1 set (CR-BO-07) extends each seeded area of the mesh: the **party roster** (Supplier, Employee, Partner around Customer), the **offering space** (Service, Subscription, Price List around Product), the **transaction spine** (Quote → Order → Shipment → Return; Purchase Order; Ticket), the **finance core** (Journal Entry, Budget, Credit Note, Asset around Invoice/Payment/Grant), the **legal layer** (License, Policy, Consent Record around Contract), the **work layer** (Project), and the **technology footprint** (Application, Environment, Incident around Feature Flag). Aspects deep-dives for wave-2 records are a follow-up documentation wave.
 
 ---
 
@@ -86,10 +110,10 @@ The seed set forms a coherent mini-mesh: the **order-to-cash chain** (Customer �
 
 | Level | Count |
 | :--- | ---: |
-| L1 (Business Object) | 8 |
-| **Total** | **8** |
+| L1 (Business Object) | 30 |
+| **Total** | **30** |
 
-The first admission (CR-BO-05) landed eight seed Business Object records. The CI early-exit pattern in `.github/workflows/ci.yml` has been dropped; schema validation runs on every entry.
+The first admission (CR-BO-05) landed eight seed Business Object records; the second admission (CR-BO-07) landed the wave-2 T1 commercial-core extension (22 records). The CI early-exit pattern in `.github/workflows/ci.yml` has been dropped; schema validation runs on every entry.
 
 ---
 

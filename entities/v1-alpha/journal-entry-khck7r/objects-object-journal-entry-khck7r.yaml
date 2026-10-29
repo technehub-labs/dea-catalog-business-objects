@@ -1,0 +1,29 @@
+id: objects:object-journal-entry-khck7r
+name: Journal Entry
+type: BusinessObject
+version: 1.0.0
+object_class: financial-instrument
+object_subclass: journal-entry
+ecf_domain: finance-accounting
+ecf_stage: operate
+current_state: active
+description: >
+  The atomic recording of a debit and credit against ledger accounts that together keep the books balanced. The Journal Entry is the unit of accounting truth: every Invoice, Payment, and payroll run lands in the ledger as journal entries posted through the close.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-financial-resource-management-cd3c7c
+processes_involved:
+  - processes:process-fa-operate-g9zpnq
+  - processes:process-fa-operate-4xn4d6
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-07); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-07
+      date: 2026-10-30
+      change: Wave-2 admission (T1 commercial-core extension, CR-BO-06 scope).
+metadata:
+  seed_record: "false"

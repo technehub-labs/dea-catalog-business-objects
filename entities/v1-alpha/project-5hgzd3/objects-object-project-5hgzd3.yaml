@@ -1,0 +1,29 @@
+id: objects:object-project-5hgzd3
+name: Project
+type: BusinessObject
+version: 1.0.0
+object_class: work-item
+object_subclass: project
+ecf_domain: agency-organization
+ecf_stage: operate
+current_state: active
+description: >
+  A temporary endeavor undertaken by the enterprise to create a change within constraints of scope, time, and resources. The Project is the delivery vehicle of choice for non-routine work: it is chartered, planned, executed, and closed, and it consumes resources the permanent organization provides.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-enterprise-performance-management-5fxren
+  - capabilities:capability-strategic-planning-k3rz7a
+processes_involved:
+  - processes:process-sd-operate-u6xgu5
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-07); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-07
+      date: 2026-10-30
+      change: Wave-2 admission (T1 commercial-core extension, CR-BO-06 scope).
+metadata:
+  seed_record: "false"

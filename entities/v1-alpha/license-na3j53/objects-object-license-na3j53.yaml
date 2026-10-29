@@ -1,0 +1,27 @@
+id: objects:object-license-na3j53
+name: License
+type: BusinessObject
+version: 1.0.0
+object_class: legal-instrument
+object_subclass: license
+ecf_domain: governance-existence
+ecf_stage: operate
+current_state: active
+description: >
+  A granted legal permission under which the enterprise may conduct an activity it could not otherwise conduct. The License is granted by an external authority, expires or renews on terms, and its loss can constrain the enterprise's ability to operate.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-legal-matter-management-zzbd2u
+  - capabilities:capability-regulation-management-gya4d8
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-07); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-07
+      date: 2026-10-30
+      change: Wave-2 admission (T1 commercial-core extension, CR-BO-06 scope).
+metadata:
+  seed_record: "false"

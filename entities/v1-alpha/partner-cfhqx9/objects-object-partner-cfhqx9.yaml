@@ -1,0 +1,26 @@
+id: objects:object-partner-cfhqx9
+name: Partner
+type: BusinessObject
+version: 1.0.0
+object_class: party
+object_subclass: partner
+ecf_domain: party-relationship
+ecf_stage: operate
+current_state: active
+description: >
+  An external party that collaborates with the enterprise in a joint value arrangement that is neither purely demand-side nor purely supply-side. Partner lifecycle and joint-operation processes create and update it, and partner management capabilities act on it.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-partner-management-cp3vdb
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-07); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-07
+      date: 2026-10-30
+      change: Wave-2 admission (T1 commercial-core extension, CR-BO-06 scope).
+metadata:
+  seed_record: "false"

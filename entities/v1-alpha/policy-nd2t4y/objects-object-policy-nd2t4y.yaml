@@ -1,0 +1,29 @@
+id: objects:object-policy-nd2t4y
+name: Policy
+type: BusinessObject
+version: 1.0.0
+object_class: legal-instrument
+object_subclass: policy
+ecf_domain: governance-existence
+ecf_stage: operate
+current_state: active
+description: >
+  A deliberate statement of the enterprise's chosen position on a matter, binding on those it covers. The Policy is the enterprise governing itself: policies are adopted, communicated, and their compliance is audited, and they bound the decisions the enterprise may take.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-enterprise-governance-uas48u
+  - capabilities:capability-regulation-management-gya4d8
+processes_involved:
+  - processes:process-ge-operate-hxxyc9
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-07); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-07
+      date: 2026-10-30
+      change: Wave-2 admission (T1 commercial-core extension, CR-BO-06 scope).
+metadata:
+  seed_record: "false"

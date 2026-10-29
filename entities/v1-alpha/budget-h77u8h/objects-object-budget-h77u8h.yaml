@@ -1,0 +1,29 @@
+id: objects:object-budget-h77u8h
+name: Budget
+type: BusinessObject
+version: 1.0.0
+object_class: financial-instrument
+object_subclass: budget
+ecf_domain: finance-accounting
+ecf_stage: operate
+current_state: active
+description: >
+  The approved allocation of financial resources to purposes over a period. The Budget is the spending authority against which actuals are planned, committed, monitored, and controlled, and it bounds the disbursement instruments (Invoice, Payment, Grant) that execute against it.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-financial-resource-management-cd3c7c
+  - capabilities:capability-financial-stewardship-c7xtfk
+processes_involved:
+  - processes:process-fa-operate-2pmqb2
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-07); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-07
+      date: 2026-10-30
+      change: Wave-2 admission (T1 commercial-core extension, CR-BO-06 scope).
+metadata:
+  seed_record: "false"

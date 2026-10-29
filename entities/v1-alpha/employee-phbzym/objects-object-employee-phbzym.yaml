@@ -1,0 +1,29 @@
+id: objects:object-employee-phbzym
+name: Employee
+type: BusinessObject
+version: 1.0.0
+object_class: party
+object_subclass: employee
+ecf_domain: party-relationship
+ecf_stage: operate
+current_state: active
+description: >
+  An individual engaged by the enterprise under an employment relationship. The Employee is the workforce party: hiring, payroll, time, and development processes create and update it, and workforce capabilities act on it.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-workforce-management-9e8d8s
+processes_involved:
+  - processes:process-ao-operate-38qyc6
+  - processes:process-fa-operate-zpmxzp
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-07); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-07
+      date: 2026-10-30
+      change: Wave-2 admission (T1 commercial-core extension, CR-BO-06 scope).
+metadata:
+  seed_record: "false"

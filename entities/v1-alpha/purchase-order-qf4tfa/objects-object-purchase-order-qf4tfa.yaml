@@ -1,0 +1,29 @@
+id: objects:object-purchase-order-qf4tfa
+name: Purchase Order
+type: BusinessObject
+version: 1.0.0
+object_class: transaction
+object_subclass: purchase-order
+ecf_domain: enablement-operations
+ecf_stage: operate
+current_state: active
+description: >
+  A commitment from the enterprise to a supplier for goods or services at agreed prices and terms. The Purchase Order is the inbound counterpart of the Order: it drives receiving, and it is the accrual basis for the supplier invoice that follows.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-sourcing-and-procurement-esucp4
+processes_involved:
+  - processes:process-eo-operate-vzcxx7
+  - processes:process-fa-operate-wkqaqp
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-07); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-07
+      date: 2026-10-30
+      change: Wave-2 admission (T1 commercial-core extension, CR-BO-06 scope).
+metadata:
+  seed_record: "false"

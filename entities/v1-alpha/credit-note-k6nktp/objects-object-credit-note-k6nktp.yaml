@@ -1,0 +1,28 @@
+id: objects:object-credit-note-k6nktp
+name: Credit Note
+type: BusinessObject
+version: 1.0.0
+object_class: financial-instrument
+object_subclass: credit-note
+ecf_domain: finance-accounting
+ecf_stage: operate
+current_state: active
+description: >
+  A commercial document issued by the enterprise to a customer reducing an amount previously invoiced, for returns, corrections, or concessions. The Credit Note is the receivable-reversing counterpart of the Invoice and is processed through accounts receivable.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-financial-resource-management-cd3c7c
+processes_involved:
+  - processes:process-fa-operate-sdppmp
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-07); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-07
+      date: 2026-10-30
+      change: Wave-2 admission (T1 commercial-core extension, CR-BO-06 scope).
+metadata:
+  seed_record: "false"

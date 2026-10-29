@@ -2,9 +2,9 @@ catalog:
   abbreviation: DEA-
   counts:
     candidates: 0
-    canonical: 8
-    entities: 8
-    open_change_requests: 6
+    canonical: 30
+    entities: 30
+    open_change_requests: 7
     research_files: 0
     retired: 0
   cross_cutting:
@@ -19,6 +19,50 @@ catalog:
   entities:
   - candidate_count: 0
     canonical_count: 1
+    id: objects:object-application-eewde8
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/application-eewde8/objects-object-application-eewde8.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-asset-w887xr
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/asset-w887xr/objects-object-asset-w887xr.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-budget-h77u8h
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/budget-h77u8h/objects-object-budget-h77u8h.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-consent-record-gacq7d
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/consent-record-gacq7d/objects-object-consent-record-gacq7d.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
     id: objects:object-contract-w24y9z
     last_modified: '2026-10-29'
     lifecycle_status: active
@@ -30,10 +74,43 @@ catalog:
     version: 1.0.0
   - candidate_count: 0
     canonical_count: 1
+    id: objects:object-credit-note-k6nktp
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/credit-note-k6nktp/objects-object-credit-note-k6nktp.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
     id: objects:object-customer-2qvphc
     last_modified: '2026-10-29'
     lifecycle_status: active
     path: entities/v1-alpha/customer-2qvphc/objects-object-customer-2qvphc.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-employee-phbzym
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/employee-phbzym/objects-object-employee-phbzym.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-environment-npd5vt
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/environment-npd5vt/objects-object-environment-npd5vt.yaml
     research_count: 0
     retired_count: 0
     state: canonical
@@ -63,10 +140,43 @@ catalog:
     version: 1.0.0
   - candidate_count: 0
     canonical_count: 1
+    id: objects:object-incident-wudf9s
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/incident-wudf9s/objects-object-incident-wudf9s.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
     id: objects:object-invoice-z3fwgb
     last_modified: '2026-10-29'
     lifecycle_status: active
     path: entities/v1-alpha/invoice-z3fwgb/objects-object-invoice-z3fwgb.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-journal-entry-khck7r
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/journal-entry-khck7r/objects-object-journal-entry-khck7r.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-license-na3j53
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/license-na3j53/objects-object-license-na3j53.yaml
     research_count: 0
     retired_count: 0
     state: canonical
@@ -85,10 +195,43 @@ catalog:
     version: 1.0.0
   - candidate_count: 0
     canonical_count: 1
+    id: objects:object-partner-cfhqx9
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/partner-cfhqx9/objects-object-partner-cfhqx9.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
     id: objects:object-payment-kgsvrg
     last_modified: '2026-10-29'
     lifecycle_status: active
     path: entities/v1-alpha/payment-kgsvrg/objects-object-payment-kgsvrg.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-policy-nd2t4y
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/policy-nd2t4y/objects-object-policy-nd2t4y.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-price-list-4bk48j
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/price-list-4bk48j/objects-object-price-list-4bk48j.yaml
     research_count: 0
     retired_count: 0
     state: canonical
@@ -105,35 +248,200 @@ catalog:
     state: canonical
     type: BusinessObject
     version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-project-5hgzd3
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/project-5hgzd3/objects-object-project-5hgzd3.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-purchase-order-qf4tfa
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/purchase-order-qf4tfa/objects-object-purchase-order-qf4tfa.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-quote-gnngfe
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/quote-gnngfe/objects-object-quote-gnngfe.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-return-uwz79t
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/return-uwz79t/objects-object-return-uwz79t.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-service-q8w4ce
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/service-q8w4ce/objects-object-service-q8w4ce.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-shipment-mb7wgn
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/shipment-mb7wgn/objects-object-shipment-mb7wgn.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-subscription-3v98yb
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/subscription-3v98yb/objects-object-subscription-3v98yb.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-supplier-g7m7fu
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/supplier-g7m7fu/objects-object-supplier-g7m7fu.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-ticket-2cudww
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/ticket-2cudww/objects-object-ticket-2cudww.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
   id: dea:catalog-business-objects
   metamodel_version: unknown
   name: dea-catalog-business-objects
   owner: TechNeHub Labs
   repository: https://github.com/technehub-labs/dea-catalog-business-objects.git
   research_registers:
+  - entity_id: objects:object-application-eewde8
+    files: []
+    path: entities/v1-alpha/application-eewde8/research/
+  - entity_id: objects:object-asset-w887xr
+    files: []
+    path: entities/v1-alpha/asset-w887xr/research/
+  - entity_id: objects:object-budget-h77u8h
+    files: []
+    path: entities/v1-alpha/budget-h77u8h/research/
+  - entity_id: objects:object-consent-record-gacq7d
+    files: []
+    path: entities/v1-alpha/consent-record-gacq7d/research/
   - entity_id: objects:object-contract-w24y9z
     files: []
     path: entities/v1-alpha/contract-w24y9z/research/
+  - entity_id: objects:object-credit-note-k6nktp
+    files: []
+    path: entities/v1-alpha/credit-note-k6nktp/research/
   - entity_id: objects:object-customer-2qvphc
     files: []
     path: entities/v1-alpha/customer-2qvphc/research/
+  - entity_id: objects:object-employee-phbzym
+    files: []
+    path: entities/v1-alpha/employee-phbzym/research/
+  - entity_id: objects:object-environment-npd5vt
+    files: []
+    path: entities/v1-alpha/environment-npd5vt/research/
   - entity_id: objects:object-feature-flag-p5gzf7
     files: []
     path: entities/v1-alpha/feature-flag-p5gzf7/research/
   - entity_id: objects:object-grant-nhdwg9
     files: []
     path: entities/v1-alpha/grant-nhdwg9/research/
+  - entity_id: objects:object-incident-wudf9s
+    files: []
+    path: entities/v1-alpha/incident-wudf9s/research/
   - entity_id: objects:object-invoice-z3fwgb
     files: []
     path: entities/v1-alpha/invoice-z3fwgb/research/
+  - entity_id: objects:object-journal-entry-khck7r
+    files: []
+    path: entities/v1-alpha/journal-entry-khck7r/research/
+  - entity_id: objects:object-license-na3j53
+    files: []
+    path: entities/v1-alpha/license-na3j53/research/
   - entity_id: objects:object-order-bpy4g4
     files: []
     path: entities/v1-alpha/order-bpy4g4/research/
+  - entity_id: objects:object-partner-cfhqx9
+    files: []
+    path: entities/v1-alpha/partner-cfhqx9/research/
   - entity_id: objects:object-payment-kgsvrg
     files: []
     path: entities/v1-alpha/payment-kgsvrg/research/
+  - entity_id: objects:object-policy-nd2t4y
+    files: []
+    path: entities/v1-alpha/policy-nd2t4y/research/
+  - entity_id: objects:object-price-list-4bk48j
+    files: []
+    path: entities/v1-alpha/price-list-4bk48j/research/
   - entity_id: objects:object-product-dkf9gb
     files: []
     path: entities/v1-alpha/product-dkf9gb/research/
+  - entity_id: objects:object-project-5hgzd3
+    files: []
+    path: entities/v1-alpha/project-5hgzd3/research/
+  - entity_id: objects:object-purchase-order-qf4tfa
+    files: []
+    path: entities/v1-alpha/purchase-order-qf4tfa/research/
+  - entity_id: objects:object-quote-gnngfe
+    files: []
+    path: entities/v1-alpha/quote-gnngfe/research/
+  - entity_id: objects:object-return-uwz79t
+    files: []
+    path: entities/v1-alpha/return-uwz79t/research/
+  - entity_id: objects:object-service-q8w4ce
+    files: []
+    path: entities/v1-alpha/service-q8w4ce/research/
+  - entity_id: objects:object-shipment-mb7wgn
+    files: []
+    path: entities/v1-alpha/shipment-mb7wgn/research/
+  - entity_id: objects:object-subscription-3v98yb
+    files: []
+    path: entities/v1-alpha/subscription-3v98yb/research/
+  - entity_id: objects:object-supplier-g7m7fu
+    files: []
+    path: entities/v1-alpha/supplier-g7m7fu/research/
+  - entity_id: objects:object-ticket-2cudww
+    files: []
+    path: entities/v1-alpha/ticket-2cudww/research/
   status: active
   version: 0.0.0
