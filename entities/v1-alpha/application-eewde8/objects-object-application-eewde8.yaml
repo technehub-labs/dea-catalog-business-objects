@@ -1,0 +1,29 @@
+id: objects:object-application-eewde8
+name: Application
+type: BusinessObject
+version: 1.0.0
+object_class: technology-control
+object_subclass: application
+ecf_domain: enablement-operations
+ecf_stage: operate
+current_state: active
+description: >
+  A software system deployed by the enterprise to perform or support business functions. The Application is the standing technology asset of operations: it is built or acquired, operated, integrated, and eventually retired, and platform operations processes keep it running.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-technology-management-maus5n
+  - capabilities:capability-technology-enablement-y6nkws
+processes_involved:
+  - processes:process-eo-operate-4njp7b
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-07); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-07
+      date: 2026-10-30
+      change: Wave-2 admission (T1 commercial-core extension, CR-BO-06 scope).
+metadata:
+  seed_record: "false"

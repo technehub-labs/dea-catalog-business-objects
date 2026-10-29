@@ -1,0 +1,29 @@
+id: objects:object-incident-wudf9s
+name: Incident
+type: BusinessObject
+version: 1.0.0
+object_class: technology-control
+object_subclass: service-incident
+ecf_domain: enablement-operations
+ecf_stage: operate
+current_state: active
+description: >
+  An unplanned interruption or degradation of a technology service. The Incident is the operational exception object of technology management: it is detected, triaged, worked to restoration, and analyzed afterward for recurrence prevention.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-technology-management-maus5n
+  - capabilities:capability-continuity-management-v3rn6u
+processes_involved:
+  - processes:process-eo-operate-4njp7b
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-07); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-07
+      date: 2026-10-30
+      change: Wave-2 admission (T1 commercial-core extension, CR-BO-06 scope).
+metadata:
+  seed_record: "false"

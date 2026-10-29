@@ -1,0 +1,28 @@
+id: objects:object-subscription-3v98yb
+name: Subscription
+type: BusinessObject
+version: 1.0.0
+object_class: offering
+object_subclass: subscription-plan
+ecf_domain: product-value
+ecf_stage: operate
+current_state: active
+description: >
+  An offering arrangement in which the customer receives continuing access to products or services for a recurring charge over an agreed term. The Subscription converts the one-time sale into an entitlement relationship that renewal and billing processes operate on.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-offering-management-6egkc8
+processes_involved:
+  - processes:process-pv-operate-cau4gv
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-07); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-07
+      date: 2026-10-30
+      change: Wave-2 admission (T1 commercial-core extension, CR-BO-06 scope).
+metadata:
+  seed_record: "false"

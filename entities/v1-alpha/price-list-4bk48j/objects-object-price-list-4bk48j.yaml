@@ -1,0 +1,29 @@
+id: objects:object-price-list-4bk48j
+name: Price List
+type: BusinessObject
+version: 1.0.0
+object_class: offering
+object_subclass: price-list
+ecf_domain: product-value
+ecf_stage: operate
+current_state: active
+description: >
+  The structured set of prices at which the enterprise offers its products and services, scoped by market, channel, segment, or agreement. The Price List governs quote and order pricing and is maintained through catalogue and proposition lifecycle processes.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-offering-management-6egkc8
+  - capabilities:capability-marketing-xmc539
+processes_involved:
+  - processes:process-pv-operate-zyguzp
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-07); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-07
+      date: 2026-10-30
+      change: Wave-2 admission (T1 commercial-core extension, CR-BO-06 scope).
+metadata:
+  seed_record: "false"

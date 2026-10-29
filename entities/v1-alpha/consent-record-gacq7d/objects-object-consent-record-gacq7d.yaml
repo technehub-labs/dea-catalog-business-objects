@@ -1,0 +1,27 @@
+id: objects:object-consent-record-gacq7d
+name: Consent Record
+type: BusinessObject
+version: 1.0.0
+object_class: legal-instrument
+object_subclass: consent-record
+ecf_domain: party-relationship
+ecf_stage: operate
+current_state: active
+description: >
+  The documented expression of a party's permission for the enterprise to process their data or contact them for named purposes. The Consent Record is a party-relationship compliance object: it is captured at grant, versioned on change, and its withdrawal terminates the permissions it previously carried.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-customer-management-f3n8wb
+  - capabilities:capability-information-management-6vjgdh
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-07); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-07
+      date: 2026-10-30
+      change: Wave-2 admission (T1 commercial-core extension, CR-BO-06 scope).
+metadata:
+  seed_record: "false"

@@ -1,0 +1,29 @@
+id: objects:object-environment-npd5vt
+name: Environment
+type: BusinessObject
+version: 1.0.0
+object_class: technology-control
+object_subclass: environment
+ecf_domain: enablement-operations
+ecf_stage: operate
+current_state: active
+description: >
+  A configured deployment context in which applications run, such as production, staging, or testing. The Environment separates run-states of the same technology so change can be promoted safely, and platform operations processes keep it provisioned and healthy.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-technology-management-maus5n
+  - capabilities:capability-technology-enablement-y6nkws
+processes_involved:
+  - processes:process-eo-operate-4njp7b
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-07); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-07
+      date: 2026-10-30
+      change: Wave-2 admission (T1 commercial-core extension, CR-BO-06 scope).
+metadata:
+  seed_record: "false"

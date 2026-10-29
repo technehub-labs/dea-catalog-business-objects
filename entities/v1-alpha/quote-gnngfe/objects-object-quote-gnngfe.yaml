@@ -1,0 +1,28 @@
+id: objects:object-quote-gnngfe
+name: Quote
+type: BusinessObject
+version: 1.0.0
+object_class: transaction
+object_subclass: sales-quote
+ecf_domain: enablement-operations
+ecf_stage: operate
+current_state: active
+description: >
+  A non-binding offer from the enterprise to a customer stating products or services, quantities, prices, and terms. The Quote is the pre-commitment stage of the order-to-cash chain: it may be revised or expired without fulfilment obligation, and converts into an Order on acceptance.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-operations-management-pm3w8k
+processes_involved:
+  - processes:process-eo-operate-2jnz85
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-07); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-07
+      date: 2026-10-30
+      change: Wave-2 admission (T1 commercial-core extension, CR-BO-06 scope).
+metadata:
+  seed_record: "false"
