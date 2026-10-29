@@ -1,0 +1,42 @@
+@startmindmap catalog-coverage
+*[#2C3E50] _**58 Business Objects** by ECF cell_
+**[#5B2C6F] strategy-direction (2)
+***[#7D3C98] conceive — 1
+**** Business Case
+***[#7D3C98] operate — 1
+**** Goal
+**[#1F618D] party-relationship (12)
+***[#2E86C1] conceive — 1
+**** Candidate
+***[#3498DB] activate — 2
+**** Onboarding Program · Party Credential
+***[#5DADE2] operate — 7
+**** Customer · Supplier · Employee · Partner · Patient · Citizen · Member · Consent Record
+***[#21618C] retire — 1
+**** Offboarding Plan
+**[#117A65] product-value (8)
+***[#1E8449] design — 1
+**** Requirement
+***[#28B463] operate — 5
+**** Product · Service · Subscription · Price List · SKU · Study Program
+***[#186A3B] retire — 1
+**** Sunset Plan
+**[#A9DFBF] enablement-operations (17)
+***[#58D68D] build — 1
+**** Release Candidate
+***[#82E0AA] operate — 15
+**** Order · Quote · Shipment · Return · Purchase Order · Ticket · Treatment · Course Section · Lot/Batch · BOM · Machine · Store · Application · Environment · Incident · Feature Flag
+***[#45B39D] activate — 0
+**[#935116] finance-accounting (13)
+***[#CA6F1E] operate — 13
+**** Invoice · Payment · Grant · Journal Entry · Budget · Credit Note · Asset · Forecast · Tax Record · Loan · Account · Benefit · Insurance Claim
+**[#6E2C00] governance-existence (4)
+***[#BA4A00] operate — 4
+**** Contract · License · Policy · Case
+**[#4A235A] agency-organization (2)
+***[#8E44AD] build — 1
+**** Training Program
+***[#9B59B6] operate — 1
+**** Project
+caption: 7 of 7 domains populated · 6 of 7 stages populated (improve pending sibling anchors)
+@endmindmap
