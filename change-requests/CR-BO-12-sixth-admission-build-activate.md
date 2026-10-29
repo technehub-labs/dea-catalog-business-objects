@@ -4,7 +4,7 @@
 |-------|-------|
 | **CR** | CR-BO-12 |
 | **Title** | Sixth Admission (Build and Activate Stage-Native Records, 4 Records) |
-| **Status** | Proposed (this PR) |
+| **Status** | Merged |
 | **Layer** | L2 (Business Operating Model) |
 | **Owner** | Emmanuel A. Otchere |
 | **Author** | Emmanuel A. Otchere |
