@@ -1,0 +1,29 @@
+id: objects:object-release-candidate-wed4tk
+name: Release Candidate
+type: BusinessObject
+version: 1.0.0
+object_class: technology-control
+object_subclass: release-candidate
+ecf_domain: enablement-operations
+ecf_stage: build
+current_state: active
+description: >
+  A build of an application or service proposed for release: feature-complete, under verification, and not yet authorized for production. The Release Candidate is stage-native to build — it exists to be proven, and its terminal transitions are promotion to release or rejection back to development.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-technology-management-maus5n
+  - capabilities:capability-technology-enablement-y6nkws
+processes_involved:
+  - processes:process-eo-build-nmmmt6
+state_history:
+  - state: active
+    ecf_stage: build
+    entered: 2026-10-30
+    note: Stage-native admission (CR-BO-12, CR-BO-10 scope continuation); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-12
+      date: 2026-10-30
+      change: Stage-native admission (build and activate ECF cells, CR-BO-10 scope continuation).
+metadata:
+  seed_record: "false"

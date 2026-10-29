@@ -20,8 +20,8 @@ This is one of **seven interoperable catalogs** in the DEA ecosystem. Business O
 
 | Level | Count |
 | :--- | ---: |
-| L1 (Business Object) | 54 |
-| **Total** | **54** |
+| L1 (Business Object) | 58 |
+| **Total** | **58** |
 
 ## Catalog of Business Objects
 
@@ -65,6 +65,12 @@ The 16 wave-2 T2 records are cross-industry universal types, each with its secto
 The 3 T3-ready records (goal, forecast, tax-record from the CR-BO-06 deferred list, anchors now resolvable) were admitted under CR-BO-09 (2026-10-30). Goal is the first record in the `strategy-direction` ECF domain.
 
 The 5 stage-native records (CR-BO-11, per the CR-BO-10 scope and its §5 decisions: BO-STG-01 adopted, all five candidates, `Candidate` naming) populate the first non-`operate` cells: `conceive` (Business Case, Candidate), `design` (Requirement), and `retire` (Offboarding Plan, Sunset Plan).
+
+The 4 build/activate stage-native records (CR-BO-12, CR-BO-10 scope continuation under BO-STG-01) populate the last two empty stages: `build` (Release Candidate, Training Program) and `activate` (Onboarding Program, Party Credential). All seven ECF stages are now populated.
+| [Release Candidate](entities/v1-alpha/release-candidate-wed4tk/README.md) | `objects:object-release-candidate-wed4tk` | technology-control / release-candidate | enablement-operations · build | technology-management, technology-enablement | eo-build | |
+| [Training Program](entities/v1-alpha/training-program-r8fpt3/README.md) | `objects:object-training-program-r8fpt3` | work-item / training-program | agency-organization · build | workforce-management, workforce-planning | ao-build ×2 | |
+| [Onboarding Program](entities/v1-alpha/onboarding-program-mrun5r/README.md) | `objects:object-onboarding-program-mrun5r` | work-item / onboarding-program | party-relationship · activate | customer-management | pr-activate | |
+| [Party Credential](entities/v1-alpha/party-credential-kaqfq8/README.md) | `objects:object-party-credential-kaqfq8` | technology-control / party-credential | party-relationship · activate | security-management, information-management | pr-activate | |
 | [Business Case](entities/v1-alpha/business-case-et8p4e/README.md) | `objects:object-business-case-et8p4e` | work-item / business-case | strategy-direction · conceive | strategic-planning | sd-conceive ×2 | |
 | [Requirement](entities/v1-alpha/requirement-9ukadu/README.md) | `objects:object-requirement-9ukadu` | transaction / requirement | product-value · design | offering-management, technology-management | pv-design ×2 | |
 | [Candidate](entities/v1-alpha/candidate-party-s8q2mk/README.md) | `objects:object-candidate-party-s8q2mk` | party / candidate-party | party-relationship · conceive | customer-management | pr-conceive ×2 | |
@@ -131,8 +137,8 @@ Every BO lives in exactly one `(ecf_domain, ecf_stage)` cell at a time.
 | `offering` | 6 | `catalogue-product`, `service`, `subscription-plan`, `price-list`, `education-program`, `stock-keeping-unit` |
 | `financial-instrument` | 12 | `billing-invoice`, `customer-payment`, `disbursement-grant`, `journal-entry`, `budget`, `credit-note`, `fixed-asset`, `loan`, `deposit-account`, `benefit-entitlement`, `forecast`, `tax-record` |
 | `legal-instrument` | 4 | `commercial-contract`, `license`, `policy`, `consent-record` |
-| `technology-control` | 4 | `release-feature-flag`, `application`, `environment`, `service-incident` |
-| `work-item` | 5 | `project`, `strategic-goal`, `business-case`, `offboarding-plan`, `sunset-plan` |
+| `technology-control` | 6 | `release-feature-flag`, `application`, `environment`, `service-incident`, `release-candidate`, `party-credential` |
+| `work-item` | 7 | `project`, `strategic-goal`, `business-case`, `offboarding-plan`, `sunset-plan`, `training-program`, `onboarding-program` |
 | `resource` | 3 | `manufacturing-lot`, `bill-of-material`, `production-machine` |
 | `location` | 1 | `retail-store` |
 

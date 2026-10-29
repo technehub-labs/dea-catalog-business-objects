@@ -2,8 +2,8 @@ catalog:
   abbreviation: DEA-
   counts:
     candidates: 0
-    canonical: 54
-    entities: 54
+    canonical: 58
+    entities: 58
     open_change_requests: 5
     research_files: 0
     retired: 0
@@ -360,6 +360,17 @@ catalog:
     version: 1.0.0
   - candidate_count: 0
     canonical_count: 1
+    id: objects:object-onboarding-program-mrun5r
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/onboarding-program-mrun5r/objects-object-onboarding-program-mrun5r.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
     id: objects:object-order-bpy4g4
     last_modified: '2026-10-29'
     lifecycle_status: active
@@ -375,6 +386,17 @@ catalog:
     last_modified: '2026-10-29'
     lifecycle_status: active
     path: entities/v1-alpha/partner-cfhqx9/objects-object-partner-cfhqx9.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-party-credential-kaqfq8
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/party-credential-kaqfq8/objects-object-party-credential-kaqfq8.yaml
     research_count: 0
     retired_count: 0
     state: canonical
@@ -485,6 +507,17 @@ catalog:
     last_modified: '2026-10-29'
     lifecycle_status: active
     path: entities/v1-alpha/quote-gnngfe/objects-object-quote-gnngfe.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-release-candidate-wed4tk
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/release-candidate-wed4tk/objects-object-release-candidate-wed4tk.yaml
     research_count: 0
     retired_count: 0
     state: canonical
@@ -611,6 +644,17 @@ catalog:
     state: canonical
     type: BusinessObject
     version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-training-program-r8fpt3
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/training-program-r8fpt3/objects-object-training-program-r8fpt3.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
   id: dea:catalog-business-objects
   metamodel_version: unknown
   name: dea-catalog-business-objects
@@ -710,12 +754,18 @@ catalog:
   - entity_id: objects:object-offboarding-plan-djz4md
     files: []
     path: entities/v1-alpha/offboarding-plan-djz4md/research/
+  - entity_id: objects:object-onboarding-program-mrun5r
+    files: []
+    path: entities/v1-alpha/onboarding-program-mrun5r/research/
   - entity_id: objects:object-order-bpy4g4
     files: []
     path: entities/v1-alpha/order-bpy4g4/research/
   - entity_id: objects:object-partner-cfhqx9
     files: []
     path: entities/v1-alpha/partner-cfhqx9/research/
+  - entity_id: objects:object-party-credential-kaqfq8
+    files: []
+    path: entities/v1-alpha/party-credential-kaqfq8/research/
   - entity_id: objects:object-patient-w8ry62
     files: []
     path: entities/v1-alpha/patient-w8ry62/research/
@@ -746,6 +796,9 @@ catalog:
   - entity_id: objects:object-quote-gnngfe
     files: []
     path: entities/v1-alpha/quote-gnngfe/research/
+  - entity_id: objects:object-release-candidate-wed4tk
+    files: []
+    path: entities/v1-alpha/release-candidate-wed4tk/research/
   - entity_id: objects:object-requirement-9ukadu
     files: []
     path: entities/v1-alpha/requirement-9ukadu/research/
@@ -779,5 +832,8 @@ catalog:
   - entity_id: objects:object-ticket-2cudww
     files: []
     path: entities/v1-alpha/ticket-2cudww/research/
+  - entity_id: objects:object-training-program-r8fpt3
+    files: []
+    path: entities/v1-alpha/training-program-r8fpt3/research/
   status: active
   version: 0.0.0

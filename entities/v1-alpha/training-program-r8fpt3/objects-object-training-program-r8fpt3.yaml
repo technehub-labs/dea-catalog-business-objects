@@ -1,0 +1,30 @@
+id: objects:object-training-program-r8fpt3
+name: Training Program
+type: BusinessObject
+version: 1.0.0
+object_class: work-item
+object_subclass: training-program
+ecf_domain: agency-organization
+ecf_stage: build
+current_state: active
+description: >
+  A structured development effort that builds workforce or agent capability: curriculum, cohorts, and completion criteria. The Training Program is stage-native to build — its output is competence, and it closes when the cohort is qualified.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-workforce-management-9e8d8s
+  - capabilities:capability-workforce-planning-b43rhm
+processes_involved:
+  - processes:process-ao-build-w2qurd
+  - processes:process-ao-build-9my4jr
+state_history:
+  - state: active
+    ecf_stage: build
+    entered: 2026-10-30
+    note: Stage-native admission (CR-BO-12, CR-BO-10 scope continuation); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-12
+      date: 2026-10-30
+      change: Stage-native admission (build and activate ECF cells, CR-BO-10 scope continuation).
+metadata:
+  seed_record: "false"

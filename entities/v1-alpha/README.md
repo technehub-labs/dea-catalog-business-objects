@@ -110,10 +110,10 @@ The wave-2 T1 set (CR-BO-07) extends each seeded area of the mesh: the **party r
 
 | Level | Count |
 | :--- | ---: |
-| L1 (Business Object) | 54 |
-| **Total** | **54** |
+| L1 (Business Object) | 58 |
+| **Total** | **58** |
 
-The first admission (CR-BO-05) landed eight seed Business Object records; the second admission (CR-BO-07) landed the wave-2 T1 commercial-core extension (22 records), and the third admission (CR-BO-08) landed the wave-2 T2 cross-industry records (16 records with sector lenses), and the fourth admission (CR-BO-09) landed the first T3-ready records (goal, forecast, tax-record), and the fifth admission (CR-BO-11) landed the first stage-native records outside the operate stage (business-case, requirement, candidate-party, offboarding-plan, sunset-plan). The CI early-exit pattern in `.github/workflows/ci.yml` has been dropped; schema validation runs on every entry.
+The first admission (CR-BO-05) landed eight seed Business Object records; the second admission (CR-BO-07) landed the wave-2 T1 commercial-core extension (22 records), and the third admission (CR-BO-08) landed the wave-2 T2 cross-industry records (16 records with sector lenses), and the fourth admission (CR-BO-09) landed the first T3-ready records (goal, forecast, tax-record), the fifth admission (CR-BO-11) landed the first stage-native records outside the operate stage (business-case, requirement, candidate-party, offboarding-plan, sunset-plan), and the sixth admission (CR-BO-12) populated the remaining build and activate stages (release-candidate, training-program, onboarding-program, party-credential) — all seven ECF stages are now populated. The CI early-exit pattern in `.github/workflows/ci.yml` has been dropped; schema validation runs on every entry.
 
 ---
 
