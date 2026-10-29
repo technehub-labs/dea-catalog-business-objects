@@ -20,8 +20,8 @@ This is one of **seven interoperable catalogs** in the DEA ecosystem. Business O
 
 | Level | Count |
 | :--- | ---: |
-| L1 (Business Object) | 46 |
-| **Total** | **46** |
+| L1 (Business Object) | 49 |
+| **Total** | **49** |
 
 ## Catalog of Business Objects
 
@@ -61,6 +61,11 @@ This is one of **seven interoperable catalogs** in the DEA ecosystem. Business O
 The eight seed records are `lifecycle_status: active`, admitted under CR-BO-05 (2026-10-28); the 22 wave-2 T1 records are `lifecycle_status: active`, admitted under CR-BO-07 (2026-10-30). All lifecycles are anchored at activation.
 
 The 16 wave-2 T2 records are cross-industry universal types, each with its sector lens labeled; admitted under CR-BO-08 (2026-10-30).
+
+The 3 T3-ready records (goal, forecast, tax-record from the CR-BO-06 deferred list, anchors now resolvable) were admitted under CR-BO-09 (2026-10-30). Goal is the first record in the `strategy-direction` ECF domain.
+| [Goal](entities/v1-alpha/goal-h2zfhv/README.md) | `objects:object-goal-h2zfhv` | work-item / strategic-goal | strategy-direction · operate | strategic-planning, enterprise-performance-management | sd-operate ×3 | |
+| [Forecast](entities/v1-alpha/forecast-um3az3/README.md) | `objects:object-forecast-um3az3` | financial-instrument / forecast | finance-accounting · operate | financial-resource-management, enterprise-performance-management | fa-build, fa-operate | |
+| [Tax Record](entities/v1-alpha/tax-record-zwqfpa/README.md) | `objects:object-tax-record-zwqfpa` | financial-instrument / tax-record | finance-accounting · operate | financial-resource-management, regulation-management | fa-operate, fa-design | |
 
 | [Patient](entities/v1-alpha/patient-w8ry62/README.md) | `objects:object-patient-w8ry62` | party / patient | party-relationship · operate | customer-management | eo-operate | *healthcare* |
 | [Citizen](entities/v1-alpha/citizen-2xqsse/README.md) | `objects:object-citizen-2xqsse` | party / citizen | party-relationship · operate | customer-management | — | *government* |
@@ -117,10 +122,10 @@ Every BO lives in exactly one `(ecf_domain, ecf_stage)` cell at a time.
 | `party` | 7 | `customer`, `supplier`, `employee`, `partner`, `patient`, `citizen`, `member` |
 | `transaction` | 10 | `sales-order`, `sales-quote`, `shipment`, `return-rma`, `purchase-order`, `service-ticket`, `insurance-claim`, `care-encounter`, `public-case`, `course-section` |
 | `offering` | 6 | `catalogue-product`, `service`, `subscription-plan`, `price-list`, `education-program`, `stock-keeping-unit` |
-| `financial-instrument` | 10 | `billing-invoice`, `customer-payment`, `disbursement-grant`, `journal-entry`, `budget`, `credit-note`, `fixed-asset`, `loan`, `deposit-account`, `benefit-entitlement` |
+| `financial-instrument` | 12 | `billing-invoice`, `customer-payment`, `disbursement-grant`, `journal-entry`, `budget`, `credit-note`, `fixed-asset`, `loan`, `deposit-account`, `benefit-entitlement`, `forecast`, `tax-record` |
 | `legal-instrument` | 4 | `commercial-contract`, `license`, `policy`, `consent-record` |
 | `technology-control` | 4 | `release-feature-flag`, `application`, `environment`, `service-incident` |
-| `work-item` | 1 | `project` |
+| `work-item` | 2 | `project`, `strategic-goal` |
 | `resource` | 3 | `manufacturing-lot`, `bill-of-material`, `production-machine` |
 | `location` | 1 | `retail-store` |
 

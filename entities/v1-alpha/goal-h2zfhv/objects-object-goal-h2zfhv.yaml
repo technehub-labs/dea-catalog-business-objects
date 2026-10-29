@@ -1,0 +1,31 @@
+id: objects:object-goal-h2zfhv
+name: Goal
+type: BusinessObject
+version: 1.0.0
+object_class: work-item
+object_subclass: strategic-goal
+ecf_domain: strategy-direction
+ecf_stage: operate
+current_state: active
+description: >
+  A deliberate outcome the enterprise commits to achieve over a horizon, expressed so that progress can be steered and measured. The Goal is the steering object of the strategy-direction domain: strategic planning frames it, initiative steering tracks it, and the Initiative/Project portfolio executes toward it.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-strategic-planning-k3rz7a
+  - capabilities:capability-enterprise-performance-management-5fxren
+processes_involved:
+  - processes:process-sd-operate-u6xgu5
+  - processes:process-sd-operate-zdjchn
+  - processes:process-sd-operate-ucxpz4
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-09); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-09
+      date: 2026-10-30
+      change: Wave-2 admission (T3-ready candidates, CR-BO-06 deferred list).
+metadata:
+  seed_record: "false"
