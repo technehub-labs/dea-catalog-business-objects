@@ -4,7 +4,7 @@
 |-------|-------|
 | **CR** | CR-BO-05 |
 | **Title** | First Phase-2 Admission (Seed Business Object Records, BO Profile, Early-Exit Drop) |
-| **Status** | Proposed (this PR) |
+| **Status** | Merged |
 | **Layer** | L2 (Business Operating Model) |
 | **Owner** | Emmanuel A. Otchere |
 | **Author** | Emmanuel A. Otchere |

@@ -4,7 +4,7 @@
 |-------|-------|
 | **CR** | CR-BO-08 |
 | **Title** | Third Admission, Wave-2 T2 (Cross-Industry Records, 16 Records) |
-| **Status** | Proposed (this PR) |
+| **Status** | Merged |
 | **Layer** | L2 (Business Operating Model) |
 | **Owner** | Emmanuel A. Otchere |
 | **Author** | Emmanuel A. Otchere |

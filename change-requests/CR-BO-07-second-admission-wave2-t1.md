@@ -4,7 +4,7 @@
 |-------|-------|
 | **CR** | CR-BO-07 |
 | **Title** | Second Admission Wave, T1 (Commercial-Core Extension, 22 Records) |
-| **Status** | Proposed (this PR) |
+| **Status** | Merged |
 | **Layer** | L2 (Business Operating Model) |
 | **Owner** | Emmanuel A. Otchere |
 | **Author** | Emmanuel A. Otchere |
