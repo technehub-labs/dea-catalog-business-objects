@@ -1,0 +1,29 @@
+id: objects:object-tariff-plan-ah5q9f
+name: Tariff Plan
+type: BusinessObject
+version: 1.0.0
+object_class: offering
+object_subclass: tariff-plan
+ecf_domain: product-value
+ecf_stage: operate
+current_state: active
+description: >
+  The published rate structure under which usage is charged: per-unit prices, bundles, allowances, and zone rules. The Tariff Plan is the pricing offering of a telecom lens — where the Price List carries commercial prices generally, the tariff governs metered usage specifically, and regulator-approved tariffs make it partly non-discretionary.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-offering-management-6egkc8
+  - capabilities:capability-regulation-management-gya4d8
+processes_involved:
+  - processes:process-pv-operate-zyguzp
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Telecom/DSP admission (CR-BO-15); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-15
+      date: 2026-10-30
+      change: Telecom operator / digital service provider enrichment (CR-BO-06 scope continuation).
+metadata:
+  seed_record: "false"

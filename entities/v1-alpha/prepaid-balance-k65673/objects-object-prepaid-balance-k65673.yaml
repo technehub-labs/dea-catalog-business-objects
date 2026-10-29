@@ -1,0 +1,29 @@
+id: objects:object-prepaid-balance-k65673
+name: Prepaid Balance
+type: BusinessObject
+version: 1.0.0
+object_class: financial-instrument
+object_subclass: prepaid-balance
+ecf_domain: finance-accounting
+ecf_stage: operate
+current_state: active
+description: >
+  The stored value a prepaid subscriber holds with the operator, drawn down by rated usage and replenished by top-ups. The Prepaid Balance is the custody instrument of a prepaid telecom lens — the inverse of a receivable: the operator holds the customer's money, usage debits it in near-real time, and its exhaustion suspends service rather than creating debt.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-financial-resource-management-cd3c7c
+processes_involved:
+  - processes:process-fa-operate-2pmqb2
+  - processes:process-fa-operate-sdppmp
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Telecom/DSP admission (CR-BO-15); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-15
+      date: 2026-10-30
+      change: Telecom operator / digital service provider enrichment (CR-BO-06 scope continuation).
+metadata:
+  seed_record: "false"

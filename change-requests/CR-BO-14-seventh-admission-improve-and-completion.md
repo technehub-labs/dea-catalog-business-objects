@@ -4,7 +4,7 @@
 |-------|-------|
 | **CR** | CR-BO-14 |
 | **Title** | Seventh Admission (Improve-Stage Records and Taxonomy-Completion Records, 6 Records) |
-| **Status** | Proposed (this PR) |
+| **Status** | Merged |
 | **Layer** | L2 (Business Operating Model) |
 | **Owner** | Emmanuel A. Otchere |
 | **Author** | Emmanuel A. Otchere |
