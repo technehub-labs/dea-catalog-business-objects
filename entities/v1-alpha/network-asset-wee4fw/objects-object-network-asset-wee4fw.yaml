@@ -1,0 +1,30 @@
+id: objects:object-network-asset-wee4fw
+name: Network Asset
+type: BusinessObject
+version: 1.0.0
+object_class: resource
+object_subclass: network-asset
+ecf_domain: enablement-operations
+ecf_stage: operate
+current_state: active
+description: >
+  A physical or logical component of the operator's network that carries or enables service: radio units, transmission links, switches, and the logical capacity they provide. The Network Asset is the capacity resource of a telecom lens — maintained as an asset, loaded by service instances, and its utilization and coverage drive both investment and quality.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-asset-management-judtwr
+  - capabilities:capability-operations-management-pm3w8k
+processes_involved:
+  - processes:process-eo-operate-j9cjzz
+  - processes:process-eo-improve-q58ecg
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Telecom/DSP admission (CR-BO-15); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-15
+      date: 2026-10-30
+      change: Telecom operator / digital service provider enrichment (CR-BO-06 scope continuation).
+metadata:
+  seed_record: "false"

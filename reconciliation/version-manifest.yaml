@@ -57,6 +57,10 @@ records:
     content_hash: b7ce8324d8a65e3c
     file: entities/v1-alpha/course-section-j4fdpq/objects-object-course-section-j4fdpq.yaml
     version: 1.0.0
+  objects:object-coverage-area-vf8sfv:
+    content_hash: 52ebd96b68e00107
+    file: entities/v1-alpha/coverage-area-vf8sfv/objects-object-coverage-area-vf8sfv.yaml
+    version: 1.0.0
   objects:object-credit-note-k6nktp:
     content_hash: bbc64288f4faeb70
     file: entities/v1-alpha/credit-note-k6nktp/objects-object-credit-note-k6nktp.yaml
@@ -109,6 +113,10 @@ records:
     content_hash: 91e3a908111bb7db
     file: entities/v1-alpha/insurance-claim-g5mag3/objects-object-insurance-claim-g5mag3.yaml
     version: 1.0.0
+  objects:object-interconnect-agreement-dvq2ce:
+    content_hash: c1ad01092d163646
+    file: entities/v1-alpha/interconnect-agreement-dvq2ce/objects-object-interconnect-agreement-dvq2ce.yaml
+    version: 1.0.0
   objects:object-invoice-z3fwgb:
     content_hash: 6dc188725346629b
     file: entities/v1-alpha/invoice-z3fwgb/objects-object-invoice-z3fwgb.yaml
@@ -136,6 +144,10 @@ records:
   objects:object-member-vbxqke:
     content_hash: 62aff949c24fbeb2
     file: entities/v1-alpha/member-vbxqke/objects-object-member-vbxqke.yaml
+    version: 1.0.0
+  objects:object-network-asset-wee4fw:
+    content_hash: c7247f4d0fbb872a
+    file: entities/v1-alpha/network-asset-wee4fw/objects-object-network-asset-wee4fw.yaml
     version: 1.0.0
   objects:object-offboarding-plan-djz4md:
     content_hash: 70a1e899b24487da
@@ -172,6 +184,10 @@ records:
   objects:object-policy-nd2t4y:
     content_hash: 4c1dba20fdceeaea
     file: entities/v1-alpha/policy-nd2t4y/objects-object-policy-nd2t4y.yaml
+    version: 1.0.0
+  objects:object-prepaid-balance-k65673:
+    content_hash: 4ca153e7b832952c
+    file: entities/v1-alpha/prepaid-balance-k65673/objects-object-prepaid-balance-k65673.yaml
     version: 1.0.0
   objects:object-price-list-4bk48j:
     content_hash: 7d81cbc45d0afd21
@@ -217,6 +233,14 @@ records:
     content_hash: 8fa56a4c5d9180ef
     file: entities/v1-alpha/return-uwz79t/objects-object-return-uwz79t.yaml
     version: 1.0.0
+  objects:object-service-instance-j5uxmb:
+    content_hash: 190f998b07fa3a65
+    file: entities/v1-alpha/service-instance-j5uxmb/objects-object-service-instance-j5uxmb.yaml
+    version: 1.0.0
+  objects:object-service-number-6axyb2:
+    content_hash: 2aba479aec21e8c9
+    file: entities/v1-alpha/service-number-6axyb2/objects-object-service-number-6axyb2.yaml
+    version: 1.0.0
   objects:object-service-q8w4ce:
     content_hash: 8ea1b98612d2e786
     file: entities/v1-alpha/service-q8w4ce/objects-object-service-q8w4ce.yaml
@@ -225,9 +249,17 @@ records:
     content_hash: 9dc7aa6541977289
     file: entities/v1-alpha/shipment-mb7wgn/objects-object-shipment-mb7wgn.yaml
     version: 1.0.0
+  objects:object-sim-profile-ja8k4x:
+    content_hash: 433b011297d53000
+    file: entities/v1-alpha/sim-profile-ja8k4x/objects-object-sim-profile-ja8k4x.yaml
+    version: 1.0.0
   objects:object-stock-keeping-unit-x6rq8r:
     content_hash: 73f0a9767f8adc24
     file: entities/v1-alpha/stock-keeping-unit-x6rq8r/objects-object-stock-keeping-unit-x6rq8r.yaml
+    version: 1.0.0
+  objects:object-subscriber-muj94k:
+    content_hash: b13fdac0fdbca195
+    file: entities/v1-alpha/subscriber-muj94k/objects-object-subscriber-muj94k.yaml
     version: 1.0.0
   objects:object-subscription-3v98yb:
     content_hash: 5f71738d6a79a94f
@@ -240,6 +272,10 @@ records:
   objects:object-supplier-g7m7fu:
     content_hash: 25f60936fa9001c3
     file: entities/v1-alpha/supplier-g7m7fu/objects-object-supplier-g7m7fu.yaml
+    version: 1.0.0
+  objects:object-tariff-plan-ah5q9f:
+    content_hash: b1d27bd6119c5aa4
+    file: entities/v1-alpha/tariff-plan-ah5q9f/objects-object-tariff-plan-ah5q9f.yaml
     version: 1.0.0
   objects:object-tax-record-zwqfpa:
     content_hash: d6a6ef1c0f3659a0
@@ -256,5 +292,9 @@ records:
   objects:object-transformation-plan-mpsz65:
     content_hash: 75a9e73aa18f534c
     file: entities/v1-alpha/transformation-plan-mpsz65/objects-object-transformation-plan-mpsz65.yaml
+    version: 1.0.0
+  objects:object-usage-record-nax3b6:
+    content_hash: 4c53c57f51b38fc1
+    file: entities/v1-alpha/usage-record-nax3b6/objects-object-usage-record-nax3b6.yaml
     version: 1.0.0
 schema: 1

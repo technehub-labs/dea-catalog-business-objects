@@ -1,0 +1,29 @@
+id: objects:object-sim-profile-ja8k4x
+name: SIM Profile
+type: BusinessObject
+version: 1.0.0
+object_class: technology-control
+object_subclass: subscriber-identity-module
+ecf_domain: party-relationship
+ecf_stage: activate
+current_state: active
+description: >
+  The subscriber-identity module binding a subscription to its security credentials: a physical SIM or embedded profile holding the authentication keys that admit a device to the network. The SIM Profile is the identity-binding control of a telecom lens — issued at activation, bound to one subscriber and one service instance, and replaced or suspended as the subscription moves.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-security-management-wmzc7c
+  - capabilities:capability-technology-management-maus5n
+processes_involved:
+  - processes:process-pr-activate-6qzuve
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Telecom/DSP admission (CR-BO-15); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-15
+      date: 2026-10-30
+      change: Telecom operator / digital service provider enrichment (CR-BO-06 scope continuation).
+metadata:
+  seed_record: "false"

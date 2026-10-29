@@ -1,0 +1,29 @@
+id: objects:object-subscriber-muj94k
+name: Subscriber
+type: BusinessObject
+version: 1.0.0
+object_class: party
+object_subclass: subscriber
+ecf_domain: party-relationship
+ecf_stage: operate
+current_state: active
+description: >
+  A party holding an active service subscription with the operator: the contract-bound user of communications services, distinct from the commercial Customer who may be the payer. The Subscriber is the demand-side party of a telecom lens: subscription, activation, usage, and retention processes act on it, and its service instances and usage records attach to it.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-customer-management-f3n8wb
+processes_involved:
+  - processes:process-pr-operate-bbe384
+  - processes:process-pr-activate-6qzuve
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Telecom/DSP admission (CR-BO-15); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-15
+      date: 2026-10-30
+      change: Telecom operator / digital service provider enrichment (CR-BO-06 scope continuation).
+metadata:
+  seed_record: "false"

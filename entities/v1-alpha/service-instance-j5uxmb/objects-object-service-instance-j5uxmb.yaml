@@ -1,0 +1,29 @@
+id: objects:object-service-instance-j5uxmb
+name: Service Instance
+type: BusinessObject
+version: 1.0.0
+object_class: transaction
+object_subclass: service-instance
+ecf_domain: enablement-operations
+ecf_stage: operate
+current_state: active
+description: >
+  The running subscription of one service to one subscriber: an activated, billable instance of an offering. The Service Instance is the delivery transaction of a telecom lens — activated from an order, carried on network assets, metered by usage records, and billed through the recurring cycle; it suspends and restores rather than being re-created.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-operations-management-pm3w8k
+processes_involved:
+  - processes:process-eo-operate-2jnz85
+  - processes:process-pv-activate-5686v7
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Telecom/DSP admission (CR-BO-15); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-15
+      date: 2026-10-30
+      change: Telecom operator / digital service provider enrichment (CR-BO-06 scope continuation).
+metadata:
+  seed_record: "false"

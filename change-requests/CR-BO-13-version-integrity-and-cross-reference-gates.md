@@ -4,7 +4,7 @@
 |-------|-------|
 | **CR** | CR-BO-13 |
 | **Title** | Version Integrity and Cross-Reference Gates (CI-Generated Versioning) |
-| **Status** | Proposed (this PR) |
+| **Status** | Merged |
 | **Layer** | L2 (Business Operating Model) |
 | **Owner** | Emmanuel A. Otchere |
 | **Author** | Emmanuel A. Otchere |

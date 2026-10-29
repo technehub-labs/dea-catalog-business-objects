@@ -1,0 +1,29 @@
+id: objects:object-service-number-6axyb2
+name: Service Number
+type: BusinessObject
+version: 1.0.0
+object_class: resource
+object_subclass: service-number
+ecf_domain: governance-existence
+ecf_stage: operate
+current_state: active
+description: >
+  A subscriber-facing identifier allocated to a subscriber or service: a directory number or its equivalent addressing resource. The Service Number is the addressing resource of a telecom lens — allocated from regulator-governed numbering ranges, portable between operators, and attached to exactly one subscriber at a time.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-regulation-management-gya4d8
+  - capabilities:capability-information-management-6vjgdh
+processes_involved:
+  - processes:process-ge-operate-hs7wf3
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Telecom/DSP admission (CR-BO-15); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-15
+      date: 2026-10-30
+      change: Telecom operator / digital service provider enrichment (CR-BO-06 scope continuation).
+metadata:
+  seed_record: "false"

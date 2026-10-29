@@ -19,18 +19,19 @@ Change Request (full register: [`change-requests/README.md`](../change-requests/
 | Stage-native | [CR-BO-11](../change-requests/CR-BO-11-fifth-admission-stage-native.md) | 5 | First `conceive`/`design`/`retire` cells ([CR-BO-10](../change-requests/CR-BO-10-ecf-stage-diversification-proposal.md) scope) |
 | Stage-native II | [CR-BO-12](../change-requests/CR-BO-12-sixth-admission-build-activate.md) | 4 | First `build`/`activate` cells |
 | Improve stage | [CR-BO-14](../change-requests/CR-BO-14-seventh-admission-improve-and-completion.md) | 6 | Audit Finding, Performance Review, Improvement Proposal, Lessons Learned (first `improve` cells) + Configuration Item, Transformation Plan (taxonomy completion) |
-| **Total** | | **64** | |
+| Telecom / DSP | [CR-BO-15](../change-requests/CR-BO-15-eighth-admission-telecom-dsp.md) | 10 | Telecom-operator lens: Subscriber, Tariff Plan, Service Instance, Usage Record, Network Asset, Service Number, Coverage Area, SIM Profile, Prepaid Balance, Interconnect Agreement (MCSP-aligned; `resource`/`location` proven industry-portable) |
+| **Total** | | **74** | |
 
 ## Coverage
 
 | Dimension | Coverage |
 |---|---|
-| Records | 64 canonical, all `lifecycle_status: active` |
+| Records | 74 canonical, all `lifecycle_status: active` |
 | Classes | 9 of 9 in-use classes: party (8), transaction (11), offering (6), financial-instrument (12), legal-instrument (4), work-item (7), technology-control (6), resource (3), location (1) |
 | ECF domains | 7 of 7 populated |
 | ECF stages | 7 of 7 populated (improve landed in CR-BO-14) |
-| Sector lenses | 8 industry lenses represented, explicitly labeled |
-| Cross-references | 165, all resolved (IDM-003); enforced in CI by the XREF gate (CR-BO-13) |
+| Sector lenses | 9 industry lenses represented (healthcare, government, non-profit, insurance, banking, education, manufacturing, retail, telecom), explicitly labeled |
+| Cross-references | 187, all resolved (IDM-003); enforced in CI by the XREF gate (CR-BO-13) |
 
 **Stage coverage:** operate 53 · conceive 2 · design 1 · build 2 · activate 2 · improve 4 · retire 2.
 

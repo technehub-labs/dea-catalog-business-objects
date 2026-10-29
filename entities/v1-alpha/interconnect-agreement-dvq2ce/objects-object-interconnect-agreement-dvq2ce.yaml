@@ -1,0 +1,29 @@
+id: objects:object-interconnect-agreement-dvq2ce
+name: Interconnect Agreement
+type: BusinessObject
+version: 1.0.0
+object_class: legal-instrument
+object_subclass: interconnect-agreement
+ecf_domain: governance-existence
+ecf_stage: operate
+current_state: active
+description: >
+  The contract between operators governing traffic exchange: termination and transit terms, settlement rates, and technical handover points. The Interconnect Agreement is the carrier-to-carrier instrument of a telecom lens — a partner contract whose settlement runs on usage records, and whose terms are typically notified to the regulator.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-legal-matter-management-zzbd2u
+  - capabilities:capability-partner-management-cp3vdb
+processes_involved:
+  - processes:process-eo-operate-2jnz85
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Telecom/DSP admission (CR-BO-15); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-15
+      date: 2026-10-30
+      change: Telecom operator / digital service provider enrichment (CR-BO-06 scope continuation).
+metadata:
+  seed_record: "false"
