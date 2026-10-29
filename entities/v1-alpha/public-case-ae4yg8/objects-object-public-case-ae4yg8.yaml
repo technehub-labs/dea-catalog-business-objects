@@ -1,0 +1,28 @@
+id: objects:object-public-case-ae4yg8
+name: Case
+type: BusinessObject
+version: 1.0.0
+object_class: transaction
+object_subclass: public-case
+ecf_domain: governance-existence
+ecf_stage: operate
+current_state: active
+description: >
+  A matter opened by the enterprise on behalf of a party and tracked to a determination. The Case is the service-matter transaction of a public-sector lens: intake, investigation, decision, and closure processes create and update it.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-legal-matter-management-zzbd2u
+processes_involved:
+  - processes:process-ge-operate-hs7wf3
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-08); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-08
+      date: 2026-10-30
+      change: Wave-2 admission (T2 cross-industry records, CR-BO-06 scope).
+metadata:
+  seed_record: "false"

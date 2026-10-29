@@ -1,0 +1,28 @@
+id: objects:object-insurance-claim-g5mag3
+name: Insurance Claim
+type: BusinessObject
+version: 1.0.0
+object_class: transaction
+object_subclass: insurance-claim
+ecf_domain: finance-accounting
+ecf_stage: operate
+current_state: active
+description: >
+  A formal request by a policyholder for indemnification under an insurance contract. The Insurance Claim is the benefit-outbound transaction of an insurance lens: intake, assessment, settlement, and payment processes operate on it.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-financial-resource-management-cd3c7c
+processes_involved:
+  - processes:process-fa-operate-sdppmp
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-08); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-08
+      date: 2026-10-30
+      change: Wave-2 admission (T2 cross-industry records, CR-BO-06 scope).
+metadata:
+  seed_record: "false"

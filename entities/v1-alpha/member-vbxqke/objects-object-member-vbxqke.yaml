@@ -1,0 +1,28 @@
+id: objects:object-member-vbxqke
+name: Member
+type: BusinessObject
+version: 1.0.0
+object_class: party
+object_subclass: member
+ecf_domain: party-relationship
+ecf_stage: operate
+current_state: active
+description: >
+  An individual or entity holding membership in the enterprise, with rights and obligations beyond a commercial relationship. The Member is the affiliation party: join, renew, engage, and lapse processes create and update it, and party-management capabilities act on it.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-customer-management-f3n8wb
+processes_involved:
+  - processes:process-pr-improve-t6uvan
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-08); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-08
+      date: 2026-10-30
+      change: Wave-2 admission (T2 cross-industry records, CR-BO-06 scope).
+metadata:
+  seed_record: "false"

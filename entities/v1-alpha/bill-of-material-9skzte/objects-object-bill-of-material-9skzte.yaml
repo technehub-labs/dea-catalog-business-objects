@@ -1,0 +1,28 @@
+id: objects:object-bill-of-material-9skzte
+name: Bill of Material
+type: BusinessObject
+version: 1.0.0
+object_class: resource
+object_subclass: bill-of-material
+ecf_domain: enablement-operations
+ecf_stage: operate
+current_state: active
+description: >
+  The structured list of components and quantities required to make a product. The Bill of Material is the composition resource of a manufacturing lens: production planning and execution processes read it, and engineering-change processes revise it.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-operations-management-pm3w8k
+processes_involved:
+  - processes:process-eo-operate-xud3hs
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-08); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-08
+      date: 2026-10-30
+      change: Wave-2 admission (T2 cross-industry records, CR-BO-06 scope).
+metadata:
+  seed_record: "false"

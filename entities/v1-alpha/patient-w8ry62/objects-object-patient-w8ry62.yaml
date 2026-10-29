@@ -1,0 +1,28 @@
+id: objects:object-patient-w8ry62
+name: Patient
+type: BusinessObject
+version: 1.0.0
+object_class: party
+object_subclass: patient
+ecf_domain: party-relationship
+ecf_stage: operate
+current_state: active
+description: >
+  An individual who receives care from the enterprise. The Patient is the demand-side party in a healthcare lens: admission, treatment, and discharge processes create and update it, and care-delivery and customer-management capabilities act on it.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-customer-management-f3n8wb
+processes_involved:
+  - processes:process-eo-operate-2jnz85
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-08); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-08
+      date: 2026-10-30
+      change: Wave-2 admission (T2 cross-industry records, CR-BO-06 scope).
+metadata:
+  seed_record: "false"

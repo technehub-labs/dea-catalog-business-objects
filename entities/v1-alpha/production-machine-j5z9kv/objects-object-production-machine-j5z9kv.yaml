@@ -1,0 +1,30 @@
+id: objects:object-production-machine-j5z9kv
+name: Machine
+type: BusinessObject
+version: 1.0.0
+object_class: resource
+object_subclass: production-machine
+ecf_domain: enablement-operations
+ecf_stage: operate
+current_state: active
+description: >
+  A durable physical asset that performs production operations. The Machine is the capacity resource of a manufacturing lens: production scheduling and asset-maintenance processes operate on it, and it is capitalized as an Asset.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-asset-management-judtwr
+  - capabilities:capability-operations-management-pm3w8k
+processes_involved:
+  - processes:process-eo-operate-xud3hs
+  - processes:process-eo-operate-j9cjzz
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-08); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-08
+      date: 2026-10-30
+      change: Wave-2 admission (T2 cross-industry records, CR-BO-06 scope).
+metadata:
+  seed_record: "false"

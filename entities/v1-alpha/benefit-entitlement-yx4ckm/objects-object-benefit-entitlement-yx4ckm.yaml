@@ -1,0 +1,28 @@
+id: objects:object-benefit-entitlement-yx4ckm
+name: Benefit
+type: BusinessObject
+version: 1.0.0
+object_class: financial-instrument
+object_subclass: benefit-entitlement
+ecf_domain: finance-accounting
+ecf_stage: operate
+current_state: active
+description: >
+  A disbursable entitlement a party holds under an eligibility rule. The Benefit is the outbound stewardship instrument of a public-sector lens: eligibility assessment and disbursement processes create and update it, and it executes against a Budget.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-financial-stewardship-c7xtfk
+processes_involved:
+  - processes:process-fa-operate-wkqaqp
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-08); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-08
+      date: 2026-10-30
+      change: Wave-2 admission (T2 cross-industry records, CR-BO-06 scope).
+metadata:
+  seed_record: "false"

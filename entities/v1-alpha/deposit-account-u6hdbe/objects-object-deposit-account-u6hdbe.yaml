@@ -1,0 +1,29 @@
+id: objects:object-deposit-account-u6hdbe
+name: Account
+type: BusinessObject
+version: 1.0.0
+object_class: financial-instrument
+object_subclass: deposit-account
+ecf_domain: finance-accounting
+ecf_stage: operate
+current_state: active
+description: >
+  A holding of funds at the enterprise in which a customer's money is kept and tracked. The Account (deposit sense) is the custody instrument of a banking lens: open, transact, and close processes act on it, and its ledger is reconciled daily against Journal Entries.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-financial-resource-management-cd3c7c
+processes_involved:
+  - processes:process-fa-operate-g9zpnq
+  - processes:process-fa-operate-2pmqb2
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-08); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-08
+      date: 2026-10-30
+      change: Wave-2 admission (T2 cross-industry records, CR-BO-06 scope).
+metadata:
+  seed_record: "false"

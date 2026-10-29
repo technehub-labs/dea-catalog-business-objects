@@ -20,13 +20,13 @@ This is one of **seven interoperable catalogs** in the DEA ecosystem. Business O
 
 | Level | Count |
 | :--- | ---: |
-| L1 (Business Object) | 30 |
-| **Total** | **30** |
+| L1 (Business Object) | 46 |
+| **Total** | **46** |
 
 ## Catalog of Business Objects
 
-| Business Object | id | Class | ECF cell | Consumed by (capabilities) | Involved in (processes) |
-|---|---|---|---|---|---|
+| Business Object | id | Class | ECF cell | Consumed by (capabilities) | Involved in (processes) | Sector lens (T2) |
+|---|---|---|---|---|---|---|
 | [Customer](entities/v1-alpha/customer-2qvphc/README.md) | `objects:object-customer-2qvphc` | party / customer | party-relationship · operate | customer-management | pr-operate, pr-conceive |
 | [Order](entities/v1-alpha/order-bpy4g4/README.md) | `objects:object-order-bpy4g4` | transaction / sales-order | enablement-operations · operate | operations-management | eo-operate ×2 |
 | [Product](entities/v1-alpha/product-dkf9gb/README.md) | `objects:object-product-dkf9gb` | offering / catalogue-product | product-value · operate | offering-management, marketing | pv-operate, pv-design |
@@ -59,6 +59,25 @@ This is one of **seven interoperable catalogs** in the DEA ecosystem. Business O
 | [Incident](entities/v1-alpha/incident-wudf9s/README.md) | `objects:object-incident-wudf9s` | technology-control / service-incident | enablement-operations · operate | technology-management, continuity-management | eo-operate |
 
 The eight seed records are `lifecycle_status: active`, admitted under CR-BO-05 (2026-10-28); the 22 wave-2 T1 records are `lifecycle_status: active`, admitted under CR-BO-07 (2026-10-30). All lifecycles are anchored at activation.
+
+The 16 wave-2 T2 records are cross-industry universal types, each with its sector lens labeled; admitted under CR-BO-08 (2026-10-30).
+
+| [Patient](entities/v1-alpha/patient-w8ry62/README.md) | `objects:object-patient-w8ry62` | party / patient | party-relationship · operate | customer-management | eo-operate | *healthcare* |
+| [Citizen](entities/v1-alpha/citizen-2xqsse/README.md) | `objects:object-citizen-2xqsse` | party / citizen | party-relationship · operate | customer-management | — | *government* |
+| [Member](entities/v1-alpha/member-vbxqke/README.md) | `objects:object-member-vbxqke` | party / member | party-relationship · operate | customer-management | pr-improve | *non-profit* |
+| [Insurance Claim](entities/v1-alpha/insurance-claim-g5mag3/README.md) | `objects:object-insurance-claim-g5mag3` | transaction / insurance-claim | finance-accounting · operate | financial-resource-management | fa-operate | *insurance* |
+| [Treatment](entities/v1-alpha/care-encounter-8enzdc/README.md) | `objects:object-care-encounter-8enzdc` | transaction / care-encounter | enablement-operations · operate | operations-management | eo-operate | *healthcare* |
+| [Loan](entities/v1-alpha/loan-byjy28/README.md) | `objects:object-loan-byjy28` | financial-instrument / loan | finance-accounting · operate | financial-resource-management, risk-management | fa-operate | *banking* |
+| [Account](entities/v1-alpha/deposit-account-u6hdbe/README.md) | `objects:object-deposit-account-u6hdbe` | financial-instrument / deposit-account | finance-accounting · operate | financial-resource-management | fa-operate ×2 | *banking* |
+| [Benefit](entities/v1-alpha/benefit-entitlement-yx4ckm/README.md) | `objects:object-benefit-entitlement-yx4ckm` | financial-instrument / benefit-entitlement | finance-accounting · operate | financial-stewardship | fa-operate | *government* |
+| [Case](entities/v1-alpha/public-case-ae4yg8/README.md) | `objects:object-public-case-ae4yg8` | transaction / public-case | governance-existence · operate | legal-matter-management | ge-operate | *government* |
+| [Study Program](entities/v1-alpha/education-program-n6mp9m/README.md) | `objects:object-education-program-n6mp9m` | offering / education-program | product-value · operate | offering-management | pv-operate, pv-improve | *education* |
+| [Course Section](entities/v1-alpha/course-section-j4fdpq/README.md) | `objects:object-course-section-j4fdpq` | transaction / course-section | enablement-operations · operate | operations-management | eo-operate | *education* |
+| [Lot / Batch](entities/v1-alpha/manufacturing-lot-pkbqev/README.md) | `objects:object-manufacturing-lot-pkbqev` | resource / manufacturing-lot | enablement-operations · operate | operations-management | eo-operate ×2 | *manufacturing* |
+| [Bill of Material](entities/v1-alpha/bill-of-material-9skzte/README.md) | `objects:object-bill-of-material-9skzte` | resource / bill-of-material | enablement-operations · operate | operations-management | eo-operate | *manufacturing* |
+| [Machine](entities/v1-alpha/production-machine-j5z9kv/README.md) | `objects:object-production-machine-j5z9kv` | resource / production-machine | enablement-operations · operate | asset-management, operations-management | eo-operate ×2 | *manufacturing* |
+| [Store](entities/v1-alpha/retail-store-6kzkfj/README.md) | `objects:object-retail-store-6kzkfj` | location / retail-store | enablement-operations · operate | operations-management, facility-management | eo-operate | *retail* |
+| [SKU](entities/v1-alpha/stock-keeping-unit-x6rq8r/README.md) | `objects:object-stock-keeping-unit-x6rq8r` | offering / stock-keeping-unit | product-value · operate | offering-management, operations-management | pv-operate, eo-operate | *retail* |
 
 ## Entity Definition
 
@@ -95,13 +114,15 @@ Every BO lives in exactly one `(ecf_domain, ecf_stage)` cell at a time.
 
 | `object_class` | Records | Subclasses |
 |---|---|---|
-| `party` | 4 | `customer`, `supplier`, `employee`, `partner` |
-| `transaction` | 6 | `sales-order`, `sales-quote`, `shipment`, `return-rma`, `purchase-order`, `service-ticket` |
-| `offering` | 4 | `catalogue-product`, `service`, `subscription-plan`, `price-list` |
-| `financial-instrument` | 7 | `billing-invoice`, `customer-payment`, `disbursement-grant`, `journal-entry`, `budget`, `credit-note`, `fixed-asset` |
+| `party` | 7 | `customer`, `supplier`, `employee`, `partner`, `patient`, `citizen`, `member` |
+| `transaction` | 10 | `sales-order`, `sales-quote`, `shipment`, `return-rma`, `purchase-order`, `service-ticket`, `insurance-claim`, `care-encounter`, `public-case`, `course-section` |
+| `offering` | 6 | `catalogue-product`, `service`, `subscription-plan`, `price-list`, `education-program`, `stock-keeping-unit` |
+| `financial-instrument` | 10 | `billing-invoice`, `customer-payment`, `disbursement-grant`, `journal-entry`, `budget`, `credit-note`, `fixed-asset`, `loan`, `deposit-account`, `benefit-entitlement` |
 | `legal-instrument` | 4 | `commercial-contract`, `license`, `policy`, `consent-record` |
 | `technology-control` | 4 | `release-feature-flag`, `application`, `environment`, `service-incident` |
 | `work-item` | 1 | `project` |
+| `resource` | 3 | `manufacturing-lot`, `bill-of-material`, `production-machine` |
+| `location` | 1 | `retail-store` |
 
 Industry and segment variation is expressed at the subclass level (rule BO-TAX-01, [CR-BO-06](change-requests/CR-BO-06-second-admission-wave-proposal.md)); new `object_class` values require CR-level sign-off. Aspects prose carries an explicit sector lens (CR-BO-06 §6.3).
 
