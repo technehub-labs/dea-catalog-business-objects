@@ -162,6 +162,23 @@ def catalog_name_from_dir(catalog_root: Path) -> str:
     return catalog_root.resolve().name
 
 
+def repo_name_from_origin(catalog_root: Path) -> str:
+    """Derive the repo name from the git origin URL; fall back to the
+    directory name when no remote is configured.
+
+    The origin URL is stable across clones and CI checkouts (where the
+    local directory name varies), so it is the canonical fallback source
+    for `name`/`abbreviation` (CR-CATALOG-STRUCT-06a drift fix)."""
+    url = detect_repository_url(catalog_root)
+    if url:
+        name = url.rstrip("/").rsplit("/", 1)[-1]
+        if name.endswith(".git"):
+            name = name[: -len(".git")]
+        if name:
+            return name
+    return catalog_root.resolve().name
+
+
 def build_catalog_metadata(
     catalog_root: Path, pointer: dict[str, Any], verbose: bool
 ) -> tuple[dict[str, Any], list[str]]:
@@ -175,8 +192,8 @@ def build_catalog_metadata(
 
     metadata: dict[str, Any] = {
         "id": catalog_id,
-        "name": pointer.get("name", catalog_root.resolve().name),
-        "abbreviation": pointer.get("abbreviation", catalog_root.resolve().name[:4].upper()),
+        "name": pointer.get("name", repo_name_from_origin(catalog_root)),
+        "abbreviation": pointer.get("abbreviation", repo_name_from_origin(catalog_root)[:4].upper()),
         "version": str(pointer.get("version", "0.0.0")),
         "status": pointer.get("status", "active"),
         "metamodel_version": str(pointer.get("metamodel_version", "unknown")),

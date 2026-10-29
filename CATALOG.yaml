@@ -1,5 +1,5 @@
 catalog:
-  abbreviation: GITH
+  abbreviation: DEA-
   counts:
     candidates: 0
     canonical: 8
@@ -20,7 +20,7 @@ catalog:
   - candidate_count: 0
     canonical_count: 1
     id: objects:object-contract-w24y9z
-    last_modified: '2026-10-28'
+    last_modified: '2026-10-29'
     lifecycle_status: active
     path: entities/v1-alpha/contract-w24y9z/objects-object-contract-w24y9z.yaml
     research_count: 0
@@ -31,7 +31,7 @@ catalog:
   - candidate_count: 0
     canonical_count: 1
     id: objects:object-customer-2qvphc
-    last_modified: '2026-10-28'
+    last_modified: '2026-10-29'
     lifecycle_status: active
     path: entities/v1-alpha/customer-2qvphc/objects-object-customer-2qvphc.yaml
     research_count: 0
@@ -42,7 +42,7 @@ catalog:
   - candidate_count: 0
     canonical_count: 1
     id: objects:object-feature-flag-p5gzf7
-    last_modified: '2026-10-28'
+    last_modified: '2026-10-29'
     lifecycle_status: active
     path: entities/v1-alpha/feature-flag-p5gzf7/objects-object-feature-flag-p5gzf7.yaml
     research_count: 0
@@ -53,7 +53,7 @@ catalog:
   - candidate_count: 0
     canonical_count: 1
     id: objects:object-grant-nhdwg9
-    last_modified: '2026-10-28'
+    last_modified: '2026-10-29'
     lifecycle_status: active
     path: entities/v1-alpha/grant-nhdwg9/objects-object-grant-nhdwg9.yaml
     research_count: 0
@@ -64,7 +64,7 @@ catalog:
   - candidate_count: 0
     canonical_count: 1
     id: objects:object-invoice-z3fwgb
-    last_modified: '2026-10-28'
+    last_modified: '2026-10-29'
     lifecycle_status: active
     path: entities/v1-alpha/invoice-z3fwgb/objects-object-invoice-z3fwgb.yaml
     research_count: 0
@@ -75,7 +75,7 @@ catalog:
   - candidate_count: 0
     canonical_count: 1
     id: objects:object-order-bpy4g4
-    last_modified: '2026-10-28'
+    last_modified: '2026-10-29'
     lifecycle_status: active
     path: entities/v1-alpha/order-bpy4g4/objects-object-order-bpy4g4.yaml
     research_count: 0
@@ -86,7 +86,7 @@ catalog:
   - candidate_count: 0
     canonical_count: 1
     id: objects:object-payment-kgsvrg
-    last_modified: '2026-10-28'
+    last_modified: '2026-10-29'
     lifecycle_status: active
     path: entities/v1-alpha/payment-kgsvrg/objects-object-payment-kgsvrg.yaml
     research_count: 0
@@ -97,7 +97,7 @@ catalog:
   - candidate_count: 0
     canonical_count: 1
     id: objects:object-product-dkf9gb
-    last_modified: '2026-10-28'
+    last_modified: '2026-10-29'
     lifecycle_status: active
     path: entities/v1-alpha/product-dkf9gb/objects-object-product-dkf9gb.yaml
     research_count: 0
@@ -107,7 +107,7 @@ catalog:
     version: 1.0.0
   id: dea:catalog-business-objects
   metamodel_version: unknown
-  name: github__technehub-labs__dea-catalog-business-objects
+  name: dea-catalog-business-objects
   owner: TechNeHub Labs
   repository: https://github.com/technehub-labs/dea-catalog-business-objects.git
   research_registers:
