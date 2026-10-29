@@ -1,0 +1,39 @@
+@startmindmap catalog-taxonomy
+*[#2C3E50] _**58** Business Objects_
+**_[#1F6FB2] party (8)_**
+***[#1F6FB2] customer
+***[#3498DB] supplier · employee · partner
+***[#5DADE2] patient · citizen · member
+***[#85C1E9] candidate-party
+**_[#1E8449] transaction (11)_**
+***[#1E8449] sales-quote · sales-order
+***[#2ECC71] shipment · return-rma
+***[#58D68D] purchase-order · service-ticket
+***[#82E0AA] requirement
+***[#ABEBC6] insurance-claim · care-encounter · public-case · course-section
+**_[#B7950B] offering (6)_**
+***[#B7950B] catalogue-product · service
+***[#D4AC0D] subscription-plan · price-list
+***[#F1C40F] education-program · stock-keeping-unit
+**_[#943126] financial-instrument (12)_**
+***[#943126] billing-invoice · customer-payment
+***[#CB4335] journal-entry · budget · forecast
+***[#EC7063] credit-note · fixed-asset · tax-record
+***[#F1948A] disbursement-grant · loan · deposit-account · benefit-entitlement
+**_[#6C3483] legal-instrument (4)_**
+***[#6C3483] commercial-contract · license
+***[#8E44AD] policy · consent-record
+**_[#148F77] work-item (7)_**
+***[#148F77] project · strategic-goal · business-case
+***[#17A589] training-program · onboarding-program
+***[#45B39D] offboarding-plan · sunset-plan
+**_[#A04000] technology-control (6)_**
+***[#A04000] release-feature-flag · application
+***[#CA6F1E] environment · service-incident
+***[#EB984E] release-candidate · party-credential
+**_[#5D6D7E] resource (3)_**
+***[#5D6D7E] manufacturing-lot · bill-of-material · production-machine
+**_[#5D6D7E] location (1)_**
+***[#ABB2B9] retail-store
+caption: 9 object_classes · 58 records · color depth = admission wave (core → industry → stage-native)
+@endmindmap
