@@ -1,0 +1,29 @@
+id: objects:object-loan-byjy28
+name: Loan
+type: BusinessObject
+version: 1.0.0
+object_class: financial-instrument
+object_subclass: loan
+ecf_domain: finance-accounting
+ecf_stage: operate
+current_state: active
+description: >
+  A sum lent by the enterprise to a borrower, repayable with interest over an agreed term. The Loan is the lending instrument of a banking lens: origination, disbursement, servicing, and repayment processes create and update it, and its balance and terms drive credit risk.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-financial-resource-management-cd3c7c
+  - capabilities:capability-risk-management-h9uxdw
+processes_involved:
+  - processes:process-fa-operate-2pmqb2
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-08); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-08
+      date: 2026-10-30
+      change: Wave-2 admission (T2 cross-industry records, CR-BO-06 scope).
+metadata:
+  seed_record: "false"

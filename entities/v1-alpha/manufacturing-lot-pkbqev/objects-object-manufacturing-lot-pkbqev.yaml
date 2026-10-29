@@ -1,0 +1,29 @@
+id: objects:object-manufacturing-lot-pkbqev
+name: Lot / Batch
+type: BusinessObject
+version: 1.0.0
+object_class: resource
+object_subclass: manufacturing-lot
+ecf_domain: enablement-operations
+ecf_stage: operate
+current_state: active
+description: >
+  A quantity of material or product produced under shared conditions and tracked as a unit through the enterprise and its supply chain. The Lot is the traceability resource of a manufacturing lens: production, quality, and recall processes act on it.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-operations-management-pm3w8k
+processes_involved:
+  - processes:process-eo-operate-xud3hs
+  - processes:process-eo-operate-44jsrp
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-08); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-08
+      date: 2026-10-30
+      change: Wave-2 admission (T2 cross-industry records, CR-BO-06 scope).
+metadata:
+  seed_record: "false"

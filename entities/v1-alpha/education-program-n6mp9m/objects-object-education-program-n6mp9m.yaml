@@ -1,0 +1,29 @@
+id: objects:object-education-program-n6mp9m
+name: Study Program
+type: BusinessObject
+version: 1.0.0
+object_class: offering
+object_subclass: education-program
+ecf_domain: product-value
+ecf_stage: operate
+current_state: active
+description: >
+  A structured program of study the enterprise offers to learners, leading to a qualification or outcome. The Study Program is the curriculum offering of an education lens: program design, catalogue publication, and portfolio rationalization processes act on it.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-offering-management-6egkc8
+processes_involved:
+  - processes:process-pv-operate-zyguzp
+  - processes:process-pv-improve-9xvgat
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-08); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-08
+      date: 2026-10-30
+      change: Wave-2 admission (T2 cross-industry records, CR-BO-06 scope).
+metadata:
+  seed_record: "false"

@@ -110,10 +110,10 @@ The wave-2 T1 set (CR-BO-07) extends each seeded area of the mesh: the **party r
 
 | Level | Count |
 | :--- | ---: |
-| L1 (Business Object) | 30 |
-| **Total** | **30** |
+| L1 (Business Object) | 46 |
+| **Total** | **46** |
 
-The first admission (CR-BO-05) landed eight seed Business Object records; the second admission (CR-BO-07) landed the wave-2 T1 commercial-core extension (22 records). The CI early-exit pattern in `.github/workflows/ci.yml` has been dropped; schema validation runs on every entry.
+The first admission (CR-BO-05) landed eight seed Business Object records; the second admission (CR-BO-07) landed the wave-2 T1 commercial-core extension (22 records), and the third admission (CR-BO-08) landed the wave-2 T2 cross-industry records (16 records with sector lenses). The CI early-exit pattern in `.github/workflows/ci.yml` has been dropped; schema validation runs on every entry.
 
 ---
 

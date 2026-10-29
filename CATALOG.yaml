@@ -2,9 +2,9 @@ catalog:
   abbreviation: DEA-
   counts:
     candidates: 0
-    canonical: 30
-    entities: 30
-    open_change_requests: 7
+    canonical: 46
+    entities: 46
+    open_change_requests: 8
     research_files: 0
     retired: 0
   cross_cutting:
@@ -41,10 +41,54 @@ catalog:
     version: 1.0.0
   - candidate_count: 0
     canonical_count: 1
+    id: objects:object-benefit-entitlement-yx4ckm
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/benefit-entitlement-yx4ckm/objects-object-benefit-entitlement-yx4ckm.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-bill-of-material-9skzte
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/bill-of-material-9skzte/objects-object-bill-of-material-9skzte.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
     id: objects:object-budget-h77u8h
     last_modified: '2026-10-29'
     lifecycle_status: active
     path: entities/v1-alpha/budget-h77u8h/objects-object-budget-h77u8h.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-care-encounter-8enzdc
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/care-encounter-8enzdc/objects-object-care-encounter-8enzdc.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-citizen-2xqsse
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/citizen-2xqsse/objects-object-citizen-2xqsse.yaml
     research_count: 0
     retired_count: 0
     state: canonical
@@ -74,6 +118,17 @@ catalog:
     version: 1.0.0
   - candidate_count: 0
     canonical_count: 1
+    id: objects:object-course-section-j4fdpq
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/course-section-j4fdpq/objects-object-course-section-j4fdpq.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
     id: objects:object-credit-note-k6nktp
     last_modified: '2026-10-29'
     lifecycle_status: active
@@ -89,6 +144,28 @@ catalog:
     last_modified: '2026-10-29'
     lifecycle_status: active
     path: entities/v1-alpha/customer-2qvphc/objects-object-customer-2qvphc.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-deposit-account-u6hdbe
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/deposit-account-u6hdbe/objects-object-deposit-account-u6hdbe.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-education-program-n6mp9m
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/education-program-n6mp9m/objects-object-education-program-n6mp9m.yaml
     research_count: 0
     retired_count: 0
     state: canonical
@@ -151,6 +228,17 @@ catalog:
     version: 1.0.0
   - candidate_count: 0
     canonical_count: 1
+    id: objects:object-insurance-claim-g5mag3
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/insurance-claim-g5mag3/objects-object-insurance-claim-g5mag3.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
     id: objects:object-invoice-z3fwgb
     last_modified: '2026-10-29'
     lifecycle_status: active
@@ -184,6 +272,39 @@ catalog:
     version: 1.0.0
   - candidate_count: 0
     canonical_count: 1
+    id: objects:object-loan-byjy28
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/loan-byjy28/objects-object-loan-byjy28.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-manufacturing-lot-pkbqev
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/manufacturing-lot-pkbqev/objects-object-manufacturing-lot-pkbqev.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-member-vbxqke
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/member-vbxqke/objects-object-member-vbxqke.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
     id: objects:object-order-bpy4g4
     last_modified: '2026-10-29'
     lifecycle_status: active
@@ -199,6 +320,17 @@ catalog:
     last_modified: '2026-10-29'
     lifecycle_status: active
     path: entities/v1-alpha/partner-cfhqx9/objects-object-partner-cfhqx9.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-patient-w8ry62
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/patient-w8ry62/objects-object-patient-w8ry62.yaml
     research_count: 0
     retired_count: 0
     state: canonical
@@ -250,10 +382,32 @@ catalog:
     version: 1.0.0
   - candidate_count: 0
     canonical_count: 1
+    id: objects:object-production-machine-j5z9kv
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/production-machine-j5z9kv/objects-object-production-machine-j5z9kv.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
     id: objects:object-project-5hgzd3
     last_modified: '2026-10-29'
     lifecycle_status: active
     path: entities/v1-alpha/project-5hgzd3/objects-object-project-5hgzd3.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-public-case-ae4yg8
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/public-case-ae4yg8/objects-object-public-case-ae4yg8.yaml
     research_count: 0
     retired_count: 0
     state: canonical
@@ -276,6 +430,17 @@ catalog:
     last_modified: '2026-10-29'
     lifecycle_status: active
     path: entities/v1-alpha/quote-gnngfe/objects-object-quote-gnngfe.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-retail-store-6kzkfj
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/retail-store-6kzkfj/objects-object-retail-store-6kzkfj.yaml
     research_count: 0
     retired_count: 0
     state: canonical
@@ -309,6 +474,17 @@ catalog:
     last_modified: '2026-10-29'
     lifecycle_status: active
     path: entities/v1-alpha/shipment-mb7wgn/objects-object-shipment-mb7wgn.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-stock-keeping-unit-x6rq8r
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/stock-keeping-unit-x6rq8r/objects-object-stock-keeping-unit-x6rq8r.yaml
     research_count: 0
     retired_count: 0
     state: canonical
@@ -359,21 +535,42 @@ catalog:
   - entity_id: objects:object-asset-w887xr
     files: []
     path: entities/v1-alpha/asset-w887xr/research/
+  - entity_id: objects:object-benefit-entitlement-yx4ckm
+    files: []
+    path: entities/v1-alpha/benefit-entitlement-yx4ckm/research/
+  - entity_id: objects:object-bill-of-material-9skzte
+    files: []
+    path: entities/v1-alpha/bill-of-material-9skzte/research/
   - entity_id: objects:object-budget-h77u8h
     files: []
     path: entities/v1-alpha/budget-h77u8h/research/
+  - entity_id: objects:object-care-encounter-8enzdc
+    files: []
+    path: entities/v1-alpha/care-encounter-8enzdc/research/
+  - entity_id: objects:object-citizen-2xqsse
+    files: []
+    path: entities/v1-alpha/citizen-2xqsse/research/
   - entity_id: objects:object-consent-record-gacq7d
     files: []
     path: entities/v1-alpha/consent-record-gacq7d/research/
   - entity_id: objects:object-contract-w24y9z
     files: []
     path: entities/v1-alpha/contract-w24y9z/research/
+  - entity_id: objects:object-course-section-j4fdpq
+    files: []
+    path: entities/v1-alpha/course-section-j4fdpq/research/
   - entity_id: objects:object-credit-note-k6nktp
     files: []
     path: entities/v1-alpha/credit-note-k6nktp/research/
   - entity_id: objects:object-customer-2qvphc
     files: []
     path: entities/v1-alpha/customer-2qvphc/research/
+  - entity_id: objects:object-deposit-account-u6hdbe
+    files: []
+    path: entities/v1-alpha/deposit-account-u6hdbe/research/
+  - entity_id: objects:object-education-program-n6mp9m
+    files: []
+    path: entities/v1-alpha/education-program-n6mp9m/research/
   - entity_id: objects:object-employee-phbzym
     files: []
     path: entities/v1-alpha/employee-phbzym/research/
@@ -389,6 +586,9 @@ catalog:
   - entity_id: objects:object-incident-wudf9s
     files: []
     path: entities/v1-alpha/incident-wudf9s/research/
+  - entity_id: objects:object-insurance-claim-g5mag3
+    files: []
+    path: entities/v1-alpha/insurance-claim-g5mag3/research/
   - entity_id: objects:object-invoice-z3fwgb
     files: []
     path: entities/v1-alpha/invoice-z3fwgb/research/
@@ -398,12 +598,24 @@ catalog:
   - entity_id: objects:object-license-na3j53
     files: []
     path: entities/v1-alpha/license-na3j53/research/
+  - entity_id: objects:object-loan-byjy28
+    files: []
+    path: entities/v1-alpha/loan-byjy28/research/
+  - entity_id: objects:object-manufacturing-lot-pkbqev
+    files: []
+    path: entities/v1-alpha/manufacturing-lot-pkbqev/research/
+  - entity_id: objects:object-member-vbxqke
+    files: []
+    path: entities/v1-alpha/member-vbxqke/research/
   - entity_id: objects:object-order-bpy4g4
     files: []
     path: entities/v1-alpha/order-bpy4g4/research/
   - entity_id: objects:object-partner-cfhqx9
     files: []
     path: entities/v1-alpha/partner-cfhqx9/research/
+  - entity_id: objects:object-patient-w8ry62
+    files: []
+    path: entities/v1-alpha/patient-w8ry62/research/
   - entity_id: objects:object-payment-kgsvrg
     files: []
     path: entities/v1-alpha/payment-kgsvrg/research/
@@ -416,15 +628,24 @@ catalog:
   - entity_id: objects:object-product-dkf9gb
     files: []
     path: entities/v1-alpha/product-dkf9gb/research/
+  - entity_id: objects:object-production-machine-j5z9kv
+    files: []
+    path: entities/v1-alpha/production-machine-j5z9kv/research/
   - entity_id: objects:object-project-5hgzd3
     files: []
     path: entities/v1-alpha/project-5hgzd3/research/
+  - entity_id: objects:object-public-case-ae4yg8
+    files: []
+    path: entities/v1-alpha/public-case-ae4yg8/research/
   - entity_id: objects:object-purchase-order-qf4tfa
     files: []
     path: entities/v1-alpha/purchase-order-qf4tfa/research/
   - entity_id: objects:object-quote-gnngfe
     files: []
     path: entities/v1-alpha/quote-gnngfe/research/
+  - entity_id: objects:object-retail-store-6kzkfj
+    files: []
+    path: entities/v1-alpha/retail-store-6kzkfj/research/
   - entity_id: objects:object-return-uwz79t
     files: []
     path: entities/v1-alpha/return-uwz79t/research/
@@ -434,6 +655,9 @@ catalog:
   - entity_id: objects:object-shipment-mb7wgn
     files: []
     path: entities/v1-alpha/shipment-mb7wgn/research/
+  - entity_id: objects:object-stock-keeping-unit-x6rq8r
+    files: []
+    path: entities/v1-alpha/stock-keeping-unit-x6rq8r/research/
   - entity_id: objects:object-subscription-3v98yb
     files: []
     path: entities/v1-alpha/subscription-3v98yb/research/

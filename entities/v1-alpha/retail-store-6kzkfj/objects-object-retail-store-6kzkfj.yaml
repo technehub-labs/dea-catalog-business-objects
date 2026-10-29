@@ -1,0 +1,29 @@
+id: objects:object-retail-store-6kzkfj
+name: Store
+type: BusinessObject
+version: 1.0.0
+object_class: location
+object_subclass: retail-store
+ecf_domain: enablement-operations
+ecf_stage: operate
+current_state: active
+description: >
+  A physical outlet where the enterprise offers goods to customers. The Store is the customer-facing location of a retail lens: replenishment, sales, and inventory processes operate in it, and its performance is measured as a unit.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-operations-management-pm3w8k
+  - capabilities:capability-facility-management-tx73hb
+processes_involved:
+  - processes:process-eo-operate-zwzmbd
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-08); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-08
+      date: 2026-10-30
+      change: Wave-2 admission (T2 cross-industry records, CR-BO-06 scope).
+metadata:
+  seed_record: "false"
