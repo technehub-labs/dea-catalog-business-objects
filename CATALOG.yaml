@@ -109,7 +109,7 @@ catalog:
   metamodel_version: unknown
   name: dea-catalog-business-objects
   owner: TechNeHub Labs
-  repository: https://github.com/technehub-labs/dea-catalog-business-objects
+  repository: https://github.com/technehub-labs/dea-catalog-business-objects.git
   research_registers:
   - entity_id: objects:object-contract-w24y9z
     files: []
