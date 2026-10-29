@@ -20,8 +20,8 @@ This is one of **seven interoperable catalogs** in the DEA ecosystem. Business O
 
 | Level | Count |
 | :--- | ---: |
-| L1 (Business Object) | 49 |
-| **Total** | **49** |
+| L1 (Business Object) | 54 |
+| **Total** | **54** |
 
 ## Catalog of Business Objects
 
@@ -63,6 +63,13 @@ The eight seed records are `lifecycle_status: active`, admitted under CR-BO-05 (
 The 16 wave-2 T2 records are cross-industry universal types, each with its sector lens labeled; admitted under CR-BO-08 (2026-10-30).
 
 The 3 T3-ready records (goal, forecast, tax-record from the CR-BO-06 deferred list, anchors now resolvable) were admitted under CR-BO-09 (2026-10-30). Goal is the first record in the `strategy-direction` ECF domain.
+
+The 5 stage-native records (CR-BO-11, per the CR-BO-10 scope and its §5 decisions: BO-STG-01 adopted, all five candidates, `Candidate` naming) populate the first non-`operate` cells: `conceive` (Business Case, Candidate), `design` (Requirement), and `retire` (Offboarding Plan, Sunset Plan).
+| [Business Case](entities/v1-alpha/business-case-et8p4e/README.md) | `objects:object-business-case-et8p4e` | work-item / business-case | strategy-direction · conceive | strategic-planning | sd-conceive ×2 | |
+| [Requirement](entities/v1-alpha/requirement-9ukadu/README.md) | `objects:object-requirement-9ukadu` | transaction / requirement | product-value · design | offering-management, technology-management | pv-design ×2 | |
+| [Candidate](entities/v1-alpha/candidate-party-s8q2mk/README.md) | `objects:object-candidate-party-s8q2mk` | party / candidate-party | party-relationship · conceive | customer-management | pr-conceive ×2 | |
+| [Offboarding Plan](entities/v1-alpha/offboarding-plan-djz4md/README.md) | `objects:object-offboarding-plan-djz4md` | work-item / offboarding-plan | party-relationship · retire | customer-management | pr-retire | |
+| [Sunset Plan](entities/v1-alpha/sunset-plan-34225t/README.md) | `objects:object-sunset-plan-34225t` | work-item / sunset-plan | product-value · retire | offering-management | pv-retire | |
 | [Goal](entities/v1-alpha/goal-h2zfhv/README.md) | `objects:object-goal-h2zfhv` | work-item / strategic-goal | strategy-direction · operate | strategic-planning, enterprise-performance-management | sd-operate ×3 | |
 | [Forecast](entities/v1-alpha/forecast-um3az3/README.md) | `objects:object-forecast-um3az3` | financial-instrument / forecast | finance-accounting · operate | financial-resource-management, enterprise-performance-management | fa-build, fa-operate | |
 | [Tax Record](entities/v1-alpha/tax-record-zwqfpa/README.md) | `objects:object-tax-record-zwqfpa` | financial-instrument / tax-record | finance-accounting · operate | financial-resource-management, regulation-management | fa-operate, fa-design | |
@@ -119,13 +126,13 @@ Every BO lives in exactly one `(ecf_domain, ecf_stage)` cell at a time.
 
 | `object_class` | Records | Subclasses |
 |---|---|---|
-| `party` | 7 | `customer`, `supplier`, `employee`, `partner`, `patient`, `citizen`, `member` |
-| `transaction` | 10 | `sales-order`, `sales-quote`, `shipment`, `return-rma`, `purchase-order`, `service-ticket`, `insurance-claim`, `care-encounter`, `public-case`, `course-section` |
+| `party` | 8 | `customer`, `supplier`, `employee`, `partner`, `patient`, `citizen`, `member`, `candidate-party` |
+| `transaction` | 11 | `sales-order`, `sales-quote`, `shipment`, `return-rma`, `purchase-order`, `service-ticket`, `insurance-claim`, `care-encounter`, `public-case`, `course-section`, `requirement` |
 | `offering` | 6 | `catalogue-product`, `service`, `subscription-plan`, `price-list`, `education-program`, `stock-keeping-unit` |
 | `financial-instrument` | 12 | `billing-invoice`, `customer-payment`, `disbursement-grant`, `journal-entry`, `budget`, `credit-note`, `fixed-asset`, `loan`, `deposit-account`, `benefit-entitlement`, `forecast`, `tax-record` |
 | `legal-instrument` | 4 | `commercial-contract`, `license`, `policy`, `consent-record` |
 | `technology-control` | 4 | `release-feature-flag`, `application`, `environment`, `service-incident` |
-| `work-item` | 2 | `project`, `strategic-goal` |
+| `work-item` | 5 | `project`, `strategic-goal`, `business-case`, `offboarding-plan`, `sunset-plan` |
 | `resource` | 3 | `manufacturing-lot`, `bill-of-material`, `production-machine` |
 | `location` | 1 | `retail-store` |
 

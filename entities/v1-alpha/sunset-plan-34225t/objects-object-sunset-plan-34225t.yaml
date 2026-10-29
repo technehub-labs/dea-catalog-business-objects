@@ -1,0 +1,28 @@
+id: objects:object-sunset-plan-34225t
+name: Sunset Plan
+type: BusinessObject
+version: 1.0.0
+object_class: work-item
+object_subclass: sunset-plan
+ecf_domain: product-value
+ecf_stage: retire
+current_state: active
+description: >
+  The managed exit of an offering: migration paths for existing customers, run-off of inventory and commitments, and communication of the withdrawal. The Sunset Plan is stage-native to retire — it converts an offering's end from a cliff into a slope.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-offering-management-6egkc8
+processes_involved:
+  - processes:process-pv-retire-6us5am
+state_history:
+  - state: active
+    ecf_stage: retire
+    entered: 2026-10-30
+    note: Stage-native admission (CR-BO-11, CR-BO-10 scope); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-11
+      date: 2026-10-30
+      change: Stage-native admission (first non-operate ECF cells, CR-BO-10 scope).
+metadata:
+  seed_record: "false"
