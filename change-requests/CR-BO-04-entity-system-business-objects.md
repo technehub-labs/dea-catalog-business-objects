@@ -4,7 +4,7 @@
 |-------|-------|
 | **CR** | CR-BO-04 |
 | **Title** | Entity System Stage 5-6 (Catalog Adoption + Institutionalisation) - BO slice of the General Entity System institutionalisation. The BO catalog has 0 entity records at the time of CR landing; the gate is vacuously CONFORMANT. Slice |
-| **Status** | Proposed (this PR) |
+| **Status** | Merged |
 | **Layer** | L1 (BO slice of the General Entity System institutionalisation. The BO catalog has 0 entity records at the time of CR landing; the gate is vacuously CONFORMANT. Catalog) |
 | **Depends on** | CR-BP-121..125 (the 6-stage institutionalisation in dea-catalog-processes) |
 | **Author** | Emmanuel A. Otchere |

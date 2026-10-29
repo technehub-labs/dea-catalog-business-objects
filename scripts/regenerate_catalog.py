@@ -538,12 +538,14 @@ def count_open_change_requests(catalog_root: Path) -> int:
             continue
         # Take the first 30 lines; look for a status line.
         head = "\n".join(text.splitlines()[:30])
-        if "Status**: Merged" in head or "Status**: Merged" in head:
+        # Table form is `| **Status** | Merged |`; bold-prefix form is
+        # `**Status**: Merged`. Accept both (with or without the space).
+        if "Status** | Merged" in head or "Status**: Merged" in head:
             continue
-        if "Status**: Proposed" in head or "Status**: Draft" in head:
+        if "Status** | Proposed" in head or "Status** | Draft" in head or "Status**: Proposed" in head or "Status**: Draft" in head:
             open_count += 1
             continue
-        if "Status**:" in head:
+        if "Status** |" in head or "Status**:" in head:
             # Some other status (Accepted, Superseded, etc.): conservative: open.
             open_count += 1
             continue

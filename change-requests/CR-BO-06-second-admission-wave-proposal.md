@@ -4,7 +4,7 @@
 |-------|-------|
 | **CR** | CR-BO-06 |
 | **Title** | Second Admission Wave Proposal (Candidate Business Objects, Class/Subclass Taxonomy, Industry-Variation Guidance) |
-| **Status** | Proposed (this PR) |
+| **Status** | Merged |
 | **Layer** | L2 (Business Operating Model) |
 | **Owner** | Emmanuel A. Otchere |
 | **Author** | Emmanuel A. Otchere |
