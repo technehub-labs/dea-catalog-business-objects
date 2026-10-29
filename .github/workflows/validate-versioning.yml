@@ -1,0 +1,35 @@
+name: validate-versioning
+
+# CR-BO-13: version integrity + cross-reference gates.
+# VER-001..003 run on every PR against the committed version manifest;
+# XREF-001..002 clone the sibling catalogs at HEAD and verify every
+# capabilities:* / processes:* reference resolves.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  version-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: pip install pyyaml
+      - name: Version Integrity Gate (VER-001..003)
+        run: python scripts/version_manifest.py check-version-integrity --strict
+
+  cross-references:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: pip install pyyaml
+      - name: Clone sibling catalogs at HEAD
+        run: |
+          git clone --depth 1 https://github.com/technehub-labs/dea-catalog-business-capabilities.git /tmp/caps
+          git clone --depth 1 https://github.com/technehub-labs/dea-catalog-business-processes.git /tmp/procs
+      - name: Cross-Reference Gate (XREF-001..002)
+        run: python scripts/version_manifest.py check-cross-references --caps /tmp/caps --procs /tmp/procs

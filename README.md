@@ -26,6 +26,7 @@ Without a canonical register of these types, every catalog and every model impro
 | What this is; why it exists; how it's built; how to use it | this README |
 | Where the population stands; coverage; open threads | [docs/project-status.md](docs/project-status.md) |
 | Rules, workflow, decision log | [docs/governance/catalog-governance.md](docs/governance/catalog-governance.md) |
+| Versioning policy, release cuts | [docs/versioning.md](docs/versioning.md) |
 | Change Request register | [change-requests/README.md](change-requests/README.md) |
 | Notable changes | [CHANGELOG.md](CHANGELOG.md) |
 
@@ -247,7 +248,7 @@ dea-catalog-business-objects/
 │   └── entity.schema.json              # record schema
 ├── catalog-index-schema/
 ├── change-requests/                    # CR-BO-01..12 governance trail
-├── reconciliation/                     # authorship registry, entity-system registry
+├── reconciliation/                     # authorship + entity-system registries, version manifest
 ├── docs/
 │   ├── project-status.md               # population progress, coverage, open threads
 │   ├── governance/catalog-governance.md # rules, workflow, decision log
@@ -268,6 +269,8 @@ Every PR runs the full conformance pipeline (see [`entities/v1-alpha/README.md`]
 - **Authorship Gate** — cardinal rules R1/R2, data-driven from `reconciliation/authorship-fields.yaml`
 - **CR Metadata Gate** — every structural change tied to an approved Change Request
 - **Allocation & register gates** — orphan/duplicate record detection, catalog-register honesty
+- **Version Integrity Gate (VER-001..003)** — version-manifest coverage and substance-change⇔bump coherence (CR-BO-13)
+- **Cross-Reference Gate (XREF-001..002)** — sibling-catalog reference resolution at HEAD, enforced in CI (CR-BO-13)
 
 
 
