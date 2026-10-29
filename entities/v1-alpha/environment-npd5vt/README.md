@@ -1,6 +1,6 @@
 # Environment
 
-Documentation for Business Object record [`objects:object-environment-npd5vt`](objects-object-environment-npd5vt.yaml)
+Documentation for Business Object record [`objects:object-environment-npd5vt`](objects-object-environment-npd5vt.yaml) · [Aspects deep-dive](aspects.md)
 
 ## Identity
 

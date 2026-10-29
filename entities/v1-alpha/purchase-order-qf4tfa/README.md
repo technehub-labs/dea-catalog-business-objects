@@ -1,6 +1,6 @@
 # Purchase Order
 
-Documentation for Business Object record [`objects:object-purchase-order-qf4tfa`](objects-object-purchase-order-qf4tfa.yaml)
+Documentation for Business Object record [`objects:object-purchase-order-qf4tfa`](objects-object-purchase-order-qf4tfa.yaml) · [Aspects deep-dive](aspects.md)
 
 ## Identity
 

@@ -1,6 +1,6 @@
 # Partner
 
-Documentation for Business Object record [`objects:object-partner-cfhqx9`](objects-object-partner-cfhqx9.yaml)
+Documentation for Business Object record [`objects:object-partner-cfhqx9`](objects-object-partner-cfhqx9.yaml) · [Aspects deep-dive](aspects.md)
 
 ## Identity
 

@@ -1,6 +1,6 @@
 # Application
 
-Documentation for Business Object record [`objects:object-application-eewde8`](objects-object-application-eewde8.yaml)
+Documentation for Business Object record [`objects:object-application-eewde8`](objects-object-application-eewde8.yaml) · [Aspects deep-dive](aspects.md)
 
 ## Identity
 

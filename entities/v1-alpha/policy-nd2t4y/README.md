@@ -1,6 +1,6 @@
 # Policy
 
-Documentation for Business Object record [`objects:object-policy-nd2t4y`](objects-object-policy-nd2t4y.yaml)
+Documentation for Business Object record [`objects:object-policy-nd2t4y`](objects-object-policy-nd2t4y.yaml) · [Aspects deep-dive](aspects.md)
 
 ## Identity
 

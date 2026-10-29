@@ -1,6 +1,6 @@
 # Price List
 
-Documentation for Business Object record [`objects:object-price-list-4bk48j`](objects-object-price-list-4bk48j.yaml)
+Documentation for Business Object record [`objects:object-price-list-4bk48j`](objects-object-price-list-4bk48j.yaml) · [Aspects deep-dive](aspects.md)
 
 ## Identity
 

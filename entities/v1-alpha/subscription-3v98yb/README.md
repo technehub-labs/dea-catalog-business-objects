@@ -1,6 +1,6 @@
 # Subscription
 
-Documentation for Business Object record [`objects:object-subscription-3v98yb`](objects-object-subscription-3v98yb.yaml)
+Documentation for Business Object record [`objects:object-subscription-3v98yb`](objects-object-subscription-3v98yb.yaml) · [Aspects deep-dive](aspects.md)
 
 ## Identity
 

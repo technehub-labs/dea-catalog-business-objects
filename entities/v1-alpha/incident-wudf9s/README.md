@@ -1,6 +1,6 @@
 # Incident
 
-Documentation for Business Object record [`objects:object-incident-wudf9s`](objects-object-incident-wudf9s.yaml)
+Documentation for Business Object record [`objects:object-incident-wudf9s`](objects-object-incident-wudf9s.yaml) · [Aspects deep-dive](aspects.md)
 
 ## Identity
 

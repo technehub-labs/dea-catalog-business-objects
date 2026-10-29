@@ -1,6 +1,6 @@
 # License
 
-Documentation for Business Object record [`objects:object-license-na3j53`](objects-object-license-na3j53.yaml)
+Documentation for Business Object record [`objects:object-license-na3j53`](objects-object-license-na3j53.yaml) · [Aspects deep-dive](aspects.md)
 
 ## Identity
 

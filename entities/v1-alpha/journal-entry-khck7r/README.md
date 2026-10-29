@@ -1,6 +1,6 @@
 # Journal Entry
 
-Documentation for Business Object record [`objects:object-journal-entry-khck7r`](objects-object-journal-entry-khck7r.yaml)
+Documentation for Business Object record [`objects:object-journal-entry-khck7r`](objects-object-journal-entry-khck7r.yaml) · [Aspects deep-dive](aspects.md)
 
 ## Identity
 

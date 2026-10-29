@@ -1,6 +1,6 @@
 # Credit Note
 
-Documentation for Business Object record [`objects:object-credit-note-k6nktp`](objects-object-credit-note-k6nktp.yaml)
+Documentation for Business Object record [`objects:object-credit-note-k6nktp`](objects-object-credit-note-k6nktp.yaml) · [Aspects deep-dive](aspects.md)
 
 ## Identity
 

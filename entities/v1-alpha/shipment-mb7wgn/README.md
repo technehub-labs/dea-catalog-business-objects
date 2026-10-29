@@ -1,6 +1,6 @@
 # Shipment
 
-Documentation for Business Object record [`objects:object-shipment-mb7wgn`](objects-object-shipment-mb7wgn.yaml)
+Documentation for Business Object record [`objects:object-shipment-mb7wgn`](objects-object-shipment-mb7wgn.yaml) · [Aspects deep-dive](aspects.md)
 
 ## Identity
 

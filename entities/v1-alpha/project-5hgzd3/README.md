@@ -1,6 +1,6 @@
 # Project
 
-Documentation for Business Object record [`objects:object-project-5hgzd3`](objects-object-project-5hgzd3.yaml)
+Documentation for Business Object record [`objects:object-project-5hgzd3`](objects-object-project-5hgzd3.yaml) · [Aspects deep-dive](aspects.md)
 
 ## Identity
 
