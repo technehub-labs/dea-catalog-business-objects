@@ -193,6 +193,7 @@ To add the first record to this catalog:
 5. **Run Local Conformance.** Execute `scripts/check_id_system.py --strict` and the CST suite locally. The CI pipeline runs the same gates on every PR.
 6. **Regenerate Reconciliation Artifacts.** Run `scripts/regenerate_catalog.py --check --schema catalog-index-schema/catalog-index-schema.json`.
 7. **Submit PR.** Link the PR to the CR. The CI pipeline enforces the gates described above.
+8. **Mark the CR Merged on landing.** When the PR merges, update the CR's `**Status**` field from `Proposed (this PR)` to `Merged` (and the change-requests/README.md table) in a follow-up commit, then refresh `CATALOG.yaml`. The regenerator counts every non-`Merged` CR as open, so skipping this step leaves `open_change_requests` overstated.
 
 For deeper metamodel definitions and the canonical id-system / entity-storage-layout specs, refer to:
 
