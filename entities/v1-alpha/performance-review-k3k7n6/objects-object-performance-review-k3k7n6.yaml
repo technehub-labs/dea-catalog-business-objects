@@ -1,0 +1,31 @@
+id: objects:object-performance-review-k3k7n6
+name: Performance Review
+type: BusinessObject
+version: 1.0.0
+object_class: work-item
+object_subclass: performance-review
+ecf_domain: strategy-direction
+ecf_stage: improve
+current_state: active
+description: >
+  A periodic, evidence-based assessment of performance against targets, producing conclusions and improvement decisions. The Performance Review is stage-native to improve: it is the moment the enterprise measures itself, and its output feeds strategy adaptation, portfolio rationalization, and control refinement.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-enterprise-performance-management-5fxren
+  - capabilities:capability-strategic-planning-k3rz7a
+processes_involved:
+  - processes:process-sd-improve-duwd64
+  - processes:process-pv-improve-27r7r7
+  - processes:process-eo-improve-g3ngp3
+state_history:
+  - state: active
+    ecf_stage: improve
+    entered: 2026-10-30
+    note: Admission (CR-BO-14); lifecycle anchored at activation in the improve stage.
+provenance:
+  change_history:
+    - cr: CR-BO-14
+      date: 2026-10-30
+      change: Admission (improve-stage records and taxonomy-completion records, CR-BO-13/CR-BO-10 scope continuation).
+metadata:
+  seed_record: "false"

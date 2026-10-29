@@ -48,9 +48,10 @@ def _record_file():
 def test_manifest_generates_and_conforms(tmp_path):
     r = run("generate", "--output", str(tmp_path / "m.yaml"))
     assert r.returncode == 0
-    import yaml
+    import yaml, glob
     m = yaml.safe_load((tmp_path / "m.yaml").read_text())
-    assert len(m["records"]) == 58
+    n_records = len(list((REPO / "entities/v1-alpha").glob("*/objects-object-*.yaml")))
+    assert len(m["records"]) == n_records
     assert m["catalog"]["version"] == "0.1.0"
 
 

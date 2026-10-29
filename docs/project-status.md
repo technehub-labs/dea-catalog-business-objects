@@ -18,20 +18,21 @@ Change Request (full register: [`change-requests/README.md`](../change-requests/
 | T3-ready | [CR-BO-09](../change-requests/CR-BO-09-fourth-admission-t3-ready.md) | 3 | Goal, Forecast, Tax Record; first `strategy-direction` record |
 | Stage-native | [CR-BO-11](../change-requests/CR-BO-11-fifth-admission-stage-native.md) | 5 | First `conceive`/`design`/`retire` cells ([CR-BO-10](../change-requests/CR-BO-10-ecf-stage-diversification-proposal.md) scope) |
 | Stage-native II | [CR-BO-12](../change-requests/CR-BO-12-sixth-admission-build-activate.md) | 4 | First `build`/`activate` cells |
-| **Total** | | **58** | |
+| Improve stage | [CR-BO-14](../change-requests/CR-BO-14-seventh-admission-improve-and-completion.md) | 6 | Audit Finding, Performance Review, Improvement Proposal, Lessons Learned (first `improve` cells) + Configuration Item, Transformation Plan (taxonomy completion) |
+| **Total** | | **64** | |
 
 ## Coverage
 
 | Dimension | Coverage |
 |---|---|
-| Records | 58 canonical, all `lifecycle_status: active` |
+| Records | 64 canonical, all `lifecycle_status: active` |
 | Classes | 9 of 9 in-use classes: party (8), transaction (11), offering (6), financial-instrument (12), legal-instrument (4), work-item (7), technology-control (6), resource (3), location (1) |
 | ECF domains | 7 of 7 populated |
-| ECF stages | 6 of 7 populated — `improve` pending sibling anchors |
+| ECF stages | 7 of 7 populated (improve landed in CR-BO-14) |
 | Sector lenses | 8 industry lenses represented, explicitly labeled |
-| Cross-references | 153, all resolved (IDM-003) |
+| Cross-references | 165, all resolved (IDM-003); enforced in CI by the XREF gate (CR-BO-13) |
 
-**Stage coverage:** operate 49 · conceive 2 · design 1 · build 2 · activate 2 · retire 2 · improve 0.
+**Stage coverage:** operate 53 · conceive 2 · design 1 · build 2 · activate 2 · improve 4 · retire 2.
 
 ## Open threads
 
@@ -40,7 +41,6 @@ scope decision — none is actionable in this repo alone:
 
 | Thread | Blocked on | Tracking |
 |---|---|---|
-| `improve`-stage records (Post-Implementation Review, Improvement Proposal) | processes catalog improve-stage anchors | [dea-catalog-business-processes#215](https://github.com/technehub-labs/dea-catalog-business-processes/issues/215) |
 | Quality-management capability reference (Lot/Batch record) | capabilities catalog record | [dea-catalog-business-capabilities#114](https://github.com/technehub-labs/dea-catalog-business-capabilities/issues/114) |
 | Process anchors for Citizen, Partner, License, Consent Record | processes catalog records | [processes#215](https://github.com/technehub-labs/dea-catalog-business-processes/issues/215) |
 | `owner[]` / `stakeholders[]` / `events[]` / `data_entities[]` population | actors, stakeholders, and data catalogs binding | CR-BO-05 §2.2 (deliberately unset) |

@@ -2,9 +2,9 @@ catalog:
   abbreviation: DEA-
   counts:
     candidates: 0
-    canonical: 58
-    entities: 58
-    open_change_requests: 5
+    canonical: 64
+    entities: 64
+    open_change_requests: 6
     research_files: 0
     retired: 0
   cross_cutting:
@@ -34,6 +34,17 @@ catalog:
     last_modified: '2026-10-29'
     lifecycle_status: active
     path: entities/v1-alpha/asset-w887xr/objects-object-asset-w887xr.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-audit-finding-jd44zy
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/audit-finding-jd44zy/objects-object-audit-finding-jd44zy.yaml
     research_count: 0
     retired_count: 0
     state: canonical
@@ -111,6 +122,17 @@ catalog:
     last_modified: '2026-10-29'
     lifecycle_status: active
     path: entities/v1-alpha/citizen-2xqsse/objects-object-citizen-2xqsse.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-configuration-item-tsn3ex
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/configuration-item-tsn3ex/objects-object-configuration-item-tsn3ex.yaml
     research_count: 0
     retired_count: 0
     state: canonical
@@ -261,6 +283,17 @@ catalog:
     version: 1.0.0
   - candidate_count: 0
     canonical_count: 1
+    id: objects:object-improvement-proposal-cwcz6m
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/improvement-proposal-cwcz6m/objects-object-improvement-proposal-cwcz6m.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
     id: objects:object-incident-wudf9s
     last_modified: '2026-10-29'
     lifecycle_status: active
@@ -298,6 +331,17 @@ catalog:
     last_modified: '2026-10-29'
     lifecycle_status: active
     path: entities/v1-alpha/journal-entry-khck7r/objects-object-journal-entry-khck7r.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-lessons-learned-pvcj26
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/lessons-learned-pvcj26/objects-object-lessons-learned-pvcj26.yaml
     research_count: 0
     retired_count: 0
     state: canonical
@@ -419,6 +463,17 @@ catalog:
     last_modified: '2026-10-29'
     lifecycle_status: active
     path: entities/v1-alpha/payment-kgsvrg/objects-object-payment-kgsvrg.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-performance-review-k3k7n6
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/performance-review-k3k7n6/objects-object-performance-review-k3k7n6.yaml
     research_count: 0
     retired_count: 0
     state: canonical
@@ -655,6 +710,17 @@ catalog:
     state: canonical
     type: BusinessObject
     version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-transformation-plan-mpsz65
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/transformation-plan-mpsz65/objects-object-transformation-plan-mpsz65.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
   id: dea:catalog-business-objects
   metamodel_version: unknown
   name: dea-catalog-business-objects
@@ -667,6 +733,9 @@ catalog:
   - entity_id: objects:object-asset-w887xr
     files: []
     path: entities/v1-alpha/asset-w887xr/research/
+  - entity_id: objects:object-audit-finding-jd44zy
+    files: []
+    path: entities/v1-alpha/audit-finding-jd44zy/research/
   - entity_id: objects:object-benefit-entitlement-yx4ckm
     files: []
     path: entities/v1-alpha/benefit-entitlement-yx4ckm/research/
@@ -688,6 +757,9 @@ catalog:
   - entity_id: objects:object-citizen-2xqsse
     files: []
     path: entities/v1-alpha/citizen-2xqsse/research/
+  - entity_id: objects:object-configuration-item-tsn3ex
+    files: []
+    path: entities/v1-alpha/configuration-item-tsn3ex/research/
   - entity_id: objects:object-consent-record-gacq7d
     files: []
     path: entities/v1-alpha/consent-record-gacq7d/research/
@@ -727,6 +799,9 @@ catalog:
   - entity_id: objects:object-grant-nhdwg9
     files: []
     path: entities/v1-alpha/grant-nhdwg9/research/
+  - entity_id: objects:object-improvement-proposal-cwcz6m
+    files: []
+    path: entities/v1-alpha/improvement-proposal-cwcz6m/research/
   - entity_id: objects:object-incident-wudf9s
     files: []
     path: entities/v1-alpha/incident-wudf9s/research/
@@ -739,6 +814,9 @@ catalog:
   - entity_id: objects:object-journal-entry-khck7r
     files: []
     path: entities/v1-alpha/journal-entry-khck7r/research/
+  - entity_id: objects:object-lessons-learned-pvcj26
+    files: []
+    path: entities/v1-alpha/lessons-learned-pvcj26/research/
   - entity_id: objects:object-license-na3j53
     files: []
     path: entities/v1-alpha/license-na3j53/research/
@@ -772,6 +850,9 @@ catalog:
   - entity_id: objects:object-payment-kgsvrg
     files: []
     path: entities/v1-alpha/payment-kgsvrg/research/
+  - entity_id: objects:object-performance-review-k3k7n6
+    files: []
+    path: entities/v1-alpha/performance-review-k3k7n6/research/
   - entity_id: objects:object-policy-nd2t4y
     files: []
     path: entities/v1-alpha/policy-nd2t4y/research/
@@ -835,5 +916,8 @@ catalog:
   - entity_id: objects:object-training-program-r8fpt3
     files: []
     path: entities/v1-alpha/training-program-r8fpt3/research/
+  - entity_id: objects:object-transformation-plan-mpsz65
+    files: []
+    path: entities/v1-alpha/transformation-plan-mpsz65/research/
   status: active
   version: 0.0.0
