@@ -136,7 +136,9 @@ The taxonomy, at a glance ([source](docs/diagrams/catalog-taxonomy-mindmap.puml)
 
 ### Coverage across the ECF matrix
 
-Every Business Object occupies exactly one cell of the Enterprise Concept Framework — the intersection of an **ECF domain** (what the business does) and an **ECF stage** (where in the lifecycle the business principally manages the type). The map below shows all 58 records in their cells: the density of the `operate` column reflects reality — most types are managed in steady state — while the sparse outer cells hold the *stage-native* types that exist only in a lifecycle moment (a Business Case is consumed at the decision; a Sunset Plan exists only at the offering's exit). Empty cells are legitimate results, not gaps: a type is placed only where the business principally manages it (rule BO-STG-01), and the deliberately-open cells are tracked in [project status](docs/project-status.md).
+Every Business Object occupies exactly one cell of the Enterprise Concept Framework — the intersection of an **ECF domain** (what the business does) and an **ECF stage** (where in the lifecycle the business principally manages the type). 
+The map below shows all 58 records in their cells: the density of the `operate` column reflects reality, most types are managed in steady state， while the sparse outer cells hold the *stage-native* types that exist only in a lifecycle moment (a Business Case is consumed at the decision; a Sunset Plan exists only at the offering's exit). 
+Empty cells are legitimate results, not gaps: a type is placed only where the business principally manages it (rule BO-STG-01), and the deliberately-open cells are tracked in [project status](docs/project-status.md).
 
 ![ECF coverage map — Business Objects](visuals/ecf-coverage-map.svg)
 
