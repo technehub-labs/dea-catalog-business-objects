@@ -1,93 +1,146 @@
-# OpenDEA Business Objects (dea-catalog-business-objects)
+# OpenDEA Business Objects
 
-> Real-world entities of interest to the business — the atoms that populate the ECF matrix cells.
+The canonical catalog of **Business Objects** for the TechNeHub Labs Digital Enterprise Architecture (DEA) ecosystem.
 
-**Layer:** L2 · **Entity:** `BO` · **Metamodel:** [v1.0.0-alpha](https://github.com/technehub-labs/dea-metamodel)
+A Business Object is a real-world entity the business cares about — a Customer, an Order, an Invoice, a Consent Record. This catalog is the authoritative register of those types: each is a versioned, content-addressed record with a precise classification, resolved references into the sibling catalogs, and full documentation.
 
-[![View in Metamodel Explorer](https://img.shields.io/badge/Metamodel%20Explorer-View%20Entity-2C3E50?style=shield)](https://technehub-labs.github.io/metamodel/?entity=BusinessObject)
+**Layer:** L2 (Business Operating Model) · **Entity:** `BO` · **Metamodel:** [v1.0.0-alpha](https://github.com/technehub-labs/dea-metamodel)
+
+[![Metamodel Explorer](https://img.shields.io/badge/Metamodel%20Explorer-View%20Entity-2C3E50?style=shield)](https://technehub-labs.github.io/metamodel/?entity=BusinessObject)
 [![CI](https://github.com/technehub-labs/dea-catalog-business-objects/actions/workflows/ci.yml/badge.svg)](https://github.com/technehub-labs/dea-catalog-business-objects/actions/workflows/ci.yml)
-[![License](https://img.shields.io/badge/License-See%20LICENSE-blue)](LICENSE)
-[![Records](https://img.shields.io/badge/Records-58%20Business%20Objects-2ECC71)](entities/v1-alpha/README.md)
-[![CRs](https://img.shields.io/badge/Change%20Requests-BO--01..12-blue)](change-requests/README.md)
+[![Records](https://img.shields.io/badge/Records-58-2ECC71)](docs/project-status.md)
+[![Gates](https://img.shields.io/badge/Conformance%20Gates-6%2F6%20green-brightgreen)](.github/workflows/)
 
-## What this catalog is
+## Why this catalog exists
 
-This repository is the canonical catalog of **Business Objects (BO)** for the TechNeHub Labs Digital Enterprise Architecture (DEA) ecosystem. A Business Object is a real-world entity the business cares about — a Customer, an Order, an Invoice — and it is the atom that populates the cells of the [ECF matrix](https://github.com/technehub-labs/dea-metamodel).
+The DEA ecosystem models an enterprise along two universal coordinates — **what** the business does (ECF domains) and **when** in the lifecycle it does it (ECF stages). Business Objects are the *atoms* that give those coordinates substance: capabilities act on them, processes create and update them, data entities persist them, and solution components realize them.
 
-This is one of **seven interoperable catalogs** in the DEA ecosystem. Business Objects are acted on by capabilities, created and updated by processes, persisted by data entities, and realized by solution components — all expressed as typed, content-addressed, cross-catalog references.
+Without a canonical register of these types, every catalog and every model improvises its own vocabulary — one system's "client" is another's "account holder," and cross-referencing decays into string matching. This catalog fixes the vocabulary once: each type has one id, one classification, one ECF cell, and references that resolve mechanically.
 
-## Status — Phase 2 population
+**In the ecosystem, this is one of seven interoperable catalogs.** Business Objects sit at the center of the mesh: they are the join points the other catalogs reference.
 
-From an 8-record seed ([CR-BO-05](change-requests/CR-BO-05-first-admission-seed-business-objects.md)) the catalog has grown to **58 Business Objects** across **9 classes**, **all 7 ECF domains**, and **6 of 7 ECF stages**, via five admission waves and two scope-setting proposals:
+## Positioning
 
-| Admission | CR | Records | Scope |
-|---|---|---|---|
-| Seeds | [CR-BO-05](change-requests/CR-BO-05-first-admission-seed-business-objects.md) | 8 | Order-to-cash core, instruments, controls |
-| Wave-2 T1 | [CR-BO-07](change-requests/CR-BO-07-second-admission-wave2-t1.md) | 22 | Commercial-core extension ([CR-BO-06](change-requests/CR-BO-06-second-admission-wave-proposal.md) scope) |
-| Wave-2 T2 | [CR-BO-08](change-requests/CR-BO-08-third-admission-wave2-t2.md) | 16 | Cross-industry, 8 sector lenses; `resource` + `location` classes |
-| T3-ready | [CR-BO-09](change-requests/CR-BO-09-fourth-admission-t3-ready.md) | 3 | Goal, Forecast, Tax Record; first `strategy-direction` record |
-| Stage-native | [CR-BO-11](change-requests/CR-BO-11-fifth-admission-stage-native.md) | 5 | First `conceive`/`design`/`retire` cells ([CR-BO-10](change-requests/CR-BO-10-ecf-stage-diversification-proposal.md) scope, BO-STG-01) |
-| Stage-native II | [CR-BO-12](change-requests/CR-BO-12-sixth-admission-build-activate.md) | 4 | First `build`/`activate` cells |
+| Concern | Document |
+|---|---|
+| What this is; why it exists; how it's built; how to use it | this README |
+| Where the population stands; coverage; open threads | [docs/project-status.md](docs/project-status.md) |
+| Rules, workflow, decision log | [docs/governance/catalog-governance.md](docs/governance/catalog-governance.md) |
+| Change Request register | [change-requests/README.md](change-requests/README.md) |
+| Notable changes | [CHANGELOG.md](CHANGELOG.md) |
 
-| Level | Count |
-| :--- | ---: |
-| L1 (Business Object) | 58 |
-| **Total** | **58** |
+## Architecture
 
-## Catalog at a glance
+### Record model
 
-**Taxonomy** — 58 records across 9 `object_class` values ([source](docs/diagrams/catalog-taxonomy-mindmap.puml)):
+Every Business Object is one record at a flat, content-addressed path:
 
-![Catalog taxonomy mindmap](https://www.plantuml.com/plantuml/svg/NLLBhjiu4Dpx50IoSGmGy4UofG01OdsypG42uu6csZRpA5BXnubpW1mWbvdz76LECarIUdQoigLkDgkhgrgVh6F6zK9rFHi8Puv9VQ6E_T1Az_VPuikxTRrfy-MHl2mMUR5OaCfReS1Qyldq5RYpBxF5ukNBkzLXUwZMHp9WkJkP5-yn7oEBHuHxwtGF9htTP6NHL4TY_J180ORy-m-1Vf3w3X3-XpfgIiwRVTF6uaw0SY7EXHC_GOM_FVIdARF8wrLRucLCTQ9Z3cW4D69iYop3e3DCMSQTq8hCLwidg6E2PH8i_UQrYrZIepRTTCkwhUlT2lEkOkX7G0QSDugQdesOYsPRD8ZP6tvb5jBvM0xCJN2WJl1NS2FkTRlSxuzOvPiN1aBH5DXNRLLlZqGewn4s7kEIYJvIm0nGK5nxvLBbmP-au9JZTJ51UuCNMuYj9WwgNPalaNTzFeCHwaBcsqV_Kt3KWKVsZEuyTq-mKsQJxUjb4yPtijo88Ln01ydYG0OJsfF2ZZqSLdMsF1m9O2cMCes-61QxG57mL_eAC20QwfLm2MYPRLPhRFmi5BOjcAH8WJC-yZrVhH-efyoJa3BK4Egc4K1aODGSgk3-uBIkiiqcFvAlo8_2mXWmzv1-yjq5OhDdRG1f70-qzMwvtI0l1ZhXg1frSHO_eAFCsdG6NKFn5CvvQhlC2fnf9-mf3280eDXsqelKYQmE1csnAEDna146A3ZZAymNJavYG4wszIOh48U4orzyP0ywfYIkU-myCiSrTiZI654WeEmungBDidqGgSRNzwGP32BEjqQ2RxBYiDiToNTjNgbmq9FvxiaqOnHd6XP2cgb1wrrGYXVDP68sROsepV7SRfyNoOr2XRazYKAhasQcUtgRpcHvjIcRgDv7mgWwwn6vYuy9zdwPBPUukHpmgzAevtiYGii_H3-b6P0GV7e6Xax6NyakeIuB2ohfTfJFVdjOjIXdTHD6gsa1JBOMgDRkJMjjLHPP-wZ-jfYc9OUWK5LXr4mct7cpRNRnY4M1ef3dcmVQATWpvSyuKXzCJALEma47K7scFTOt8Z4_EZYuhcVyYbFuynQfKs_egITEgcfTbG62Oq9ID9616MVHvXz8INJS_I-uYb3yDboJ5oH9nYOLIMs2jDsLV2IiwuMruOxlx8RjO1gG_txzngNMeK7HU-41lqGNe0h1tE3zx1FW9obzbcR_0m00)
-
-**ECF coverage** — records by domain and stage ([source](docs/diagrams/catalog-coverage.puml)):
-
-![ECF coverage mindmap](https://www.plantuml.com/plantuml/svg/RLLBajis4Dth5AZAHbQLAiElAAzCKfJBoTXIPYQhbCe5WIqA2Gam8AYolF8XV9ViSvIS98sFFDBKR4I8UEZkz_2w-MxGLEcEYxgZFM5KqrOsSoPFe6W3azaVFuLbL2LtE_9vDaioKem35p0CPBF_4vWUPZEoFvEgN1C6RVjvCiCJIH6MwNf71gseXkOyhxb2B9U2JCCt247COXMLosn7c1GC-0d8Vz--ay3ipPvpb7I0MxZimSIyHh-NjBLfWtKQPAiTwP7GUQwWfIRbSEGzcGQNl66LfMNmUjwIYfhN6Dv1etYPhOeTeLZwwP8qTD2Ds4kgQYuQibMoKRGZ__v3jYOpAHNK83ItPHavLlcg2czhN_YCuw1b1yeSVXpxlkLkNNLzAyy0bw32lTuY8unibYNN_2i8i_m8tTxjbqZNx3y0awhsX0DKfTmH1HfluPhkvd1u9j5IuKGC5dcQe8XArYFJynDjHo3JpCiNL5aSBtUaXe4tuZhQ0_mzOe8Ey_l4MH6dqItjn66tBhXb3Uh46JW1zWDJlBT6CMoLsRZdWmF--hjzwB4-NpJtDMLf7XMlCNmSKG_zJ2vVhjO56XC4tRUsrBchplW4JRBmB9DibHedxKVUrhSaMq1FldHA5bPtUVx2dPxhHjNkSduRfNOyqP6TlyO7qADoR4V5ZYRsZmDFdFq55lMaWEhBaLAE2c6FlgFmpRtKFnTKiwFvKsm-MbDGTiGcSf99PHUvCHYZbsELE74bnINk1y5uxTThp3VYeNLB6qSnJefekNhH37TMrMMK146w8mSkA3RLd38cH_G_sceQH5xICa_NGVL2eiX9z46SfFV0bfulzRnNr2r-GSA2jbYlLcTBSQmR9unfDQx99wziFWpk_HePC-gCyqI_-8PmMb5BFdT5sd0WuC2z1iEe30bIjfHtbbvQXUKTph_6p4J74BwWAS70fh7dL-HnRb3N_6BVv18BfyxkzyWJFMcfIhmCoyUFEHGv3wC4VOIJLx3pNAg62lwLtaxEh8hZ_3LpFYdAnTL4Sl1baIoBzDN9YJWpmoUCsfvxInP47l2dbXr66aWl-n67A5ZXKhU7dui6hhUclCDPWOEq1s57oS3thNcYKaUfXZUJTxZXFp2J_m40)
-
-**Value chains** — the order-to-cash spine and its inbound mirror:
-
-```mermaid
-flowchart LR
-  subgraph procure["Procure-to-pay"]
-    direction LR
-    SUPP[Supplier] --> PO[Purchase Order] --> RJ2[Receipt / Shipment] --> AP[Invoice · AP] --> PAY2[Payment]
-  end
-  subgraph otc["Order-to-cash"]
-    direction LR
-    CUST[Customer] --> Q[Quote] --> O[Order] --> S[Shipment] --> I[Invoice] --> P[Payment]
-    R[Return] --> CN[Credit Note]
-  end
+```
+entities/v1-alpha/<slug>-<hash6>/
+├── objects-object-<slug>-<hash6>.yaml   # the record (id, classification, references, lifecycle)
+├── README.md                            # record documentation (IDM-007)
+└── aspects.md                           # six-aspect deep-dive
 ```
 
-**Party lifecycle** — stage-native objects bracket the operate-stage party roles:
+- **Identity:** the id is `objects:object-<slug>-<hash6>`; the hash suffix is derived once, at admission, from the record content and is immutable thereafter. The filesystem path is the id with `:` normalized to `-`.
+- **Classification:** two universal coordinates (`ecf_domain`, `ecf_stage`) place the record in the ECF matrix; two free-form labels (`object_class`, `object_subclass`) carry the domain vocabulary.
+- **References:** cross-catalog references (`capabilities_consumed[]`, `processes_involved[]`, and the planned `owner[]`, `stakeholders[]`, `events[]`, `data_entities[]`) are typed, content-addressed ids that must resolve against the live sibling catalogs — unresolved references are forbidden.
+- **Lifecycle:** `ecf_stage` (the universal coordinate) and `current_state` (the domain business label) are deliberately separate lifecycles; transitions are recorded in `state_history`.
 
-```mermaid
-flowchart LR
-  CAND[Candidate<br/>conceive] --> ONB[Onboarding Program<br/>activate]
-  ONB --> ROLE[Customer · Supplier · Employee · Partner<br/>Member · Patient · Citizen<br/>operate]
-  ONB --> PC[Party Credential<br/>activate]
-  PC -. revoked at .-> OFF[Offboarding Plan<br/>retire]
-  ROLE --> OFF
+## Classification
+
+Business Objects are classified by **two universal coordinates plus two free-form labels**:
+
+### Universal coordinates (ECF matrix position)
+
+| Axis | Values |
+|---|---|
+| `ecf_domain` | `governance-existence` · `strategy-direction` · `agency-organization` · `party-relationship` · `product-value` · `enablement-operations` · `finance-accounting` |
+| `ecf_stage` | `conceive` · `design` · `build` · `activate` · `operate` · `improve` · `retire` |
+
+Every BO lives in exactly one `(ecf_domain, ecf_stage)` cell at a time.
+
+### Free-form labels (domain-specific vocabulary)
+
+| Axis | Purpose | Example |
+|---|---|---|
+| `object_class` | Kind of thing the business cares about | `customer`, `order`, `product`, `invoice`, `feature-flag`, `grant` |
+| `object_subclass` | Refinement under the class | `retail-customer`, `enterprise-order` |
+
+`current_state` is a **separate** domain-specific business label (e.g. `active`, `proposed`, `suspended`) — distinct from the universal `ecf_stage` coordinate.
+
+### Classes in use today
+
+| `object_class` | Records | Subclasses |
+|---|---|---|
+| `party` | 8 | `customer`, `supplier`, `employee`, `partner`, `patient`, `citizen`, `member`, `candidate-party` |
+| `transaction` | 11 | `sales-order`, `sales-quote`, `shipment`, `return-rma`, `purchase-order`, `service-ticket`, `insurance-claim`, `care-encounter`, `public-case`, `course-section`, `requirement` |
+| `offering` | 6 | `catalogue-product`, `service`, `subscription-plan`, `price-list`, `education-program`, `stock-keeping-unit` |
+| `financial-instrument` | 12 | `billing-invoice`, `customer-payment`, `disbursement-grant`, `journal-entry`, `budget`, `credit-note`, `fixed-asset`, `loan`, `deposit-account`, `benefit-entitlement`, `forecast`, `tax-record` |
+| `legal-instrument` | 4 | `commercial-contract`, `license`, `policy`, `consent-record` |
+| `technology-control` | 6 | `release-feature-flag`, `application`, `environment`, `service-incident`, `release-candidate`, `party-credential` |
+| `work-item` | 7 | `project`, `strategic-goal`, `business-case`, `offboarding-plan`, `sunset-plan`, `training-program`, `onboarding-program` |
+| `resource` | 3 | `manufacturing-lot`, `bill-of-material`, `production-machine` |
+| `location` | 1 | `retail-store` |
+
+Industry and segment variation is expressed at the subclass level (rule **BO-TAX-01**); new `object_class` values require CR-level sign-off. Aspects prose carries an explicit sector lens. Rules and their decisions: [catalog governance](docs/governance/catalog-governance.md).
+
+## Entity definition
+
+| Field | Value |
+|-------|-------|
+| Entity ID | `dea:entity-business-object` |
+| Class Alias | `BO` |
+| Layer | L2 (Business Operating Model) |
+| Metamodel Version | v1.0.0-alpha |
+
+## Typed references
+
+| Field | Reference | Catalog |
+|---|---|---|
+| `owner` | Actor (single) | [`dea-catalog-actors`](https://github.com/technehub-labs/dea-catalog-actors) |
+| `stakeholders[]` | External/affected parties | [`dea-catalog-stakeholders`](https://github.com/technehub-labs/dea-catalog-stakeholders) |
+| `capabilities_consumed[]` | Capabilities that act on this BO | [`dea-catalog-business-capabilities`](https://github.com/technehub-labs/dea-catalog-business-capabilities) |
+| `processes_involved[]` | Processes that create/read/update/delete this BO | [`dea-catalog-business-processes`](https://github.com/technehub-labs/dea-catalog-business-processes) |
+| `data_entities[]` | Data entities persisting this BO | data catalog (unbound) |
+| `components_realizing[]` | Solution Components that realize this BO | [`dea-catalog-digital-business-service-factory`](https://github.com/technehub-labs/dea-catalog-digital-business-service-factory) |
+| `events[]` | Business events this BO participates in | events catalog (unbound) |
+
+A reference is populated only when it resolves against the live sibling catalog at landing time; until a sibling catalog binds, the field stays empty (IDM-003 — no unresolved references, ever).
+
+
+
+## Identity
+
+Records are **content-addressed**: the id hash suffix was assigned once, at admission, from the record content (first 4 bytes of the file's SHA-256, base-31 over the alphabet `a-z` minus `i`, `l`, `o` plus digits `2-9`) and is immutable thereafter. The filesystem path is the id with `:` normalized to `-` (IDM-005).
+
+```yaml
+id: objects:object-customer-2qvphc      # namespace:level-slug-hash6
+identity:                              # instance-level identity (planned)
+  primary_id: customer-12345            # canonical handle
+  external_ids:                         # source-system mapping
+    crm_id: SF-0034Q00012
+    erp_id: SAP-DEBI-9001
 ```
 
-**Governance timeline** — how the catalog grew, and its open threads:
+See [`dea-metaframework/docs/id-system.md`](https://github.com/technehub-labs/dea-metaframework/blob/main/docs/id-system.md) §2.5 for the org-wide id contract.
 
-```mermaid
-timeline
-  title dea-catalog-business-objects — Phase 2 population
-  2026-10-28 : CR-BO-05 seeds (8 records)
-  2026-10-29 : CR-BO-06 proposal : CR-BO-07 T1 (+22)
-              : CR-BO-08 T2 (+16) : CR-BO-09 T3-ready (+3)
-              : CR-BO-10 proposal : CR-BO-11 stage-native (+5)
-              : CR-BO-12 build/activate (+4) : 58 records
-  Open : improve-stage anchors (processes#215)
-       : quality-management capability (capabilities#114)
-       : owner / stakeholders / events / data_entities binding
-```
 
-## Catalog of Business Objects
+### Catalog mesh
 
-All 58 records. Every record carries [README](entities/v1-alpha/README.md) + aspects documentation; sector lenses are labeled per the [CR-BO-06](change-requests/CR-BO-06-second-admission-wave-proposal.md) §6.3 explicit-lens convention; stage-native records per [BO-STG-01](change-requests/CR-BO-10-ecf-stage-diversification-proposal.md).
+The taxonomy, at a glance ([source](docs/diagrams/catalog-taxonomy-mindmap.puml)):
+
+![Catalog taxonomy](https://www.plantuml.com/plantuml/svg/NLLBhjiu4Dpx50IoSGmGy4UofG01OdsypG42uu6csZRpA5BXnubpW1mWbvdz76LECarIUdQoigLkDgkhgrgVh6F6zK9rFHi8Puv9VQ6E_T1Az_VPuikxTRrfy-MHl2mMUR5OaCfReS1Qyldq5RYpBxF5ukNBkzLXUwZMHp9WkJkP5-yn7oEBHuHxwtGF9htTP6NHL4TY_J180ORy-m-1Vf3w3X3-XpfgIiwRVTF6uaw0SY7EXHC_GOM_FVIdARF8wrLRucLCTQ9Z3cW4D69iYop3e3DCMSQTq8hCLwidg6E2PH8i_UQrYrZIepRTTCkwhUlT2lEkOkX7G0QSDugQdesOYsPRD8ZP6tvb5jBvM0xCJN2WJl1NS2FkTRlSxuzOvPiN1aBH5DXNRLLlZqGewn4s7kEIYJvIm0nGK5nxvLBbmP-au9JZTJ51UuCNMuYj9WwgNPalaNTzFeCHwaBcsqV_Kt3KWKVsZEuyTq-mKsQJxUjb4yPtijo88Ln01ydYG0OJsfF2ZZqSLdMsF1m9O2cMCes-61QxG57mL_eAC20QwfLm2MYPRLPhRFmi5BOjcAH8WJC-yZrVhH-efyoJa3BK4Egc4K1aODGSgk3-uBIkiiqcFvAlo8_2mXWmzv1-yjq5OhDdRG1f70-qzMwvtI0l1ZhXg1frSHO_eAFCsdG6NKFn5CvvQhlC2fnf9-mf3280eDXsqelKYQmE1csnAEDna146A3ZZAymNJavYG4wszIOh48U4orzyP0ywfYIkU-myCiSrTiZI654WeEmungBDidqGgSRNzwGP32BEjqQ2RxBYiDiToNTjNgbmq9FvxiaqOnHd6XP2cgb1wrrGYXVDP68sROsepV7SRfyNoOr2XRazYKAhasQcUtgRpcHvjIcRgDv7mgWwwn6vYuy9zdwPBPUukHpmgzAevtiYGii_H3-b6P0GV7e6Xax6NyakeIuB2ohfTfJFVdjOjIXdTHD6gsa1JBOMgDRkJMjjLHPP-wZ-jfYc9OUWK5LXr4mct7cpRNRnY4M1ef3dcmVQATWpvSyuKXzCJALEma47K7scFTOt8Z4_EZYuhcVyYbFuynQfKs_egITEgcfTbG62Oq9ID9616MVHvXz8INJS_I-uYb3yDboJ5oH9nYOLIMs2jDsLV2IiwuMruOxlx8RjO1gG_txzngNMeK7HU-41lqGNe0h1tE3zx1FW9obzbcR_0m00)
+
+Coverage across the ECF matrix ([source](docs/diagrams/catalog-coverage.puml)):
+
+![ECF coverage](https://www.plantuml.com/plantuml/svg/RLLBajis4Dth5AZAHbQLAiElAAzCKfJBoTXIPYQhbCe5WIqA2Gam8AYolF8XV9ViSvIS98sFFDBKR4I8UEZkz_2w-MxGLEcEYxgZFM5KqrOsSoPFe6W3azaVFuLbL2LtE_9vDaioKem35p0CPBF_4vWUPZEoFvEgN1C6RVjvCiCJIH6MwNf71gseXkOyhxb2B9U2JCCt247COXMLosn7c1GC-0d8Vz--ay3ipPvpb7I0MxZimSIyHh-NjBLfWtKQPAiTwP7GUQwWfIRbSEGzcGQNl66LfMNmUjwIYfhN6Dv1etYPhOeTeLZwwP8qTD2Ds4kgQYuQibMoKRGZ__v3jYOpAHNK83ItPHavLlcg2czhN_YCuw1b1yeSVXpxlkLkNNLzAyy0bw32lTuY8unibYNN_2i8i_m8tTxjbqZNx3y0awhsX0DKfTmH1HfluPhkvd1u9j5IuKGC5dcQe8XArYFJynDjHo3JpCiNL5aSBtUaXe4tuZhQ0_mzOe8Ey_l4MH6dqItjn66tBhXb3Uh46JW1zWDJlBT6CMoLsRZdWmF--hjzwB4-NpJtDMLf7XMlCNmSKG_zJ2vVhjO56XC4tRUsrBchplW4JRBmB9DibHedxKVUrhSaMq1FldHA5bPtUVx2dPxhHjNkSduRfNOyqP6TlyO7qADoR4V5ZYRsZmDFdFq55lMaWEhBaLAE2c6FlgFmpRtKFnTKiwFvKsm-MbDGTiGcSf99PHUvCHYZbsELE74bnINk1y5uxTThp3VYeNLB6qSnJefekNhH37TMrMMK146w8mSkA3RLd38cH_G_sceQH5xICa_NGVL2eiX9z46SfFV0bfulzRnNr2r-GSA2jbYlLcTBSQmR9unfDQx99wziFWpk_HePC-gCyqI_-8PmMb5BFdT5sd0WuC2z1iEe30bIjfHtbbvQXUKTph_6p4J74BwWAS70fh7dL-HnRb3N_6BVv18BfyxkzyWJFMcfIhmCoyUFEHGv3wC4VOIJLx3pNAg62lwLtaxEh8hZ_3LpFYdAnTL4Sl1baIoBzDN9YJWpmoUCsfvxInP47l2dbXr66aWl-n67A5ZXKhU7dui6hhUclCDPWOEq1s57oS3thNcYKaUfXZUJTxZXFp2J_m40)
+
+## Usage
+
+### Finding a Business Object
+
+The full register, one row per record:
 
 | Business Object | id | Class | ECF cell | Consumed by (capabilities) | Involved in (processes) | Sector lens |
 |---|---|---|---|---|---|---|
@@ -150,121 +203,54 @@ All 58 records. Every record carries [README](entities/v1-alpha/README.md) + asp
 | [Ticket](entities/v1-alpha/ticket-2cudww/README.md) | `objects:object-ticket-2cudww` | transaction / service-ticket | enablement-operations · operate | operations-management | eo-operate |  |
 | [Training Program](entities/v1-alpha/training-program-r8fpt3/README.md) | `objects:object-training-program-r8fpt3` | work-item / training-program | agency-organization · build | workforce-management, workforce-planning | ao-build |  |
 
-## Entity Definition
+### Referencing a Business Object from another catalog
 
-| Field | Value |
-|-------|-------|
-| Entity ID | `dea:entity-business-object` |
-| Class Alias | `BO` |
-| Layer | L2 (Business Operating Model) |
-| Metamodel Version | v1.0.0-alpha |
-
-## Classification
-
-Business Objects are classified by **two universal coordinates plus two free-form labels**:
-
-### Universal coordinates (ECF matrix position)
-
-| Axis | Values |
-|---|---|
-| `ecf_domain` | `governance-existence` · `strategy-direction` · `agency-organization` · `party-relationship` · `product-value` · `enablement-operations` · `finance-accounting` |
-| `ecf_stage` | `conceive` · `design` · `build` · `activate` · `operate` · `improve` · `retire` |
-
-Every BO lives in exactly one `(ecf_domain, ecf_stage)` cell at a time.
-
-### Free-form labels (domain-specific vocabulary)
-
-| Axis | Purpose | Example |
-|---|---|---|
-| `object_class` | Kind of thing the business cares about | `customer`, `order`, `product`, `invoice`, `feature-flag`, `grant` |
-| `object_subclass` | Refinement under the class | `retail-customer`, `enterprise-order` |
-
-`current_state` is a **separate** domain-specific business label (e.g. `active`, `proposed`, `suspended`) — distinct from the universal `ecf_stage` coordinate.
-
-### Classes in use today
-
-| `object_class` | Records | Subclasses |
-|---|---|---|
-| `party` | 8 | `customer`, `supplier`, `employee`, `partner`, `patient`, `citizen`, `member`, `candidate-party` |
-| `transaction` | 11 | `sales-order`, `sales-quote`, `shipment`, `return-rma`, `purchase-order`, `service-ticket`, `insurance-claim`, `care-encounter`, `public-case`, `course-section`, `requirement` |
-| `offering` | 6 | `catalogue-product`, `service`, `subscription-plan`, `price-list`, `education-program`, `stock-keeping-unit` |
-| `financial-instrument` | 12 | `billing-invoice`, `customer-payment`, `disbursement-grant`, `journal-entry`, `budget`, `credit-note`, `fixed-asset`, `loan`, `deposit-account`, `benefit-entitlement`, `forecast`, `tax-record` |
-| `legal-instrument` | 4 | `commercial-contract`, `license`, `policy`, `consent-record` |
-| `technology-control` | 6 | `release-feature-flag`, `application`, `environment`, `service-incident`, `release-candidate`, `party-credential` |
-| `work-item` | 7 | `project`, `strategic-goal`, `business-case`, `offboarding-plan`, `sunset-plan`, `training-program`, `onboarding-program` |
-| `resource` | 3 | `manufacturing-lot`, `bill-of-material`, `production-machine` |
-| `location` | 1 | `retail-store` |
-
-Industry and segment variation is expressed at the subclass level (rule BO-TAX-01, [CR-BO-06](change-requests/CR-BO-06-second-admission-wave-proposal.md)); new `object_class` values require CR-level sign-off. Aspects prose carries an explicit sector lens (CR-BO-06 §6.3).
-
-
-
-| Field | Value |
-|-------|-------|
-| Entity ID | `dea:entity-business-object` |
-| Class Alias | `BO` |
-| Layer | L2 (Business Operating Model) |
-| Metamodel Version | v1.0.0-alpha |
-
-
-## Typed References
-
-| Field | Reference | Catalog | Status |
-|---|---|---|---|
-| `owner` | Actor (single) | [`dea-catalog-actors`](https://github.com/technehub-labs/dea-catalog-actors) | Scaffold (unset on seeds — IDM-003 forbids unresolved references) |
-| `stakeholders[]` | External/affected parties | [`dea-catalog-stakeholders`](https://github.com/technehub-labs/dea-catalog-stakeholders) | Scaffold (unset on seeds) |
-| `capabilities_consumed[]` | Capabilities that act on this BO | [`dea-catalog-business-capabilities`](https://github.com/technehub-labs/dea-catalog-business-capabilities) | Populated (28 canonical records) |
-| `processes_involved[]` | Processes that create/read/update/delete this BO | [`dea-catalog-business-processes`](https://github.com/technehub-labs/dea-catalog-business-processes) | Populated (3,598 records) |
-| `data_entities[]` | Data entities persisting this BO | (TBD) | Unbound |
-| `components_realizing[]` | Solution Components that realize this BO | [`dea-catalog-digital-business-service-factory`](https://github.com/technehub-labs/dea-catalog-digital-business-service-factory) | Scaffold |
-| `events[]` | Business events this BO participates in | (TBD) | Unbound |
-
-Every reference was resolved against the live sibling catalogs before landing; deliberately unset fields remain empty until their catalogs bind, per IDM-003.
-
-
-## Identity
-
-Records are **content-addressed**: the id hash suffix was assigned once, at admission, from the record content (first 4 bytes of the file's SHA-256, base-31 over the alphabet `a-z` minus `i`, `l`, `o` plus digits `2-9`) and is immutable thereafter. The filesystem path is the id with `:` normalized to `-` (IDM-005).
+Use the full id form `<namespace>:<level>-<slug>-<hash6>`:
 
 ```yaml
-id: objects:object-customer-2qvphc      # namespace:level-slug-hash6
-identity:                              # instance-level identity (planned)
-  primary_id: customer-12345            # canonical handle
-  external_ids:                         # source-system mapping
-    crm_id: SF-0034Q00012
-    erp_id: SAP-DEBI-9001
+business_objects:
+  - objects:object-customer-2qvphc
 ```
 
-See [`dea-metaframework/docs/id-system.md`](https://github.com/technehub-labs/dea-metaframework/blob/main/docs/id-system.md) §2.5 for the org-wide id contract.
+Resolve references against this catalog's HEAD before landing (the same
+IDM-003 discipline this catalog follows toward its siblings). The
+[Metamodel Explorer](https://technehub-labs.github.io/metamodel/?entity=BusinessObject)
+renders the entity and its relations.
 
-## Catalog Structure
+### Consuming the catalog programmatically
+
+`CATALOG.yaml` is the machine-generated index (do not hand-edit); each record
+subtree's YAML is the source of truth for that record. The conformance gates
+in CI are the contract enforcement: a record that passes CI is conformant.
+
+## Catalog structure
 
 ```
 dea-catalog-business-objects/
-├── CATALOG.yaml                        ← auto-generated catalog index (do not hand-edit)
-├── metamodel-pointer.yaml              ← entity mapping (do not edit manually)
+├── CATALOG.yaml                        # auto-generated catalog index (do not hand-edit)
+├── metamodel-pointer.yaml              # entity mapping (do not edit manually)
 ├── README.md
 ├── LICENSE + NOTICE
 ├── CHANGELOG.md · CONTRIBUTING.md
 ├── entities/
-│   └── v1-alpha/                       ← catalog entries (flat layout)
-│       ├── README.md                   ← entry-level topology, gates, workflow
-│       └── object-<slug>-<hash6>/
+│   └── v1-alpha/                       # catalog entries (flat layout)
+│       └── <slug>-<hash6>/
 │           ├── objects-object-<slug>-<hash6>.yaml
-│           └── README.md               ← per-record documentation (IDM-007)
+│           ├── README.md               # per-record documentation (IDM-007)
+│           └── aspects.md              # aspects deep-dive
 ├── schemas/
-│   └── entity.schema.json              ← mirrors dea-metamodel/schemas/entities/business-object.json
+│   └── entity.schema.json              # record schema
 ├── catalog-index-schema/
-│   └── catalog-index-schema.json       ← schema for CATALOG.yaml
-├── change-requests/                   ← CR-BO-01..05 governance trail
-├── reconciliation/                     ← authorship registry, entity-system registry
+├── change-requests/                    # CR-BO-01..12 governance trail
+├── reconciliation/                     # authorship registry, entity-system registry
 ├── docs/
-│   └── governance/cardinal-rules.md
-├── scripts/                            ← conformance validators (IDM, ES, AUT, catalog)
-├── tests/                              ← validator unit tests
-└── .github/workflows/                  ← CI: validate, conformance, allocation, authorship, entity-system
+│   ├── project-status.md               # population progress, coverage, open threads
+│   ├── governance/catalog-governance.md # rules, workflow, decision log
+│   └── diagrams/                       # PlantUML sources for embedded illustrations
+├── scripts/                            # conformance validators (IDM, ES, AUT, catalog)
+├── tests/                              # validator unit tests
+└── .github/workflows/                  # CI: validate, conformance, allocation, authorship, entity-system
 ```
-
 
 ## Quality Gates
 
@@ -278,10 +264,11 @@ Every PR runs the full conformance pipeline (see [`entities/v1-alpha/README.md`]
 - **Allocation & register gates** — orphan/duplicate record detection, catalog-register honesty
 
 
+
 ## Contributing
 
-Admissions go through the CR workflow described in [`entities/v1-alpha/README.md`](entities/v1-alpha/README.md) and [`CONTRIBUTING.md`](CONTRIBUTING.md).
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the authorship cardinal rules and the branch/PR conventions, and [docs/governance/catalog-governance.md](docs/governance/catalog-governance.md) for the change workflow. Admissions go through the CR process described in [`entities/v1-alpha/README.md`](entities/v1-alpha/README.md).
 
 ## Diagrams
 
-The PlantUML sources for the embedded mindmaps live in [`docs/diagrams/`](docs/diagrams/); the README embeds their `plantuml.com` server-rendered SVG URLs (re-encode after editing a source, per the format used by the `plantuml` reference encoder).
+PlantUML sources for the embedded illustrations live in [`docs/diagrams/`](docs/diagrams/); the README embeds their `plantuml.com` server-rendered SVG URLs. Re-encode after editing a source (the encoding matches the `plantuml` reference encoder).
