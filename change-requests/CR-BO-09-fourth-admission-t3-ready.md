@@ -4,7 +4,7 @@
 |-------|-------|
 | **CR** | CR-BO-09 |
 | **Title** | Fourth Admission (T3-Ready Candidates, 3 Records) |
-| **Status** | Proposed (this PR) |
+| **Status** | Merged |
 | **Layer** | L2 (Business Operating Model) |
 | **Owner** | Emmanuel A. Otchere |
 | **Author** | Emmanuel A. Otchere |
