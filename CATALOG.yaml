@@ -1,5 +1,5 @@
 catalog:
-  abbreviation: GITH
+  abbreviation: DEA-
   counts:
     candidates: 0
     canonical: 8
@@ -107,7 +107,7 @@ catalog:
     version: 1.0.0
   id: dea:catalog-business-objects
   metamodel_version: unknown
-  name: github__technehub-labs__dea-catalog-business-objects
+  name: dea-catalog-business-objects
   owner: TechNeHub Labs
   repository: https://github.com/technehub-labs/dea-catalog-business-objects.git
   research_registers:
