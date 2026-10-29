@@ -4,7 +4,7 @@
 |-------|-------|
 | **CR** | CR-BO-11 |
 | **Title** | Fifth Admission (Stage-Native Records, First Non-Operate Cells, 5 Records) |
-| **Status** | Proposed (this PR) |
+| **Status** | Merged |
 | **Layer** | L2 (Business Operating Model) |
 | **Owner** | Emmanuel A. Otchere |
 | **Author** | Emmanuel A. Otchere |

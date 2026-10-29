@@ -1,0 +1,28 @@
+id: objects:object-onboarding-program-mrun5r
+name: Onboarding Program
+type: BusinessObject
+version: 1.0.0
+object_class: work-item
+object_subclass: onboarding-program
+ecf_domain: party-relationship
+ecf_stage: activate
+current_state: active
+description: >
+  The structured activation of a party relationship: provisioning of access, accounts, and entitlements, and the first interactions that make the relationship operational. The Onboarding Program is stage-native to activate — it converts an accepted party into an operating one.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-customer-management-f3n8wb
+processes_involved:
+  - processes:process-pr-activate-6qzuve
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Stage-native admission (CR-BO-12, CR-BO-10 scope continuation); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-12
+      date: 2026-10-30
+      change: Stage-native admission (build and activate ECF cells, CR-BO-10 scope continuation).
+metadata:
+  seed_record: "false"
