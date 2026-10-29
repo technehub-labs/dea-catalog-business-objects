@@ -132,9 +132,13 @@ The taxonomy, at a glance ([source](docs/diagrams/catalog-taxonomy-mindmap.puml)
 
 ![Catalog taxonomy](https://www.plantuml.com/plantuml/svg/NLLBhjiu4Dpx50IoSGmGy4UofG01OdsypG42uu6csZRpA5BXnubpW1mWbvdz76LECarIUdQoigLkDgkhgrgVh6F6zK9rFHi8Puv9VQ6E_T1Az_VPuikxTRrfy-MHl2mMUR5OaCfReS1Qyldq5RYpBxF5ukNBkzLXUwZMHp9WkJkP5-yn7oEBHuHxwtGF9htTP6NHL4TY_J180ORy-m-1Vf3w3X3-XpfgIiwRVTF6uaw0SY7EXHC_GOM_FVIdARF8wrLRucLCTQ9Z3cW4D69iYop3e3DCMSQTq8hCLwidg6E2PH8i_UQrYrZIepRTTCkwhUlT2lEkOkX7G0QSDugQdesOYsPRD8ZP6tvb5jBvM0xCJN2WJl1NS2FkTRlSxuzOvPiN1aBH5DXNRLLlZqGewn4s7kEIYJvIm0nGK5nxvLBbmP-au9JZTJ51UuCNMuYj9WwgNPalaNTzFeCHwaBcsqV_Kt3KWKVsZEuyTq-mKsQJxUjb4yPtijo88Ln01ydYG0OJsfF2ZZqSLdMsF1m9O2cMCes-61QxG57mL_eAC20QwfLm2MYPRLPhRFmi5BOjcAH8WJC-yZrVhH-efyoJa3BK4Egc4K1aODGSgk3-uBIkiiqcFvAlo8_2mXWmzv1-yjq5OhDdRG1f70-qzMwvtI0l1ZhXg1frSHO_eAFCsdG6NKFn5CvvQhlC2fnf9-mf3280eDXsqelKYQmE1csnAEDna146A3ZZAymNJavYG4wszIOh48U4orzyP0ywfYIkU-myCiSrTiZI654WeEmungBDidqGgSRNzwGP32BEjqQ2RxBYiDiToNTjNgbmq9FvxiaqOnHd6XP2cgb1wrrGYXVDP68sROsepV7SRfyNoOr2XRazYKAhasQcUtgRpcHvjIcRgDv7mgWwwn6vYuy9zdwPBPUukHpmgzAevtiYGii_H3-b6P0GV7e6Xax6NyakeIuB2ohfTfJFVdjOjIXdTHD6gsa1JBOMgDRkJMjjLHPP-wZ-jfYc9OUWK5LXr4mct7cpRNRnY4M1ef3dcmVQATWpvSyuKXzCJALEma47K7scFTOt8Z4_EZYuhcVyYbFuynQfKs_egITEgcfTbG62Oq9ID9616MVHvXz8INJS_I-uYb3yDboJ5oH9nYOLIMs2jDsLV2IiwuMruOxlx8RjO1gG_txzngNMeK7HU-41lqGNe0h1tE3zx1FW9obzbcR_0m00)
 
-Coverage across the ECF matrix ([source](docs/diagrams/catalog-coverage.puml)):
+### Coverage across the ECF matrix
 
-![ECF coverage](https://www.plantuml.com/plantuml/svg/RLLBajis4Dth5AZAHbQLAiElAAzCKfJBoTXIPYQhbCe5WIqA2Gam8AYolF8XV9ViSvIS98sFFDBKR4I8UEZkz_2w-MxGLEcEYxgZFM5KqrOsSoPFe6W3azaVFuLbL2LtE_9vDaioKem35p0CPBF_4vWUPZEoFvEgN1C6RVjvCiCJIH6MwNf71gseXkOyhxb2B9U2JCCt247COXMLosn7c1GC-0d8Vz--ay3ipPvpb7I0MxZimSIyHh-NjBLfWtKQPAiTwP7GUQwWfIRbSEGzcGQNl66LfMNmUjwIYfhN6Dv1etYPhOeTeLZwwP8qTD2Ds4kgQYuQibMoKRGZ__v3jYOpAHNK83ItPHavLlcg2czhN_YCuw1b1yeSVXpxlkLkNNLzAyy0bw32lTuY8unibYNN_2i8i_m8tTxjbqZNx3y0awhsX0DKfTmH1HfluPhkvd1u9j5IuKGC5dcQe8XArYFJynDjHo3JpCiNL5aSBtUaXe4tuZhQ0_mzOe8Ey_l4MH6dqItjn66tBhXb3Uh46JW1zWDJlBT6CMoLsRZdWmF--hjzwB4-NpJtDMLf7XMlCNmSKG_zJ2vVhjO56XC4tRUsrBchplW4JRBmB9DibHedxKVUrhSaMq1FldHA5bPtUVx2dPxhHjNkSduRfNOyqP6TlyO7qADoR4V5ZYRsZmDFdFq55lMaWEhBaLAE2c6FlgFmpRtKFnTKiwFvKsm-MbDGTiGcSf99PHUvCHYZbsELE74bnINk1y5uxTThp3VYeNLB6qSnJefekNhH37TMrMMK146w8mSkA3RLd38cH_G_sceQH5xICa_NGVL2eiX9z46SfFV0bfulzRnNr2r-GSA2jbYlLcTBSQmR9unfDQx99wziFWpk_HePC-gCyqI_-8PmMb5BFdT5sd0WuC2z1iEe30bIjfHtbbvQXUKTph_6p4J74BwWAS70fh7dL-HnRb3N_6BVv18BfyxkzyWJFMcfIhmCoyUFEHGv3wC4VOIJLx3pNAg62lwLtaxEh8hZ_3LpFYdAnTL4Sl1baIoBzDN9YJWpmoUCsfvxInP47l2dbXr66aWl-n67A5ZXKhU7dui6hhUclCDPWOEq1s57oS3thNcYKaUfXZUJTxZXFp2J_m40)
+Every Business Object occupies exactly one cell of the Enterprise Concept Framework — the intersection of an **ECF domain** (what the business does) and an **ECF stage** (where in the lifecycle the business principally manages the type). The map below shows all 58 records in their cells: the density of the `operate` column reflects reality — most types are managed in steady state — while the sparse outer cells hold the *stage-native* types that exist only in a lifecycle moment (a Business Case is consumed at the decision; a Sunset Plan exists only at the offering's exit). Empty cells are legitimate results, not gaps: a type is placed only where the business principally manages it (rule BO-STG-01), and the deliberately-open cells are tracked in [project status](docs/project-status.md).
+
+![ECF coverage map — Business Objects](visuals/ecf-coverage-map.svg)
+
+The poster source is [`visuals/ecf-coverage-map.svg`](visuals/ecf-coverage-map.svg) — regenerate it from the records when the population changes (the sibling catalogs carry equivalent maps: `dea-catalog-business-capabilities/visuals/v09-ecf-coverage-map.svg`).
 
 ## Usage
 
@@ -271,4 +275,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the authorship cardinal rules and the
 
 ## Diagrams
 
-PlantUML sources for the embedded illustrations live in [`docs/diagrams/`](docs/diagrams/); the README embeds their `plantuml.com` server-rendered SVG URLs. Re-encode after editing a source (the encoding matches the `plantuml` reference encoder).
+Embedded illustrations come from two sources:
+
+- **PlantUML mindmaps** — sources in [`docs/diagrams/`](docs/diagrams/), embedded as `plantuml.com` server-rendered SVG URLs (re-encode after editing a source; the encoding matches the `plantuml` reference encoder).
+- **SVG posters** — hand-buildable vector files in [`visuals/`](visuals/), embedded directly. The [ECF coverage map](visuals/ecf-coverage-map.svg) is regenerated from the records when the population changes.
