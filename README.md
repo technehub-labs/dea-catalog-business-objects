@@ -110,6 +110,7 @@ A reference is populated only when it resolves against the live sibling catalog 
 
 
 
+
 ## Identity
 
 Records are **content-addressed**: the id hash suffix was assigned once, at admission, from the record content (first 4 bytes of the file's SHA-256, base-31 over the alphabet `a-z` minus `i`, `l`, `o` plus digits `2-9`) and is immutable thereafter. The filesystem path is the id with `:` normalized to `-` (IDM-005).
@@ -251,6 +252,7 @@ dea-catalog-business-objects/
 ├── tests/                              # validator unit tests
 └── .github/workflows/                  # CI: validate, conformance, allocation, authorship, entity-system
 ```
+
 
 ## Quality Gates
 
