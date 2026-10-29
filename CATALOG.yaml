@@ -2,9 +2,9 @@ catalog:
   abbreviation: DEA-
   counts:
     candidates: 0
-    canonical: 46
-    entities: 46
-    open_change_requests: 8
+    canonical: 49
+    entities: 49
+    open_change_requests: 9
     research_files: 0
     retired: 0
   cross_cutting:
@@ -199,6 +199,28 @@ catalog:
     last_modified: '2026-10-29'
     lifecycle_status: active
     path: entities/v1-alpha/feature-flag-p5gzf7/objects-object-feature-flag-p5gzf7.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-forecast-um3az3
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/forecast-um3az3/objects-object-forecast-um3az3.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: objects:object-goal-h2zfhv
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/goal-h2zfhv/objects-object-goal-h2zfhv.yaml
     research_count: 0
     retired_count: 0
     state: canonical
@@ -514,6 +536,17 @@ catalog:
     version: 1.0.0
   - candidate_count: 0
     canonical_count: 1
+    id: objects:object-tax-record-zwqfpa
+    last_modified: '2026-10-29'
+    lifecycle_status: active
+    path: entities/v1-alpha/tax-record-zwqfpa/objects-object-tax-record-zwqfpa.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessObject
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
     id: objects:object-ticket-2cudww
     last_modified: '2026-10-29'
     lifecycle_status: active
@@ -580,6 +613,12 @@ catalog:
   - entity_id: objects:object-feature-flag-p5gzf7
     files: []
     path: entities/v1-alpha/feature-flag-p5gzf7/research/
+  - entity_id: objects:object-forecast-um3az3
+    files: []
+    path: entities/v1-alpha/forecast-um3az3/research/
+  - entity_id: objects:object-goal-h2zfhv
+    files: []
+    path: entities/v1-alpha/goal-h2zfhv/research/
   - entity_id: objects:object-grant-nhdwg9
     files: []
     path: entities/v1-alpha/grant-nhdwg9/research/
@@ -664,6 +703,9 @@ catalog:
   - entity_id: objects:object-supplier-g7m7fu
     files: []
     path: entities/v1-alpha/supplier-g7m7fu/research/
+  - entity_id: objects:object-tax-record-zwqfpa
+    files: []
+    path: entities/v1-alpha/tax-record-zwqfpa/research/
   - entity_id: objects:object-ticket-2cudww
     files: []
     path: entities/v1-alpha/ticket-2cudww/research/

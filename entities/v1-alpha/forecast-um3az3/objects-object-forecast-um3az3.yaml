@@ -1,0 +1,30 @@
+id: objects:object-forecast-um3az3
+name: Forecast
+type: BusinessObject
+version: 1.0.0
+object_class: financial-instrument
+object_subclass: forecast
+ecf_domain: finance-accounting
+ecf_stage: operate
+current_state: active
+description: >
+  A forward-looking estimate of financial position and performance over a horizon, distinct from the Budget's authority: the Forecast predicts; the Budget permits. The Forecast is revised continuously as actuals land, and its divergence from the Budget is a steering signal.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-financial-resource-management-cd3c7c
+  - capabilities:capability-enterprise-performance-management-5fxren
+processes_involved:
+  - processes:process-fa-build-92v24c
+  - processes:process-fa-operate-ycba3k
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-09); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-09
+      date: 2026-10-30
+      change: Wave-2 admission (T3-ready candidates, CR-BO-06 deferred list).
+metadata:
+  seed_record: "false"

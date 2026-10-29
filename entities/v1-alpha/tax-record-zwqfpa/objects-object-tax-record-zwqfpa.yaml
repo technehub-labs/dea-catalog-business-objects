@@ -1,0 +1,30 @@
+id: objects:object-tax-record-zwqfpa
+name: Tax Record
+type: BusinessObject
+version: 1.0.0
+object_class: financial-instrument
+object_subclass: tax-record
+ecf_domain: finance-accounting
+ecf_stage: operate
+current_state: active
+description: >
+  A filing, position, or obligation record under tax law: returns, assessments, rulings, and supporting positions. The Tax Record is the compliance instrument of the tax function: tax strategy frames it, compliance processes file and defend it, and its errors carry statutory consequence.
+lifecycle_status: active
+capabilities_consumed:
+  - capabilities:capability-financial-resource-management-cd3c7c
+  - capabilities:capability-regulation-management-gya4d8
+processes_involved:
+  - processes:process-fa-operate-8vqvkk
+  - processes:process-fa-design-ds4drw
+state_history:
+  - state: active
+    ecf_stage: activate
+    entered: 2026-10-30
+    note: Wave-2 admission (CR-BO-09); lifecycle anchored at activation.
+provenance:
+  change_history:
+    - cr: CR-BO-09
+      date: 2026-10-30
+      change: Wave-2 admission (T3-ready candidates, CR-BO-06 deferred list).
+metadata:
+  seed_record: "false"
