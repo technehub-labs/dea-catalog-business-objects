@@ -1,6 +1,6 @@
 # Supplier
 
-Documentation for Business Object record [`objects:object-supplier-g7m7fu`](objects-object-supplier-g7m7fu.yaml)
+Documentation for Business Object record [`objects:object-supplier-g7m7fu`](objects-object-supplier-g7m7fu.yaml) · [Aspects deep-dive](aspects.md)
 
 ## Identity
 

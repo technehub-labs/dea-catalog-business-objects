@@ -1,6 +1,6 @@
 # Asset
 
-Documentation for Business Object record [`objects:object-asset-w887xr`](objects-object-asset-w887xr.yaml)
+Documentation for Business Object record [`objects:object-asset-w887xr`](objects-object-asset-w887xr.yaml) · [Aspects deep-dive](aspects.md)
 
 ## Identity
 

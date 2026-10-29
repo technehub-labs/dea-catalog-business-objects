@@ -1,6 +1,6 @@
 # Ticket
 
-Documentation for Business Object record [`objects:object-ticket-2cudww`](objects-object-ticket-2cudww.yaml)
+Documentation for Business Object record [`objects:object-ticket-2cudww`](objects-object-ticket-2cudww.yaml) · [Aspects deep-dive](aspects.md)
 
 ## Identity
 

@@ -1,6 +1,6 @@
 # Employee
 
-Documentation for Business Object record [`objects:object-employee-phbzym`](objects-object-employee-phbzym.yaml)
+Documentation for Business Object record [`objects:object-employee-phbzym`](objects-object-employee-phbzym.yaml) · [Aspects deep-dive](aspects.md)
 
 ## Identity
 

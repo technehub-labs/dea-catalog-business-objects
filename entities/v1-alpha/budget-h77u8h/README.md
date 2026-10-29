@@ -1,6 +1,6 @@
 # Budget
 
-Documentation for Business Object record [`objects:object-budget-h77u8h`](objects-object-budget-h77u8h.yaml)
+Documentation for Business Object record [`objects:object-budget-h77u8h`](objects-object-budget-h77u8h.yaml) · [Aspects deep-dive](aspects.md)
 
 ## Identity
 

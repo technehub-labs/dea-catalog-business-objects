@@ -1,6 +1,6 @@
 # Quote
 
-Documentation for Business Object record [`objects:object-quote-gnngfe`](objects-object-quote-gnngfe.yaml)
+Documentation for Business Object record [`objects:object-quote-gnngfe`](objects-object-quote-gnngfe.yaml) · [Aspects deep-dive](aspects.md)
 
 ## Identity
 

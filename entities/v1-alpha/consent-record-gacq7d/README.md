@@ -1,6 +1,6 @@
 # Consent Record
 
-Documentation for Business Object record [`objects:object-consent-record-gacq7d`](objects-object-consent-record-gacq7d.yaml)
+Documentation for Business Object record [`objects:object-consent-record-gacq7d`](objects-object-consent-record-gacq7d.yaml) · [Aspects deep-dive](aspects.md)
 
 ## Identity
 

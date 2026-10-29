@@ -1,6 +1,6 @@
 # Return
 
-Documentation for Business Object record [`objects:object-return-uwz79t`](objects-object-return-uwz79t.yaml)
+Documentation for Business Object record [`objects:object-return-uwz79t`](objects-object-return-uwz79t.yaml) · [Aspects deep-dive](aspects.md)
 
 ## Identity
 

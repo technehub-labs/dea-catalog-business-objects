@@ -1,6 +1,6 @@
 # Service
 
-Documentation for Business Object record [`objects:object-service-q8w4ce`](objects-object-service-q8w4ce.yaml)
+Documentation for Business Object record [`objects:object-service-q8w4ce`](objects-object-service-q8w4ce.yaml) · [Aspects deep-dive](aspects.md)
 
 ## Identity
 
