@@ -1,4 +1,4 @@
-# OpenDEA Business Objects
+# OpenDEA Business Objects (BO)
 
 The canonical catalog of **Business Objects** for the TechNeHub Labs Digital Enterprise Architecture (DEA) ecosystem.
 
